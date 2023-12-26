@@ -1,18 +1,25 @@
-import Link from 'next/link'
-import { headers, cookies } from 'next/headers'
-import { createClient } from '@/utils/supabase/server'
-import { redirect } from 'next/navigation'
+import Link from "next/link"
+import { headers, cookies } from "next/headers"
+import { createClient } from "@/utils/supabase/server"
+import { redirect } from "next/navigation"
+import { IconChevronLeft } from "@tabler/icons-react"
 
-export default function Login({
+export default async function Login({
   searchParams,
 }: {
   searchParams: { message: string }
 }) {
-  const signIn = async (formData: FormData) => {
-    'use server'
+  const cookieStore = cookies()
+  const supabase = createClient(cookieStore)
 
-    const email = formData.get('email') as string
-    const password = formData.get('password') as string
+  const { data } = await supabase.auth.getSession()
+  if (data.session) redirect("/")
+
+  const signIn = async (formData: FormData) => {
+    "use server"
+
+    const email = formData.get("email") as string
+    const password = formData.get("password") as string
     const cookieStore = cookies()
     const supabase = createClient(cookieStore)
 
@@ -21,19 +28,16 @@ export default function Login({
       password,
     })
 
-    if (error) {
-      return redirect('/login?message=Could not authenticate user')
-    }
-
-    return redirect('/')
+    if (error) return redirect("/login?message=Could not authenticate user")
+    return redirect("/")
   }
 
   const signUp = async (formData: FormData) => {
-    'use server'
+    "use server"
 
-    const origin = headers().get('origin')
-    const email = formData.get('email') as string
-    const password = formData.get('password') as string
+    const origin = headers().get("origin")
+    const email = formData.get("email") as string
+    const password = formData.get("password") as string
     const cookieStore = cookies()
     const supabase = createClient(cookieStore)
 
@@ -45,11 +49,8 @@ export default function Login({
       },
     })
 
-    if (error) {
-      return redirect('/login?message=Could not authenticate user')
-    }
-
-    return redirect('/login?message=Check email to continue sign in process')
+    if (error) return redirect("/login?message=Could not authenticate user")
+    return redirect("/login?message=Check email to continue sign in process")
   }
 
   return (
@@ -58,20 +59,7 @@ export default function Login({
         href="/"
         className="absolute left-8 top-8 py-2 px-4 rounded-md no-underline text-foreground bg-btn-background hover:bg-btn-background-hover flex items-center group text-sm"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1"
-        >
-          <polyline points="15 18 9 12 15 6" />
-        </svg>{' '}
+        <IconChevronLeft height={18} />
         Back
       </Link>
 
@@ -82,31 +70,39 @@ export default function Login({
         <label className="text-md" htmlFor="email">
           Email
         </label>
+
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           name="email"
           placeholder="you@example.com"
           required
+          value="john@doe.com"
         />
+
         <label className="text-md" htmlFor="password">
           Password
         </label>
+
         <input
           className="rounded-md px-4 py-2 bg-inherit border mb-6"
           type="password"
           name="password"
           placeholder="••••••••"
           required
+          value="Password1!"
         />
-        <button className="bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+
+        <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
           Sign In
         </button>
+
         <button
           formAction={signUp}
           className="border border-foreground/20 rounded-md px-4 py-2 text-foreground mb-2"
         >
           Sign Up
         </button>
+
         {searchParams?.message && (
           <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
             {searchParams.message}
