@@ -1,7 +1,7 @@
 import { createClient } from "@/utils/supabase/server"
-import Link from "next/link"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
+import { Button, ButtonLink } from "@/components/generic/Button"
 
 export default async function AuthButton() {
   const cookieStore = cookies()
@@ -29,19 +29,10 @@ export default async function AuthButton() {
       <div className="flex items-center gap-4">
         Hey, {user?.email}!
         <form action={handleSignOut}>
-          <button className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover">
-            Logout
-          </button>
+          <Button>Logout</Button>
         </form>
       </div>
     )
 
-  return (
-    <Link
-      href="/login"
-      className="py-2 px-3 flex rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
-    >
-      Login
-    </Link>
-  )
+  return <ButtonLink href="/login">Login</ButtonLink>
 }
