@@ -8,7 +8,13 @@ export const Content = () => (
         Innovative approach to the basics
       </p>
 
-      <Image alt="padel-training" src={Training} width={800} height={500} />
+      <Image
+        alt="padel-training"
+        src={Training}
+        width={800}
+        height={500}
+        layout="responsive"
+      />
     </div>
   </div>
 )

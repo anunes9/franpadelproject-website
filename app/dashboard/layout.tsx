@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
+import Sidebar from "@/components/layout/Sidebar"
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -17,12 +18,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex-1 w-full flex flex-col gap-20">
+    <div className="flex-1 w-full flex flex-col">
       <Navbar />
 
-      <main className="max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl m-auto animate-in">
-        {children}
-      </main>
+      <Sidebar>{children}</Sidebar>
 
       <Footer />
     </div>

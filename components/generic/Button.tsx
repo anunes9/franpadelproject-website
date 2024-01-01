@@ -4,12 +4,15 @@ import { ReactNode } from "react"
 export const Button = ({
   children,
   className,
+  ...props
 }: {
   children: ReactNode
-  className: string
+  className?: string
+  onClick?: any
 }) => (
   <button
     className={`py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover ${className}`}
+    {...props}
   >
     {children}
   </button>

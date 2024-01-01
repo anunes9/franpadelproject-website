@@ -2,6 +2,7 @@ import { createClient } from "@/utils/supabase/server"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 import { Button, ButtonLink } from "@/components/generic/Button"
+import { IconUser } from "@tabler/icons-react"
 
 export default async function AuthButton() {
   const cookieStore = cookies()
@@ -11,9 +12,10 @@ export default async function AuthButton() {
     data: { session },
   } = await supabase.auth.getSession()
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const { data } = await supabase
+    .from("users")
+    .select("*")
+    .eq("id", session?.user?.id)
 
   const handleSignOut = async () => {
     "use server"
@@ -27,9 +29,18 @@ export default async function AuthButton() {
   if (session)
     return (
       <div className="flex items-center gap-4">
-        Hey, {user?.email}!
+        <ButtonLink
+          href="/dashboard"
+          className="items-center gap-1 bg-inherit border"
+        >
+          <IconUser width={18} height={18} />
+          {data && data[0]?.name}
+        </ButtonLink>
+
         <form action={handleSignOut}>
-          <Button>Logout</Button>
+          <Button>
+            <p>Logout</p>
+          </Button>
         </form>
       </div>
     )

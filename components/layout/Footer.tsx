@@ -20,7 +20,7 @@ export const Footer = () => (
         </a>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-6">
+      <div className="flex flex-col sm:flex-row gap-6 items-center">
         <Link href="#" className="text-xs">
           Privacy Policy
         </Link>
@@ -32,7 +32,7 @@ export const Footer = () => (
         </Link>
       </div>
 
-      <div className="flex flex-col items-end">
+      <div className="flex flex-col items-center sm:items-end">
         <ThemeSwitch />
 
         <div className="flex flex-row items-center">

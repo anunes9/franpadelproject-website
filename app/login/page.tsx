@@ -3,6 +3,8 @@ import { headers, cookies } from "next/headers"
 import { createClient } from "@/utils/supabase/server"
 import { redirect } from "next/navigation"
 import { IconChevronLeft } from "@tabler/icons-react"
+import FranMethodology from "@/assets/fran-methodology.png"
+import Image from "next/image"
 
 export default async function Login({
   searchParams,
@@ -54,7 +56,7 @@ export default async function Login({
   }
 
   return (
-    <div className="flex-1 flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
+    <div className="flex flex-col w-full px-8 sm:max-w-md justify-center gap-2">
       <Link
         href="/"
         className="absolute left-8 top-8 py-2 px-4 rounded-md no-underline text-foreground bg-btn-background hover:bg-btn-background-hover flex items-center group text-sm"
@@ -64,9 +66,17 @@ export default async function Login({
       </Link>
 
       <form
-        className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
+        className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground pt-12 sm:pt-24"
         action={signIn}
       >
+        <Image
+          alt="fran-methodology"
+          src={FranMethodology}
+          layout="responsive"
+          width={448}
+          height={448}
+        />
+
         <label className="text-md" htmlFor="email">
           Email
         </label>
