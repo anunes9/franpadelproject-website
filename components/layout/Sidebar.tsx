@@ -1,53 +1,30 @@
 import { LogoutButton } from "@/components/AuthButton"
-import { SidebarItem } from "@/components/layout/SidebarIcon"
-import {
-  IconBallTennis,
-  IconCalendarStats,
-  IconHome,
-  IconNotebook,
-} from "@tabler/icons-react"
-import Image from "next/image"
-import Link from "next/link"
-import React, { ReactNode } from "react"
-import Logo from "@/assets/logo_green.svg"
+import { SidebarItem } from "@/components/layout/SidebarItem"
 import { UserInformation } from "@/components/layout/UserInformation"
+import { Navbar } from "@/components/layout/Navbar"
+import { NavigationLinks } from "@/utils/navigation"
+import { ReactNode } from "react"
 
 const Sidebar = ({ children }: { children: ReactNode }) => (
-  <div className="flex flex-auto">
-    <nav className="flex w-64 border-r border-r-foreground/10">
+  <div className="flex flex-col sm:flex-row flex-auto">
+    <nav className="flex sm:w-64 border-r border-r-foreground/10">
       <div className="flex flex-col w-full">
-        <div className="flex justify-center border-b border-b-foreground/10 py-4">
+        <Navbar />
+        {/* <div className="flex justify-center border-b border-b-foreground/10 py-4">
           <Link href="/dashboard">
             <Image alt="logo" src={Logo} height={48} />
           </Link>
-        </div>
+        </div> */}
 
-        <ul className="mx-2 py-4 space-y-1 font-light">
-          <SidebarItem
-            title="Dashboard"
-            href="/dashboard"
-            icon={<IconHome width={24} height={24} stroke={1.5} />}
-          />
-          <SidebarItem
-            title="Methodology"
-            href="/dashboard/methodology"
-            icon={<IconNotebook width={24} height={24} stroke={1.5} />}
-          />
-          <SidebarItem
-            title="Planning"
-            href="/dashboard/planning"
-            icon={<IconCalendarStats width={24} height={24} stroke={1.5} />}
-          />
-          <SidebarItem
-            title="Exercises"
-            href="/dashboard/exercises"
-            icon={<IconBallTennis width={24} height={24} stroke={1.5} />}
-          />
+        <ul className="hidden sm:block mx-2 py-4 space-y-1 font-light">
+          {NavigationLinks.map(({ name, href, icon }) => (
+            <SidebarItem title={name} href={href} icon={icon} />
+          ))}
 
-          <LogoutButton />
+          <LogoutButton className="hover:cursor-pointer" />
         </ul>
 
-        <div className="border-t border-t-foreground/10 px-2 py-4">
+        <div className="hidden sm:block border-t border-t-foreground/10 px-2 py-4">
           <UserInformation />
         </div>
       </div>

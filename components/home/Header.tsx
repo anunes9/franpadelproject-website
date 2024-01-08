@@ -3,13 +3,13 @@ import { ButtonLink } from "@/components/generic/Button"
 export const Header = () => (
   <>
     <div>
-      <div className="absolute w-screen h-[48rem] sm:h-[32rem] bg-green-600/50" />
+      <div className="absolute w-screen h-[32rem] bg-green-600/50" />
     </div>
 
     <div>
-      <div className="absolute pt-32 sm:pt-20 w-screen">
+      <div className="absolute pt-32 sm:pt-20 px-2 sm:px-16 w-screen">
         <div className="max-w-screen-lg m-auto px-8 sm:px-0">
-          <p className="font-bold text-[3rem] sm:text-[4rem] text-white">
+          <p className="font-bold text-4xl leading-normal sm:text-[3rem] lg:text-[4rem] text-white">
             Improve your padel <br />
             <span className="font-normal">with Fran Methodology</span>
           </p>
@@ -25,7 +25,7 @@ export const Header = () => (
     </div>
 
     <video
-      className="w-screen h-[48rem] sm:h-[32rem] object-cover"
+      className="w-screen h-[32rem] object-cover"
       autoPlay
       loop
       muted

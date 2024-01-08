@@ -11,7 +11,7 @@ export default function Page() {
             Exercises List
           </h2>
 
-          <p className="hidden text-gray-500 md:mt-4 md:block">
+          <p className="text-gray-500 mt-4 mb-4 sm:mb-0">
             In this section we present a list of exercises that we use in our
             methodology. Each exercise will have a brief description of what we
             want to achieve and what are the dynamics evolved.
@@ -21,7 +21,7 @@ export default function Page() {
         <Image
           alt="padel exercises"
           src="https://images.unsplash.com/photo-1646649853703-7645147474ba?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
+          className="hidden sm:block h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
           width={1000}
           height={500}
         />

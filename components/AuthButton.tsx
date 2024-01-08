@@ -14,7 +14,7 @@ export default async function AuthButton() {
 
   if (session)
     return (
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 bg-slate-200 rounded-md text-black">
         <ButtonLink
           href="/dashboard"
           className="items-center gap-1 bg-inherit border"
@@ -28,7 +28,7 @@ export default async function AuthButton() {
   return <ButtonLink href="/login">Login</ButtonLink>
 }
 
-export async function LogoutButton() {
+export async function LogoutButton({ className }: { className: string }) {
   const cookieStore = cookies()
   const supabase = createClient(cookieStore)
 
@@ -48,7 +48,7 @@ export async function LogoutButton() {
   if (session)
     return (
       <div
-        className={`rounded-md hover:bg-btn-background-hover text-sm dark:text-gray-200 text-gray-800`}
+        className={`rounded-md hover:bg-btn-background-hover text-sm dark:text-gray-200 text-gray-800 ${className}`}
       >
         <form action={handleSignOut}>
           <button className="flex items-center p-2 space-x-3 rounded-md">
