@@ -1,77 +1,62 @@
-"use client"
-
+import { LogoutButton } from "@/components/AuthButton"
+import { SidebarItem } from "@/components/layout/SidebarIcon"
 import {
   IconBallTennis,
   IconCalendarStats,
   IconHome,
   IconNotebook,
 } from "@tabler/icons-react"
-import { usePathname } from "next/navigation"
+import Image from "next/image"
+import Link from "next/link"
 import React, { ReactNode } from "react"
+import Logo from "@/assets/logo_green.svg"
+import { UserInformation } from "@/components/layout/UserInformation"
 
-const Item = ({
-  title,
-  href,
-  active,
-  icon,
-}: {
-  title: string
-  href: string
-  active?: boolean
-  icon: any
-}) => (
-  <a
-    href={href}
-    className={`block py-2 px-4 dark:text-gray-200 text-gray-800 hover:bg-btn-background-hover ${
-      active && "bg-btn-background-hover"
-    }`}
-  >
-    <div className="flex gap-2 items-center">
-      {icon}
-      <span>{title}</span>
-    </div>
-  </a>
-)
+const Sidebar = ({ children }: { children: ReactNode }) => (
+  <div className="flex flex-auto">
+    <nav className="flex w-64 border-r border-r-foreground/10">
+      <div className="flex flex-col w-full">
+        <div className="flex justify-center border-b border-b-foreground/10 py-4">
+          <Link href="/dashboard">
+            <Image alt="logo" src={Logo} height={48} />
+          </Link>
+        </div>
 
-const Sidebar = ({ children }: { children: ReactNode }) => {
-  const pathname = usePathname()
-
-  return (
-    <div className="flex">
-      <div className="flex-shrink-0 w-64 border-r border-r-foreground/10">
-        <nav className="mt-5">
-          <Item
+        <ul className="mx-2 py-4 space-y-1 font-light">
+          <SidebarItem
             title="Dashboard"
             href="/dashboard"
-            active={pathname === "/dashboard"}
-            icon={<IconHome width={24} height={24} />}
+            icon={<IconHome width={24} height={24} stroke={1.5} />}
           />
-          <Item
+          <SidebarItem
             title="Methodology"
             href="/dashboard/methodology"
-            active={pathname === "/dashboard/methodology"}
-            icon={<IconNotebook width={24} height={24} />}
+            icon={<IconNotebook width={24} height={24} stroke={1.5} />}
           />
-          <Item
+          <SidebarItem
             title="Planning"
             href="/dashboard/planning"
-            active={pathname === "/dashboard/planning"}
-            icon={<IconCalendarStats width={24} height={24} />}
+            icon={<IconCalendarStats width={24} height={24} stroke={1.5} />}
           />
-          <Item
+          <SidebarItem
             title="Exercises"
             href="/dashboard/exercises"
-            active={pathname === "/dashboard/exercises"}
-            icon={<IconBallTennis width={24} height={24} />}
+            icon={<IconBallTennis width={24} height={24} stroke={1.5} />}
           />
-        </nav>
-      </div>
 
-      <div className="min-h-[90vh] max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl m-auto animate-in overflow-hidden py-12">
-        {children}
+          <LogoutButton />
+        </ul>
+
+        <div className="border-t border-t-foreground/10 px-2 py-4">
+          <UserInformation />
+        </div>
       </div>
+    </nav>
+
+    <div className="max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl mx-auto w-full animate-in overflow-hidden py-12 px-4">
+      {children}
     </div>
-  )
-}
+  </div>
+)
 
 export default Sidebar

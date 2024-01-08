@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/layout/Navbar"
 import { Footer } from "@/components/layout/Footer"
 import Sidebar from "@/components/layout/Sidebar"
 
@@ -19,8 +18,6 @@ export default function RootLayout({
 }) {
   return (
     <div className="flex-1 w-full flex flex-col">
-      <Navbar />
-
       <Sidebar>{children}</Sidebar>
 
       <Footer />

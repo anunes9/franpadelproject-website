@@ -1,8 +1,6 @@
 import { GeistSans } from "geist/font/sans"
 import "./globals.css"
 import { ThemeProviders } from "@/app/theme-providers"
-import { Navbar } from "@/components/layout/Navbar"
-import { Footer } from "@/components/layout/Footer"
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -29,21 +27,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-// return (
-//   <html lang="en" className={GeistSans.className} suppressHydrationWarning>
-//     <body className="bg-background text-foreground min-h-screen flex flex-col items-center">
-//       <ThemeProviders>
-//         <div className="flex-1 w-full flex flex-col gap-20">
-//           <Navbar />
-
-//           <main className="max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl m-auto animate-in z-0">
-//             {children}
-//           </main>
-
-//           <Footer />
-//         </div>
-//       </ThemeProviders>
-//     </body>
-//   </html>
-// )

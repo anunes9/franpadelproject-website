@@ -1,12 +1,11 @@
-import { createClient } from "@/utils/supabase/server"
-import { cookies } from "next/headers"
+import { PlayersTable } from "@/components/players/PlayersTable"
 
 export default async function Page() {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore)
-  const { data: players } = await supabase.from("players").select()
-
-  return <pre>{JSON.stringify(players, null, 2)}</pre>
+  return (
+    <div>
+      <PlayersTable />
+    </div>
+  )
 }
 
 // "use client"

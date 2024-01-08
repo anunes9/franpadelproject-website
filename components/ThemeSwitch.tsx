@@ -20,6 +20,8 @@ export default function ThemeSwitch() {
         }`}
       >
         <IconSun
+          height="auto"
+          width={16}
           className="stroke-gray-500 dark:stroke-dimmed"
           onClick={() => setTheme("light")}
         />
@@ -31,6 +33,8 @@ export default function ThemeSwitch() {
         }`}
       >
         <IconMoon
+          height="auto"
+          width={16}
           onClick={() => setTheme("dark")}
           className="stroke-dimmed dark:stroke-gray-300"
         />

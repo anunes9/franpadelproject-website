@@ -6,7 +6,7 @@ import Link from "next/link"
 import ThemeSwitch from "@/components/ThemeSwitch"
 
 export const Footer = () => (
-  <footer className="bg-background w-full border-t border-t-foreground/10 px-8 pt-8 mb-8">
+  <footer className="bg-background w-full border-t border-t-foreground/10 px-8 pt-4 mb-4 font-light">
     <div className="max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between m-auto">
       <div className="flex gap-4">
         <Image alt="logo" src={Logo} height={32} />
