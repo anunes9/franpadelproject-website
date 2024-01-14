@@ -3,7 +3,7 @@ import { headers, cookies } from "next/headers"
 import { createClient } from "@/utils/supabase/server"
 import { redirect } from "next/navigation"
 import { IconChevronLeft } from "@tabler/icons-react"
-import FranMethodology from "@/assets/fran-methodology.png"
+import FranMethodology from "@assets/fran-methodology.png"
 import Image from "next/image"
 
 export default async function Login({

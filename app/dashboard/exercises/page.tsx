@@ -1,5 +1,6 @@
-import { ExerciseItem } from "@/components/exercises/ExerciseItem"
-import { Exercises } from "@/utils/exercises"
+import { ExercisesList } from "@/app/components/exercises/ExercisesList"
+import { Text, Title } from "@components/generic/Typography"
+import { Exercises } from "@lib/exercises"
 import Image from "next/image"
 
 export default function Page() {
@@ -7,15 +8,13 @@ export default function Page() {
     <section>
       <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-4">
         <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right px-16">
-          <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-            Exercises List
-          </h2>
+          <Title>Exercises List</Title>
 
-          <p className="text-gray-500 mt-4 mb-4 sm:mb-0">
+          <Text className="text-gray-500 mt-4 mb-4 sm:mb-0">
             In this section we present a list of exercises that we use in our
             methodology. Each exercise will have a brief description of what we
             want to achieve and what are the dynamics evolved.
-          </p>
+          </Text>
         </div>
 
         <Image
@@ -27,16 +26,7 @@ export default function Page() {
         />
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-        {Exercises.map(({ id, title, tags, description, image }) => (
-          <ExerciseItem
-            tags={tags}
-            title={title}
-            image={image}
-            description={description}
-          />
-        ))}
-      </div>
+      <ExercisesList exercises={Exercises} />
     </section>
   )
 }

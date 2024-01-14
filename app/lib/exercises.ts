@@ -1,16 +1,24 @@
-export const Exercises = [
+export type ExerciseType = {
+  id: string
+  title: string
+  description: string
+  tags: string[]
+  image: string
+}
+
+export const Exercises: ExerciseType[] = [
   {
     id: "1a",
     title: "Exercise 1 A",
     description: "Some description of exercise",
-    tags: ["backhand"],
+    tags: ["backhand", "mesocycle-1"],
     image: "/exercises/1a.svg",
   },
   {
     id: "1b",
     title: "Exercise 1 B",
     description: "Some description of exercise",
-    tags: ["forehand"],
+    tags: ["forehand", "mesocycle-1"],
     image: "/exercises/1b.svg",
   },
   {

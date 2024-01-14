@@ -1,4 +1,4 @@
-import { PlayersTable } from "@/components/players/PlayersTable"
+import { PlayersTable } from "@components/players/PlayersTable"
 import { createClient } from "@/utils/supabase/server"
 import { cookies } from "next/headers"
 

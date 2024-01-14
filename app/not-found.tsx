@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/generic/Button"
+import { Button } from "@components/generic/Button"
 import { useRouter } from "next/navigation"
 
 export const NotFound = () => {

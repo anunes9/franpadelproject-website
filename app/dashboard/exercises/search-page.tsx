@@ -1,6 +1,6 @@
 "use client"
 
-import { ButtonLink } from "@/components/generic/Button"
+import { ButtonLink } from "@components/generic/Button"
 import { IconChevronLeft } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"

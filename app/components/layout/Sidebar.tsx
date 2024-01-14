@@ -1,8 +1,8 @@
-import { LogoutButton } from "@/components/AuthButton"
-import { SidebarItem } from "@/components/layout/SidebarItem"
-import { UserInformation } from "@/components/layout/UserInformation"
-import { Navbar } from "@/components/layout/Navbar"
-import { NavigationLinks } from "@/utils/navigation"
+import { LogoutButton } from "@components/AuthButton"
+import { SidebarItem } from "@components/layout/SidebarItem"
+import { UserInformation } from "@components/layout/UserInformation"
+import { Navbar } from "@components/layout/Navbar"
+import { NavigationLinks } from "@lib/navigation"
 import { ReactNode } from "react"
 
 const Sidebar = ({ children }: { children: ReactNode }) => (

@@ -1,4 +1,4 @@
-import { PlayersTable } from "@/components/players/PlayersTable"
+import { PlayersTable } from "@components/players/PlayersTable"
 
 export default async function Page() {
   return (

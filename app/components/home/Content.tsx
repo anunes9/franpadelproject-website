@@ -4,7 +4,7 @@ import {
   IconUsersGroup,
 } from "@tabler/icons-react"
 import { ReactNode } from "react"
-import FranMethodology from "@/assets/fran-methodology.png"
+import FranMethodology from "@assets/fran-methodology.png"
 import Image from "next/image"
 
 const Features = [

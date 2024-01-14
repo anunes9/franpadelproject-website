@@ -1,12 +1,14 @@
 "use client"
 
-import { Badge } from "@/components/generic/Badge"
-import { Button } from "@/components/generic/Button"
+import { Text } from "@/app/components/generic/Typography"
+import { ExerciseType } from "@/app/lib/exercises"
+import { Badge } from "@components/generic/Badge"
+import { Button } from "@components/generic/Button"
 import { IconChevronLeft } from "@tabler/icons-react"
 import Image from "next/image"
 import React from "react"
 
-export const ExerciseItem = ({
+const ExerciseItem = ({
   title,
   description,
   image,
@@ -42,7 +44,7 @@ export const ExerciseItem = ({
       </div>
 
       {showModal && (
-        <div className="absolute w-full top-0 bg-background h-full py-8">
+        <div className="absolute w-[95%] top-0 bg-background h-full py-8">
           <div className="flex rounded-t mb-4 items-center gap-4">
             <Button onClick={() => setShowModal(false)}>
               <IconChevronLeft height={24} width={24} />
@@ -56,7 +58,7 @@ export const ExerciseItem = ({
               width={200}
               src={image}
               alt={title}
-              className="w-full object-contain my-8"
+              className="w-[95%] object-contain my-8"
             />
 
             <h3 className="text-sm text-gray-700 my-4">{description}</h3>
@@ -70,5 +72,23 @@ export const ExerciseItem = ({
         </div>
       )}
     </>
+  )
+}
+
+export const ExercisesList = ({ exercises }: { exercises: ExerciseType[] }) => {
+  if (exercises.length === 0) return <Text>No exercises to show</Text>
+
+  return (
+    <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+      {exercises.map(({ id, title, tags, description, image }) => (
+        <ExerciseItem
+          key={id}
+          tags={tags}
+          title={title}
+          image={image}
+          description={description}
+        />
+      ))}
+    </div>
   )
 }

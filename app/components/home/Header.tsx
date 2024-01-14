@@ -1,4 +1,4 @@
-import { ButtonLink } from "@/components/generic/Button"
+import { ButtonLink } from "@components/generic/Button"
 
 export const Header = () => (
   <>

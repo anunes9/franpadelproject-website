@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import BecomeASensei from "@/assets/become-a-sensei.png"
-import AchillesTendon from "@/assets/achilles-tendon.png"
-import ImAGoat from "@/assets/iam-goat.png"
-import LetsRemember from "@/assets/lets-remeber.png"
+import BecomeASensei from "@assets/become-a-sensei.png"
+import AchillesTendon from "@assets/achilles-tendon.png"
+import ImAGoat from "@assets/iam-goat.png"
+import LetsRemember from "@assets/lets-remeber.png"
 
 const productsList = [
   {

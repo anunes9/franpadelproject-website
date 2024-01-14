@@ -1,3 +1,33 @@
+import { Text, Title } from "@components/generic/Typography"
+import { Mesocycles } from "@lib/mesocycles"
+import Link from "next/link"
+
 export default function Page() {
-  return <span>Planning</span>
+  return (
+    <section>
+      <Title>Planning</Title>
+
+      <div className="mt-6 space-y-12 lg:space-y-0 grid grid-cols-1 lg:grid-cols-3 lg:gap-x-6">
+        {Mesocycles.map((callout) => (
+          <Link
+            href={`planning/${callout.id}`}
+            key={callout.id}
+            className="hover:opacity-75 hover:cursor-pointer"
+          >
+            <div className="h-20 flex justify-center gap-2 self-stretch items-center w-full rounded-lg bg-green-400 font-bold font-mono">
+              MESOCICLO {callout.icon}
+            </div>
+
+            <Title heading="4" className="mt-2 lg:mt-4">
+              {callout.name}
+            </Title>
+
+            <Text className="font-semibold">{callout.concept}</Text>
+          </Link>
+        ))}
+      </div>
+
+      <div className="h-28 sm:hidden" />
+    </section>
+  )
 }
