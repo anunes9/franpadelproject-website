@@ -86,7 +86,6 @@ export default async function Login({
           name="email"
           placeholder="you@example.com"
           required
-          value="john@doe.com"
         />
 
         <label className="text-md" htmlFor="password">
@@ -99,7 +98,6 @@ export default async function Login({
           name="password"
           placeholder="••••••••"
           required
-          value="Password1!"
         />
 
         <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
