@@ -5,7 +5,7 @@ export const Title = ({
   className,
   heading = "2",
 }: {
-  children: string
+  children: string | null
   className?: string
   heading?: Heading
 }) => {
@@ -49,7 +49,7 @@ export const Text = ({
   children,
   className,
 }: {
-  children: string
+  children?: string | null
   className?: string
 }) => (
   <p

@@ -31,7 +31,7 @@ export const UserInformation = async () => {
         <span className="flex items-center space-x-1">
           <a
             rel="noopener noreferrer"
-            href="#"
+            href="/dashboard/profile"
             className="text-xs hover:underline text-gray-600"
           >
             View profile

@@ -1,7 +1,6 @@
 import { Badge } from "@components/generic/Badge"
-import { createClient } from "@/utils/supabase/server"
 import { IconUser } from "@tabler/icons-react"
-import { cookies } from "next/headers"
+import { getPlayers } from "@/utils/supabase/api"
 
 const PlayerItem = ({ name, rank }: { name: string; rank: string }) => (
   <div className="p-2 w-full">
@@ -17,9 +16,7 @@ const PlayerItem = ({ name, rank }: { name: string; rank: string }) => (
 )
 
 export const PlayersTable = async () => {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore)
-  const { data: players } = await supabase.from("players").select()
+  const players = await getPlayers()
 
   return (
     <section className="text-gray-600 body-font bg-zinc-100 rounded-md my-12">
