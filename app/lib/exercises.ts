@@ -1,16 +1,3 @@
-import Exercise1A from "../assets/exercises/1A.svg"
-import Exercise1b from "../assets/exercises/1b.svg"
-import Exercise2a from "../assets/exercises/2a.svg"
-import Exercise2b from "../assets/exercises/2b.svg"
-import Exercise10a from "../assets/exercises/10a.svg"
-import Exercise10b from "../assets/exercises/10b.svg"
-import Exercise10c from "../assets/exercises/10c.svg"
-import Exercise11 from "../assets/exercises/11.svg"
-import Exercise13a from "../assets/exercises/13a.svg"
-import Exercise13b from "../assets/exercises/13b.svg"
-import Exercise14a from "../assets/exercises/14a.svg"
-import Exercise14b from "../assets/exercises/14b.svg"
-
 export type ExerciseType = {
   id: string
   title: string
@@ -21,87 +8,87 @@ export type ExerciseType = {
 
 export const Exercises: ExerciseType[] = [
   {
-    id: "1a",
+    id: "1A",
     title: "Exercise 1 A",
     description: "Some description of exercise",
     tags: ["backhand", "mesocycle-1"],
-    image: Exercise1A,
+    image: "/exercises/1A.svg",
   },
   {
-    id: "1b",
+    id: "1B",
     title: "Exercise 1 B",
     description: "Some description of exercise",
     tags: ["forehand", "mesocycle-1"],
-    image: Exercise1b,
+    image: "/exercises/1B.svg",
   },
   {
-    id: "2a",
+    id: "2A",
     title: "Exercise 2 A",
     description: "Some description of exercise",
     tags: ["forehand", "live ball"],
-    image: Exercise2a,
+    image: "/exercises/2A.svg",
   },
   {
-    id: "2b",
+    id: "2B",
     title: "Exercise 2 B",
     description: "Some description of exercise",
     tags: ["backhand", "live ball"],
-    image: Exercise2b,
+    image: "/exercises/2B.svg",
   },
   {
-    id: "10a",
+    id: "10A",
     title: "Exercise 10 A",
     description: "Some description of exercise",
     tags: ["live ball"],
-    image: Exercise10a,
+    image: "/exercises/10A.svg",
   },
   {
-    id: "10b",
+    id: "10B",
     title: "Exercise 10 B",
     description: "Some description of exercise",
     tags: ["live ball"],
-    image: Exercise10b,
+    image: "/exercises/10B.svg",
   },
   {
-    id: "10c",
+    id: "10C",
     title: "Exercise 10 C",
     description: "Some description of exercise",
     tags: ["live ball"],
-    image: Exercise10c,
+    image: "/exercises/10C.svg",
   },
   {
     id: "11",
     title: "Exercise 11",
     description: "Some description of exercise",
     tags: ["precision"],
-    image: Exercise11,
+    image: "/exercises/11.svg",
   },
   {
-    id: "13a",
+    id: "13A",
     title: "Exercise 13 A",
     description: "Some description of exercise",
     tags: ["backhand", "glass"],
-    image: Exercise13a,
+    image: "/exercises/13A.svg",
   },
   {
-    id: "13b",
+    id: "13B",
     title: "Exercise 13 B",
     description: "Some description of exercise",
     tags: ["forehand", "glass"],
-    image: Exercise13b,
+    image: "/exercises/13B.svg",
   },
   {
-    id: "14a",
+    id: "14A",
     title: "Exercise 14 A",
     description: "Some description of exercise",
     tags: ["backhand", "glass", "live ball"],
-    image: Exercise14a,
+    image: "/exercises/14A.svg",
   },
   {
-    id: "14b",
+    id: "14B",
     title: "Exercise 14 B",
     description: "Some description of exercise",
     tags: ["forehand", "glass", "live ball"],
-    image: Exercise14b,
+    image: "/exercises/14B.svg",
   },
 ]
