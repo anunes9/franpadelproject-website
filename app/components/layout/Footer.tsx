@@ -21,13 +21,13 @@ export const Footer = () => (
       </div>
 
       <div className="flex flex-col sm:flex-row gap-6 items-center">
-        <Link href="#" className="text-xs">
+        <Link href="/privacy-policy" className="text-xs">
           Privacy Policy
         </Link>
-        <Link href="#" className="text-xs">
+        <Link href="/cookie-policy" className="text-xs">
           Cookie Policy
         </Link>
-        <Link href="#" className="text-xs">
+        <Link href="/terms-of-service" className="text-xs">
           Terms of Service
         </Link>
       </div>

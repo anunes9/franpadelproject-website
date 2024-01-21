@@ -14,51 +14,32 @@ export const getUser = async () => {
   const cookieStore = cookies()
   const supabase = createClient(cookieStore)
 
-  const { data } = await supabase.auth.getUser()
-
   const { data: users } = await supabase
     .from("users")
-    .select("*")
-    .eq("id", data.user?.id)
+    .select()
 
-  const user = users && users[0]
+  return users && users[0]
 
-  return user
 }
 
 export const getClub = async () => {
   const cookieStore = cookies()
   const supabase = createClient(cookieStore)
 
-  const { data } = await supabase.auth.getUser()
-
-  const { data: users } = await supabase
-    .from("users")
-    .select("*")
-    .eq("id", data.user?.id)
-
-  const user = users && users[0]
-
   const { data: clubs } = await supabase
     .from("clubs")
-    .select("*")
-    .eq("id", user?.club_id)
+    .select()
 
-  const club = clubs && clubs[0]
-
-  return club
+  return clubs && clubs[0]
 }
 
 export const getPlayers = async () => {
   const cookieStore = cookies()
   const supabase = createClient(cookieStore)
 
-  const club = await getClub()
-
   const { data: players } = await supabase
     .from("players")
-    .select("*")
-    .eq("club_id", club.id)
+    .select()
 
   return players
 }
