@@ -1,4 +1,4 @@
-import { Button } from "@components/generic/Button"
+import { Button } from "@/components/generic/Button"
 
 export const GetInTouch = async () => {
   const handleSubmit = async () => {

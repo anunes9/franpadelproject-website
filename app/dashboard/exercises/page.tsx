@@ -1,5 +1,5 @@
-import { ExercisesList } from "@/app/components/exercises/ExercisesList"
-import { Text, Title } from "@components/generic/Typography"
+import { ExercisesList } from "@/components/exercises/ExercisesList"
+import { Text, Title } from "@/components/generic/Typography"
 import { Exercises } from "@lib/exercises"
 import Image from "next/image"
 

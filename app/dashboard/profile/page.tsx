@@ -1,7 +1,7 @@
 import { cookies } from "next/headers"
 import { createClient } from "@/utils/supabase/server"
 import { redirect } from "next/navigation"
-import { Text, Title } from "@/app/components/generic/Typography"
+import { Text, Title } from "@/components/generic/Typography"
 import { getAuthUser, getClub, getUser } from "@/utils/supabase/api"
 
 export default async function Profile() {

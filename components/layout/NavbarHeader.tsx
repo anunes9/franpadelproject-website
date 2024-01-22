@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Logo from "@assets/logo_green.svg"
-import AuthButton from "@components/AuthButton"
+import AuthButton from "@/components/AuthButton"
 import Link from "next/link"
 import { cookies } from "next/headers"
 import { createClient } from "@/utils/supabase/server"

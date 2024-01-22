@@ -1,5 +1,5 @@
-import { Footer } from "@components/layout/Footer"
-import Sidebar from "@components/layout/Sidebar"
+import { Footer } from "@/components/layout/Footer"
+import Sidebar from "@/components/layout/Sidebar"
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`

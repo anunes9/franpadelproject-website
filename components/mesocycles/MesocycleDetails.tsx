@@ -1,4 +1,4 @@
-import { Text, Title } from "@components/generic/Typography"
+import { Text, Title } from "@/components/generic/Typography"
 
 export const MesocycleDetails = ({
   mesocycle: { duration, concept, details },

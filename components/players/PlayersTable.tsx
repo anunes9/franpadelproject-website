@@ -1,4 +1,4 @@
-import { Badge } from "@components/generic/Badge"
+import { Badge } from "@/components/generic/Badge"
 import { IconUser } from "@tabler/icons-react"
 import { getPlayers } from "@/utils/supabase/api"
 

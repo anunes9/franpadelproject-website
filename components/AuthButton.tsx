@@ -1,7 +1,7 @@
 import { createClient } from "@/utils/supabase/server"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
-import { ButtonLink } from "@components/generic/Button"
+import { ButtonLink } from "@/components/generic/Button"
 import { IconLogout, IconHome } from "@tabler/icons-react"
 
 export default async function AuthButton() {

@@ -1,6 +1,6 @@
-import { Title } from "@/app/components/generic/Typography"
+import { Title } from "@/components/generic/Typography"
 import { ExerciseType } from "@/app/lib/exercises"
-import { Badge } from "@components/generic/Badge"
+import { Badge } from "@/components/generic/Badge"
 import Image from "next/image"
 import React from "react"
 

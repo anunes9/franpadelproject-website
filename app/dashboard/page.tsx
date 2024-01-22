@@ -1,5 +1,5 @@
-import { PlayersTable } from "@components/players/PlayersTable"
-import { Title } from "@/app/components/generic/Typography"
+import { PlayersTable } from "@/components/players/PlayersTable"
+import { Title } from "@/components/generic/Typography"
 import { getClub, getPlayers } from "@/utils/supabase/api"
 
 export default async function Page() {

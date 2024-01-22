@@ -1,6 +1,6 @@
-import { Text, Title } from "@/app/components/generic/Typography"
-import { Footer } from "@/app/components/layout/Footer"
-import { NavbarHeader } from "@/app/components/layout/NavbarHeader"
+import { Text, Title } from "@/components/generic/Typography"
+import { Footer } from "@/components/layout/Footer"
+import { NavbarHeader } from "@/components/layout/NavbarHeader"
 
 export default function TermsOfService() {
   return (

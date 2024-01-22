@@ -3,7 +3,7 @@ import Logo from "@assets/logo_green.svg"
 import ANLogo from "@assets/an-logo-color.svg"
 import { IconBrandInstagram } from "@tabler/icons-react"
 import Link from "next/link"
-import ThemeSwitch from "@components/ThemeSwitch"
+import ThemeSwitch from "@/components/ThemeSwitch"
 
 export const Footer = () => (
   <footer className="bg-background w-full border-t border-t-foreground/10 px-8 pt-4 mb-4 font-light">

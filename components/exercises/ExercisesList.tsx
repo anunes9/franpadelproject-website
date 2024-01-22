@@ -1,8 +1,8 @@
 "use client"
 
-import { ExerciseItemDetails } from "@/app/components/exercises/ExercisItemDetails"
-import { ExerciseItem } from "@/app/components/exercises/ExerciseItem"
-import { Text } from "@/app/components/generic/Typography"
+import { ExerciseItemDetails } from "@/components/exercises/ExercisItemDetails"
+import { ExerciseItem } from "@/components/exercises/ExerciseItem"
+import { Text } from "@/components/generic/Typography"
 import { ExerciseType } from "@/app/lib/exercises"
 import React from "react"
 
