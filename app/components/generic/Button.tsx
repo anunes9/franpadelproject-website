@@ -11,7 +11,7 @@ export const Button = ({
   onClick?: any
 }) => (
   <button
-    className={`py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover ${className}`}
+    className={`py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover flex items-center gap-2 ${className}`}
     {...props}
   >
     {children}

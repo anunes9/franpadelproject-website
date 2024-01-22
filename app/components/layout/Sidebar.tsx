@@ -17,8 +17,8 @@ const Sidebar = ({ children }: { children: ReactNode }) => (
         </div> */}
 
         <ul className="hidden sm:block mx-2 py-4 space-y-1 font-light">
-          {NavigationLinks.map(({ name, href, icon }) => (
-            <SidebarItem title={name} href={href} icon={icon} />
+          {NavigationLinks.map(({ name, href, icon }, i) => (
+            <SidebarItem key={i} title={name} href={href} icon={icon} />
           ))}
 
           <LogoutButton className="hover:cursor-pointer" />
