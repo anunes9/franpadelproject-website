@@ -33,7 +33,7 @@ export const Mesocycles: MesocycleType[] = [
         details: [
           "Passo de pivot ou de reaccao (rotacao dos ombros, cintura e desbloqueio da anca)",
           "Passos de ajuste",
-          "Direita sem vidro, esquerda sem vidro, saida de vidro de direita, saida de vidro esquerda",
+          "Direita sem vidro, esquerda sem vidro, voley de direita, voley esquerda",
         ],
       },
       {
@@ -48,6 +48,14 @@ export const Mesocycles: MesocycleType[] = [
         details: [
           "Conceito de semaforo associado a paragem",
           "Verde, amarelo e vermelho",
+        ],
+      },
+      {
+        title: "Correcoes tecnicas - Estabilidade",
+        details: [
+          "Conceito Paparazzi",
+          "Rotacao sobre o eixo corporal",
+          "Descargas eletricas",
         ],
       },
       {

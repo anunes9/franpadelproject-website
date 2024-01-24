@@ -1,6 +1,18 @@
-import { GeistSans } from "geist/font/sans"
 import "./globals.css"
 import { ThemeProviders } from "./theme-providers"
+import localFont from "next/font/local"
+
+const GTAmericaExtendedFont = localFont({
+  src: "../assets/fonts/GTAmericaExtendedMedium.woff2",
+  display: "swap",
+  variable: "--font-gt-america-medium",
+})
+
+const GTAmericaFont = localFont({
+  src: "../assets/fonts/GTAmericaRegular.woff2",
+  display: "swap",
+  variable: "--font-gt-america",
+})
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -18,9 +30,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={GeistSans.className}>
+    <html
+      lang="en"
+      className={`${GTAmericaExtendedFont.variable} ${GTAmericaFont.variable}`}
+    >
       <body className="bg-background text-foreground">
-        <main className="min-h-screen flex flex-col items-center">
+        <main className="min-h-screen">
           <ThemeProviders>{children}</ThemeProviders>
         </main>
       </body>

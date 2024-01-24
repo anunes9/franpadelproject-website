@@ -7,7 +7,22 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-pattern":
+          "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), url('/assets/pattern.png')",
+        "hero-color":
+          "linear-gradient(to top, white 0%, white 50%, #122C49 50%, #122C49 100%)",
+      },
+      backgroundSize: {
+        "100%": "100%",
+      },
+      fontFamily: {
+        projectFontMedium: ["var(--font-gt-america-medium)"],
+        projectFont: ["var(--font-gt-america)"],
+      },
       colors: {
+        projectBlue: "#122C49",
+        projectGreen: "#6bb8a4",
         green: {
           50: "#f3faf7",
           100: "#d7f0e8",
