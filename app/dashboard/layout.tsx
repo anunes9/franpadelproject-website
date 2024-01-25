@@ -17,10 +17,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex-1 w-full flex flex-col">
+    <div className="min-h-screen flex-1 w-full flex flex-col">
       <Sidebar>{children}</Sidebar>
 
-      <Footer />
+      <Footer app />
     </div>
   )
 }

@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-pattern":
-          "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), url('/assets/pattern.png')",
+          "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), linear-gradient(to bottom, transparent 0%, transparent 50%, white 100%), url('/assets/pattern.png')",
         "hero-color":
           "linear-gradient(to top, white 0%, white 50%, #122C49 50%, #122C49 100%)",
+        menu: "url('/assets/menu-background.png')",
       },
       backgroundSize: {
         "100%": "100%",

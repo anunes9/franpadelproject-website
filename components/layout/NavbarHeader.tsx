@@ -14,7 +14,7 @@ export const NavbarHeader = async () => {
   } = await supabase.auth.getSession()
 
   return (
-    <nav className="bg-gray-800 w-full">
+    <nav className="bg-projectBlue w-full">
       <div className="px-8 m-auto lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl flex justify-between items-center py-2 text-sm ">
         <Link href={session ? "/dashboard" : "/"}>
           <Image alt="logo" src={Logo} height={48} />

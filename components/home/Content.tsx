@@ -1,64 +1,55 @@
-import {
-  IconReportAnalytics,
-  IconStairsUp,
-  IconUsersGroup,
-} from "@tabler/icons-react"
-import { ReactNode } from "react"
-import FranMethodology from "@assets/fran-methodology.png"
 import Image from "next/image"
 
-const Features = [
-  {
-    description: "Manage your club and games, record data and analyze it",
-    icon: <IconUsersGroup height={48} width={48} stroke={1} />,
-    title: "Manage your players",
-  },
-  {
-    description: "Improve your understanding of the game and methodology",
-    icon: <IconReportAnalytics height={48} width={48} stroke={1} />,
-    title: "Track your games",
-  },
-  {
-    description: "Improve in court and master your game",
-    icon: <IconStairsUp height={48} width={48} stroke={1} />,
-    title: "Improve in court",
-  },
-]
+const textStyle =
+  "text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[40px] leading-normal text-center font-projectFontMedium"
 
 export const Content = () => (
-  <div className="w-screen lg:h-[36rem] px-12">
-    <Image
-      alt="fran-methodology"
-      src={FranMethodology}
-      width={448}
-      height={448}
-      className="m-auto"
-    />
-
-    <div className="grid grid-cols-1 sm:grid-cols-3 items-stretch gap-20 max-w-screen-lg mx-auto pb-20">
-      {Features.map(({ title, icon, description }) => (
-        <FeatureCard
-          key={title}
-          description={description}
-          icon={icon}
-          title={title}
-        />
-      ))}
+  <>
+    <div
+      id="section-1"
+      className="w-screen bg-projectBlue flex justify-center py-24"
+    >
+      <p className={textStyle}>
+        Focados no crescimento do jogador
+        <br /> a academia desenvolve uma
+        <br /> estratégia atendendo às suas
+        <br /> necessidades específicas.
+      </p>
     </div>
-  </div>
-)
 
-export const FeatureCard = ({
-  icon,
-  description,
-}: {
-  icon: ReactNode
-  description: string
-  title: string
-}) => (
-  <div className="bg-gray-200 dark:bg-green-400/80 p-3 md:p-5 rounded-xl h-40 shadow-md">
-    <div className="mb-4">{icon}</div>
+    <div className="relative bg-hero-color flex flex-col justify-center items-center">
+      <div>
+        <div className="bg-hero-pattern bg-cover h-full w-full absolute left-0 z-[1]" />
+      </div>
 
-    <span className="text-gray-800 dark:text-white text-sm">{description}</span>
-  </div>
+      <Image
+        className=" z-[2]"
+        src="/assets/hero.png"
+        alt="hero"
+        width={800}
+        height={800}
+      />
+
+      <div className="flex flex-col items-center mt-[-72px] mb-24 z-[2]">
+        <Image
+          className="z-10 w-12"
+          src="/assets/quotes.png"
+          alt="quotes"
+          width={100}
+          height={100}
+        />
+
+        <div className="bg-gray-100 shadow-md py-8 xl:py-20 px-4 md:px-16 lg:px-24 xl:px-32 mt-[-12px]">
+          <p className={textStyle}>
+            “Competir é ter a sensação de poder
+            <br /> ganhar ou perder dentro dos 10x20m.
+            <br /> Convido a todos os que procuram
+            <br /> gerir melhor esta dicotomia presente
+            <br /> na vida de um competidor
+            <br />a experimentar o centro de treino”
+          </p>
+        </div>
+      </div>
+    </div>
+  </>
 )

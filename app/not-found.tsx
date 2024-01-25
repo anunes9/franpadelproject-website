@@ -7,8 +7,8 @@ export const NotFound = () => {
   const router = useRouter()
 
   return (
-    <main className="max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl m-auto animate-in">
-      <div className="flex flex-col items-start">
+    <div className="animate-in flex h-screen">
+      <div className="flex flex-col items-start m-auto">
         <p className="mb-2">ERROR 404</p>
 
         <p className="text-xl font-bold mb-4">Oops! Page not found</p>
@@ -21,7 +21,7 @@ export const NotFound = () => {
           Go back
         </Button>
       </div>
-    </main>
+    </div>
   )
 }
 
