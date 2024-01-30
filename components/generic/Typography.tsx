@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 type Heading = "1" | "2" | "3" | "4"
 
 export const Title = ({
@@ -5,7 +7,7 @@ export const Title = ({
   className,
   heading = "2",
 }: {
-  children: string | null
+  children: string | null | ReactNode
   className?: string
   heading?: Heading
 }) => {
@@ -13,7 +15,7 @@ export const Title = ({
     case "1":
       return (
         <h1
-          className={`text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
         >
           {children}
         </h1>
@@ -21,7 +23,7 @@ export const Title = ({
     case "3":
       return (
         <h3
-          className={`text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
         >
           {children}
         </h3>
@@ -29,7 +31,7 @@ export const Title = ({
     case "4":
       return (
         <h3
-          className={`text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
         >
           {children}
         </h3>
@@ -37,7 +39,7 @@ export const Title = ({
     default:
       return (
         <h2
-          className={`text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
         >
           {children}
         </h2>
@@ -49,11 +51,11 @@ export const Text = ({
   children,
   className,
 }: {
-  children?: string | null
+  children?: string | null | ReactNode
   className?: string
 }) => (
   <p
-    className={`text-base font-light text-gray-700 dark:text-gray-200 mb-2 ${className}`}
+    className={`roboto text-base font-light text-gray-900 dark:text-gray-200 mb-2 ${className}`}
   >
     {children}
   </p>

@@ -1,9 +1,8 @@
 import { ExercisesList } from "@/components/exercises/ExercisesList"
-import { ButtonLink } from "@/components/generic/Button"
 import { Tabs } from "@/components/generic/Tabs"
 import { MesocycleDetails } from "@/components/mesocycles/MesocycleDetails"
+import { PlanningHeader } from "@/components/planning/PlanningHeader"
 import { Mesocycles } from "@lib/mesocycles"
-import { IconArrowLeft } from "@tabler/icons-react"
 import { redirect } from "next/navigation"
 
 export default function Page({ params }: { params: { plan: string } }) {
@@ -12,15 +11,7 @@ export default function Page({ params }: { params: { plan: string } }) {
   if (mesocycle)
     return (
       <section>
-        <div className="flex flex-row gap-8">
-          <ButtonLink href="/dashboard/planning">
-            <IconArrowLeft height={18} width={18} className="self-center" />
-          </ButtonLink>
-
-          <div className="h-14 flex flex-1 justify-center self-stretch items-center rounded-lg bg-green-400 font-bold font-mono">
-            MESOCICLO {mesocycle.icon}
-          </div>
-        </div>
+        <PlanningHeader title={`MESOCICLO ${mesocycle.icon}`} />
 
         <Tabs
           tabs={["details", "exercises"]}

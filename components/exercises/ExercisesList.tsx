@@ -11,19 +11,21 @@ export const ExercisesList = ({ exercises }: { exercises: ExerciseType[] }) => {
     null as unknown as ExerciseType | null
   )
 
-  if (exercises.length === 0) return <Text>No exercises to show</Text>
+  if (exercises.length === 0)
+    return <Text className="mt-8">No exercises to show</Text>
 
   if (exercise) {
     return (
-      <ExerciseItemDetails
-        key={exercise.id}
-        id={exercise.id}
-        onClick={() => setExercise(null)}
-        title={exercise.title}
-        description={exercise.description}
-        image={exercise.image}
-        tags={exercise.tags}
-      />
+      <div key={exercise.id} className="mt-8">
+        <ExerciseItemDetails
+          id={exercise.id}
+          onClick={() => setExercise(null)}
+          title={exercise.title}
+          description={exercise.description}
+          image={exercise.image}
+          tags={exercise.tags}
+        />
+      </div>
     )
   }
 

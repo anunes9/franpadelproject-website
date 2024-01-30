@@ -9,7 +9,7 @@ export type MesocycleType = {
   concept: string
   duration: string
   exercises: ExerciseType[]
-  details: { title: string; details: string[] }[]
+  details: { title: string; details: string[]; inset?: boolean }[]
 }
 
 export const Mesocycles: MesocycleType[] = [
@@ -19,7 +19,7 @@ export const Mesocycles: MesocycleType[] = [
     name: "Mesociclo 1",
     concept: "5-in-a-row Concept",
     duration: "4 - 6 weeks",
-    exercises: Exercises.filter(({ id }) => ["1a", "1b"].includes(id)),
+    exercises: Exercises.filter(({ tags }) => tags.includes("mesocycle-1")),
     details: [
       {
         title: "Postura",
@@ -51,12 +51,13 @@ export const Mesocycles: MesocycleType[] = [
         ],
       },
       {
-        title: "Correcoes tecnicas - Estabilidade",
+        title: "Correcoes tecnicas",
         details: [
           "Conceito Paparazzi",
           "Rotacao sobre o eixo corporal",
           "Descargas eletricas",
         ],
+        inset: true,
       },
       {
         title: "Execuçåo",

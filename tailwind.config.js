@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         projectFontMedium: ["var(--font-gt-america-medium)"],
         projectFont: ["var(--font-gt-america)"],
+        roboto: ["var(--font-roboto)"],
       },
       colors: {
         projectBlue: "#122C49",

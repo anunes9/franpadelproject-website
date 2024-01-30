@@ -1,15 +1,12 @@
+import { MesocycleType } from "@/app/lib/mesocycles"
 import { Text, Title } from "@/components/generic/Typography"
 
 export const MesocycleDetails = ({
   mesocycle: { duration, concept, details },
 }: {
-  mesocycle: {
-    duration: string
-    concept: string
-    details: { title: string; details: string[] }[]
-  }
+  mesocycle: MesocycleType
 }) => (
-  <div>
+  <div className="mx-4">
     <Title heading="3" className="mt-8">
       Duration
     </Title>
@@ -27,9 +24,9 @@ export const MesocycleDetails = ({
     </Title>
 
     <div className="pl-4">
-      {details.map(({ title, details }, i) => (
-        <div key={i}>
-          <Text className="mt-4 !font-bold !text-gray-700">{title}</Text>
+      {details.map(({ title, details, inset }, i) => (
+        <div key={i} className={inset ? "ml-4" : ""}>
+          <Text className="mt-4 underline">{title}</Text>
 
           {details.map((d, i) => (
             <Text key={i} className="pl-4">{`- ${d}`}</Text>

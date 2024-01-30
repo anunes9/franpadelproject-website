@@ -1,6 +1,7 @@
 import "./globals.css"
 import { ThemeProviders } from "./theme-providers"
 import localFont from "next/font/local"
+import { Roboto } from "next/font/google"
 
 const GTAmericaExtendedFont = localFont({
   src: "../assets/fonts/GTAmericaExtendedMedium.woff2",
@@ -14,6 +15,11 @@ const GTAmericaFont = localFont({
   variable: "--font-gt-america",
 })
 
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+})
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
   : "http://localhost:3000"
@@ -32,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${GTAmericaExtendedFont.variable} ${GTAmericaFont.variable}`}
+      className={`${GTAmericaExtendedFont.variable} ${GTAmericaFont.variable} ${roboto.className}`}
     >
       <body className="bg-background text-foreground">
         <main className="min-h-screen">
