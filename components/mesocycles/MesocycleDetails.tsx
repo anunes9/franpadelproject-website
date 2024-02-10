@@ -1,4 +1,4 @@
-import { MesocycleType } from "@/app/lib/mesocycles"
+import { MesocycleType } from "@/lib/mesocycles"
 import { Text, Title } from "@/components/generic/Typography"
 
 export const MesocycleDetails = ({

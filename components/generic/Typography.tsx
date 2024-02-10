@@ -28,14 +28,6 @@ export const Title = ({
           {children}
         </h3>
       )
-    case "4":
-      return (
-        <h3
-          className={`roboto text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
-        >
-          {children}
-        </h3>
-      )
     default:
       return (
         <h2

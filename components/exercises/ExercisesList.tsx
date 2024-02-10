@@ -3,7 +3,7 @@
 import { ExerciseItemDetails } from "@/components/exercises/ExercisItemDetails"
 import { ExerciseItem } from "@/components/exercises/ExerciseItem"
 import { Text } from "@/components/generic/Typography"
-import { ExerciseType } from "@/app/lib/exercises"
+import { ExerciseType } from "@/lib/exercises"
 import React from "react"
 
 export const ExercisesList = ({ exercises }: { exercises: ExerciseType[] }) => {

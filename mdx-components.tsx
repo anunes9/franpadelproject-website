@@ -1,36 +1,51 @@
-import { Text, Title } from "@/components/generic/Typography"
 import type { MDXComponents } from "mdx/types"
 import Link from "next/link"
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: (props) => (
-      // <h1 {...props} className="text-2xl text-pale-yellow mt-8 mb-6" />
-      <Title heading="1">{props.children}</Title>
+      <h1
+        {...props}
+        className="roboto text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-6"
+      />
     ),
     h2: (props) => (
-      // <h2 {...props} className="text-xl text-pale-yellow mt-8 mb-6" />
-      <Title heading="2">{props.children}</Title>
+      <h2
+        {...props}
+        className="roboto text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mt-6 mb-4"
+      />
     ),
     h3: (props) => (
-      // <h3 {...props} className="text-lg text-pale-yellow mt-8 mb-6" />
-      <Title heading="3">{props.children}</Title>
+      <h3
+        {...props}
+        className="roboto text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mt-6 mb-4"
+      />
     ),
     h4: (props) => (
-      // <h4 {...props} className="text-base text-pale-yellow mt-8 mb-6" />
-      <Title heading="4">{props.children}</Title>
+      <h4
+        {...props}
+        className="roboto text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mt-6 mb-4"
+      />
     ),
     h5: (props) => (
-      <h5 {...props} className="text-base text-pale-yellow mt-8 mb-6" />
+      <h5
+        {...props}
+        className="roboto text-gray-900 dark:text-gray-100 mt-4 mb-2"
+      />
     ),
     h6: (props) => (
-      <h6 {...props} className="text-base text-pale-yellow mt-8 mb-6" />
+      <h6
+        {...props}
+        className="roboto text-gray-900 dark:text-gray-100 mt-4 mb-2"
+      />
     ),
     p: (props) => (
-      // <p {...props} className="my-4 font-light [&>code]:text-pale-green" />
-      <Text>{props.children}</Text>
+      <p
+        {...props}
+        className="roboto text-base font-light text-gray-900 dark:text-gray-200 mb-2"
+      />
     ),
-    li: (props) => <li {...props} className="my-2 text-base font-light" />,
+    li: (props) => <li {...props} className="my-2 roboto font-light" />,
     ol: (props) => (
       <ol
         {...props}
@@ -39,7 +54,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           paddingLeft: "32px",
           marginBottom: "12px",
         }}
-        className="text-base font-light"
+        className="roboto font-light"
       />
     ),
     ul: (props) => (
@@ -50,7 +65,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           paddingLeft: "32px",
           marginBottom: "12px",
         }}
-        className="text-base font-light"
+        className="roboto font-light"
       />
     ),
     a: (props) => (
@@ -62,10 +77,10 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="text-pale-blue font-medium" {...props} />
+            <span className="roboto text-projectBlue font-medium" {...props} />
           </Link>
         ) : (
-          <a {...props} className="text-pale-blue font-medium" />
+          <a {...props} className="roboto text-projectBlue font-medium" />
         )}
       </span>
     ),

@@ -1,5 +1,5 @@
 import { Text, Title } from "@/components/generic/Typography"
-import { Mesocycles } from "@lib/mesocycles"
+import { Mesocycles } from "@/lib/mesocycles"
 import Link from "next/link"
 
 export default function Page() {

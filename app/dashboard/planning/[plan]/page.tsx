@@ -2,7 +2,7 @@ import { ExercisesList } from "@/components/exercises/ExercisesList"
 import { Tabs } from "@/components/generic/Tabs"
 import { MesocycleDetails } from "@/components/mesocycles/MesocycleDetails"
 import { PlanningHeader } from "@/components/planning/PlanningHeader"
-import { Mesocycles } from "@lib/mesocycles"
+import { Mesocycles } from "@/lib/mesocycles"
 import { redirect } from "next/navigation"
 
 export default function Page({ params }: { params: { plan: string } }) {

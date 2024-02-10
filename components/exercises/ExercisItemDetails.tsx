@@ -1,5 +1,5 @@
 import { Text, Title } from "@/components/generic/Typography"
-import { ExerciseType } from "@/app/lib/exercises"
+import { ExerciseType } from "@/lib/exercises"
 import { Badge } from "@/components/generic/Badge"
 import { Button } from "@/components/generic/Button"
 import { IconChevronLeft } from "@tabler/icons-react"

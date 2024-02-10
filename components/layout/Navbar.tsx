@@ -7,7 +7,7 @@ import { IconMenu, IconX } from "@tabler/icons-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { NavigationLinks } from "@lib/navigation"
+import { NavigationLinks } from "@/lib/navigation"
 
 export const Navbar = () => {
   const pathname = usePathname()

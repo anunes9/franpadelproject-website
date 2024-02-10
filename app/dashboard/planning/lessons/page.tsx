@@ -28,24 +28,19 @@ const Board = () => (
       <CourtColumnMobile />
 
       <TextColumn text="" />
-      <EmptyColumn />
+      <CourtColumn />
       <TextColumn text="" />
-      <EmptyColumnMobile />
+      <CourtColumnMobile />
 
       <TextColumn text="" />
-      <EmptyColumn />
+      <CourtColumn />
       <TextColumn text="" />
-      <EmptyColumnMobile />
+      <CourtColumnMobile />
 
       <TextColumn text="" />
-      <EmptyColumn />
+      <CourtColumn />
       <TextColumn text="" />
-      <EmptyColumnMobile />
-
-      <TextColumn text="" />
-      <EmptyColumn />
-      <TextColumn text="" />
-      <EmptyColumnMobile />
+      <CourtColumnMobile />
 
       <TextColumn text="" />
       <EmptyColumn />
@@ -64,7 +59,7 @@ const Board = () => (
 
       <TextColumn text="Jogo Condicionado" />
       <EmptyColumn />
-      <TextColumn text="5'" />
+      <TextColumn text="10'" />
       <EmptyColumnMobile />
 
       <TextColumn text="Jogo Livre" />

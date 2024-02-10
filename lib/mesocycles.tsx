@@ -1,4 +1,4 @@
-import { ExerciseType, Exercises } from "@/app/lib/exercises"
+import { ExerciseType, Exercises } from "@/lib/exercises"
 import { IconHexagonNumber1, IconHexagonNumber2 } from "@tabler/icons-react"
 import { ReactNode } from "react"
 
