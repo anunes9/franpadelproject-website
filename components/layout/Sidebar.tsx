@@ -1,4 +1,4 @@
-import { LogoutButton } from "@/components/AuthButton"
+import { LogoutButton } from "@/components/LogoutButton"
 import { SidebarItem } from "@/components/layout/SidebarItem"
 import { UserInformation } from "@/components/layout/UserInformation"
 import { Navbar } from "@/components/layout/Navbar"

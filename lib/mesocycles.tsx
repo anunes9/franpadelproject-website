@@ -40,8 +40,17 @@ export const Mesocycles: MesocycleType[] = [
         title: "Mobilidade",
         details: [
           "Tipos de deslocamento (Deslocamento frontal, lateral, regressivo e diagonal)",
-          "Correcoes tecnicas (Superhomem, dartanha, boxeador, passada larga vs passada curta, inclinacao dos ombros, distancia lateral da mao ao centro do corpo)",
         ],
+      },
+      {
+        title: "Correcoes tecnicas",
+        details: [
+          "Superhomem, dartanha, boxeador",
+          "Passada larga vs Passada curta",
+          "Inclinacao dos ombros",
+          "Distancia lateral da mao ao centro do corpo",
+        ],
+        inset: true,
       },
       {
         title: "Estabilidade",
@@ -60,7 +69,7 @@ export const Mesocycles: MesocycleType[] = [
         inset: true,
       },
       {
-        title: "Execuçåo",
+        title: "Execução",
         details: [
           "Terminacao do gesto tecnico",
           "Anatomia (rotacao lado direito e esquerdo)",
@@ -88,15 +97,15 @@ export const Mesocycles: MesocycleType[] = [
       },
       {
         title: "Profundidade",
-        details: ["Ampitude da terminaçåo"],
+        details: ["Amplitude da terminaçåo"],
       },
       {
         title: "Velocidade",
-        details: ["Categorizaçåo 1 - 5"],
+        details: ["Categorização 1 - 5"],
       },
       {
         title: "Aceleraçåo",
-        details: ["Passagem da måo sobre a bola"],
+        details: ["Passagem da mão sobre a bola"],
       },
       {
         title: "Força",

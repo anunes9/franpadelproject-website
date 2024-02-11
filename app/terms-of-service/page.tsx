@@ -8,7 +8,7 @@ export default function TermsOfService() {
       <NavbarHeader />
 
       <div className="px-4 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto my-8">
-        <Title>Terms of Service for Fran Padel Project - Methodology</Title>
+        <Title>Terms of Service </Title>
 
         <Text className="mb-6">Last Updated: 21 Jan 2024</Text>
 

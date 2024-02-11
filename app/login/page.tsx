@@ -1,35 +1,26 @@
 import Link from "next/link"
-import { cookies } from "next/headers"
-import { createClient } from "@/utils/supabase/server"
 import { redirect } from "next/navigation"
 import { IconChevronLeft } from "@tabler/icons-react"
 import FranMethodology from "@assets/fran-methodology.png"
 import Image from "next/image"
 import { Text } from "@/components/generic/Typography"
+import { getSession, handleLogin } from "@/lib/supabase/api"
 
 export default async function Login({
   searchParams,
 }: {
   searchParams: { message: string }
 }) {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore)
-
-  const { data } = await supabase.auth.getSession()
-  if (data.session) redirect("/dashboard")
+  const session = await getSession()
+  if (session) redirect("/dashboard")
 
   const signIn = async (formData: FormData) => {
     "use server"
 
     const email = formData.get("email") as string
     const password = formData.get("password") as string
-    const cookieStore = cookies()
-    const supabase = createClient(cookieStore)
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
+    const error = await handleLogin({ email, password })
 
     if (error) return redirect("/login?message=Could not authenticate user")
     return redirect("/dashboard")

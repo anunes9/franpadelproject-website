@@ -1,6 +1,6 @@
 import { Badge } from "@/components/generic/Badge"
 import { IconUser } from "@tabler/icons-react"
-import { getPlayers } from "@/utils/supabase/api"
+import { getPlayers } from "@/lib/supabase/api"
 
 const PlayerItem = ({ name, rank }: { name: string; rank: string }) => (
   <div className="p-2 w-full">

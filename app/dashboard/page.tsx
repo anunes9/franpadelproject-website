@@ -1,17 +1,16 @@
 import { PlayersTable } from "@/components/players/PlayersTable"
 import { Title } from "@/components/generic/Typography"
-import { getClub, getPlayers } from "@/utils/supabase/api"
+import { getClub, getPlayers } from "@/lib/supabase/api"
 
 export default async function Page() {
-  const club = await getClub()
-  const players = await getPlayers()
+  const [club, players] = await Promise.all([getClub(), getPlayers()])
 
   return (
     <>
       <section className="text-gray-600 body-font bg-zinc-100 rounded-md">
         <div className="container p-4 mx-auto">
           <Title heading="1" className="mb-4">
-            {club.name}
+            {club?.name}
           </Title>
 
           <div className="flex flex-wrap -m-4 text-center">

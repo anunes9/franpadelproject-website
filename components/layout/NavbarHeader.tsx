@@ -1,26 +1,21 @@
 import Image from "next/image"
-import Logo from "@assets/logo_green.svg"
-import AuthButton from "@/components/AuthButton"
 import Link from "next/link"
-import { cookies } from "next/headers"
-import { createClient } from "@/utils/supabase/server"
+import { getSession } from "@/app/supabase-server"
 
 export const NavbarHeader = async () => {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore)
-
-  const {
-    data: { session },
-  } = await supabase.auth.getSession()
+  const session = await getSession()
 
   return (
     <nav className="bg-projectBlue w-full">
-      <div className="px-8 m-auto lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl flex justify-between items-center py-2 text-sm ">
+      <div className="px-8 m-auto lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl flex justify-center py-2 text-sm ">
         <Link href={session ? "/dashboard" : "/"}>
-          <Image alt="logo" src={Logo} height={48} />
+          <Image
+            alt="logo"
+            src="/assets/fran-padel-project-logo-green.svg"
+            height={48}
+            width={128}
+          />
         </Link>
-
-        <AuthButton />
       </div>
     </nav>
   )

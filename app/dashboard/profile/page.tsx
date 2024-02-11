@@ -1,26 +1,15 @@
-import { cookies } from "next/headers"
-import { createClient } from "@/utils/supabase/server"
-import { redirect } from "next/navigation"
 import { Text, Title } from "@/components/generic/Typography"
-import { getAuthUser, getClub, getUser } from "@/utils/supabase/api"
+import { getSession, getClub, getUser } from "@/app/supabase-server"
 
 export default async function Profile() {
-  const cookieStore = cookies()
-  const supabase = createClient(cookieStore)
-
-  const { data } = await supabase.auth.getSession()
-  if (!data.session) redirect("/login")
-
-  const authUser = await getAuthUser()
-  const user = await getUser()
-  const club = await getClub()
+  const [session, user, club] = await Promise.all([
+    getSession(),
+    getUser(),
+    getClub(),
+  ])
 
   return (
     <div className="max-w-md m-auto">
-      <Title heading="1" className="mb-8">
-        Profile
-      </Title>
-
       <Title heading="4" className="mb-2">
         My Club
       </Title>
@@ -34,7 +23,7 @@ export default async function Profile() {
       <Title heading="4" className="mb-2">
         Email
       </Title>
-      <Text className="mb-4">{authUser?.email}</Text>
+      <Text className="mb-4">{session?.user?.email}</Text>
     </div>
   )
 }
