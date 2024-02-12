@@ -3,7 +3,7 @@ import Image from "next/image"
 const textStyle =
   "text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[40px] leading-normal text-center font-projectFontMedium"
 
-const assetsUrl = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_URL
+const assetsUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/public-assets`
 
 export const Content = () => (
   <>

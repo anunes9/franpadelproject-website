@@ -2,7 +2,7 @@ import { getSession } from "@/lib/supabase/api"
 import Image from "next/image"
 import Link from "next/link"
 
-const assetsUrl = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_URL
+const assetsUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/public-assets`
 
 export const NavbarHeader = async () => {
   const session = await getSession()
