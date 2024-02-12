@@ -1,5 +1,5 @@
-import { Text, Title } from "@/components/generic/Typography"
-import { getSession, getClub, getUser } from "@/app/supabase-server"
+import { Title } from "@/components/generic/Typography"
+import { getSession, getClub, getUser } from "@/lib/supabase/api"
 
 export default async function Profile() {
   const [session, user, club] = await Promise.all([
@@ -9,21 +9,25 @@ export default async function Profile() {
   ])
 
   return (
-    <div className="max-w-md m-auto">
-      <Title heading="4" className="mb-2">
-        My Club
-      </Title>
-      <Text className="mb-4">{club?.name}</Text>
+    <div className="flow-root">
+      <Title>Profile</Title>
 
-      <Title heading="4" className="mb-2">
-        Name
-      </Title>
-      <Text className="mb-4">{user?.name}</Text>
+      <dl className="-my-3 divide-y divide-gray-100 text-sm">
+        <div className="grid grid-cols-1 gap-1 py-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+          <dt className="font-medium text-gray-900">Name</dt>
+          <dd className="text-gray-700 sm:col-span-2">{user?.name}</dd>
+        </div>
 
-      <Title heading="4" className="mb-2">
-        Email
-      </Title>
-      <Text className="mb-4">{session?.user?.email}</Text>
+        <div className="grid grid-cols-1 gap-1 py-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+          <dt className="font-medium text-gray-900">Email</dt>
+          <dd className="text-gray-700 sm:col-span-2">{session?.email}</dd>
+        </div>
+
+        <div className="grid grid-cols-1 gap-1 py-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
+          <dt className="font-medium text-gray-900">Club</dt>
+          <dd className="text-gray-700 sm:col-span-2">{club?.name}</dd>
+        </div>
+      </dl>
     </div>
   )
 }
