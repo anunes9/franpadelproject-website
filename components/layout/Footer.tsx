@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 import ThemeSwitch from "@/components/ThemeSwitch"
 
+const assetsUrl = process.env.NEXT_SUPABASE_BUCKET_URL
+
 export const Footer = ({ app }: { app?: boolean }) => (
   <footer
     className={
@@ -12,11 +14,16 @@ export const Footer = ({ app }: { app?: boolean }) => (
   >
     <div className="max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between m-auto">
       <div className="flex items-center gap-4">
-        <Image alt="logo" src="/assets/fr-logo.png" height={32} width={48} />
+        <Image
+          alt="logo"
+          src={`${assetsUrl}/fr-logo.png`}
+          height={32}
+          width={48}
+        />
 
         <a href="https://www.instagram.com/franfreitas.padel/" target="_blank">
           <Image
-            src="/assets/instagram.png"
+            src={`${assetsUrl}/instagram.png`}
             width={32}
             height={32}
             alt="fran-logo"
@@ -37,7 +44,7 @@ export const Footer = ({ app }: { app?: boolean }) => (
           <a href="https://anunes9.github.io/me/" target="_blank">
             <Image
               alt="an-logo"
-              src="/assets/an-logo-color.svg"
+              src={`${assetsUrl}/an-logo-color.svg`}
               height={48}
               width={48}
               className="red-500"

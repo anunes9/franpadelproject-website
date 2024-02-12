@@ -5,6 +5,8 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Link from "next/link"
 
+const assetsUrl = process.env.NEXT_SUPABASE_BUCKET_URL
+
 export const Menu = () => {
   const [open, setOpen] = useState(false)
 
@@ -14,7 +16,12 @@ export const Menu = () => {
         onClick={() => setOpen(true)}
         className="absolute right-8 top-8 cursor-pointer z-10 hover:bg-slate-100/10 p-2 rounded-md"
       >
-        <Image src="/assets/menu.png" alt="menu" width="40" height="60" />
+        <Image
+          src={`${assetsUrl}/menu.png`}
+          alt="menu"
+          width="40"
+          height="60"
+        />
       </button>
 
       <MenuComponent open={open} handleClose={() => setOpen(false)} />
@@ -64,14 +71,24 @@ const textStyle =
 const MenuContent = ({ handleClose }: { handleClose: any }) => (
   <div className="flex h-full flex-col p-4 md:p-12">
     <div className="flex flex-row justify-between items-center">
-      <Image alt="logo" src="/assets/fr-logo.png" height={32} width={80} />
+      <Image
+        alt="logo"
+        src={`${assetsUrl}/fr-logo.png`}
+        height={32}
+        width={80}
+      />
 
       <button
         type="button"
         className="rounded-md hover:bg-slate-100/10 p-2"
         onClick={handleClose}
       >
-        <Image alt="logo" src="/assets/cross.png" height={24} width={24} />
+        <Image
+          alt="logo"
+          src={`${assetsUrl}/cross.png`}
+          height={24}
+          width={24}
+        />
       </button>
     </div>
 

@@ -93,7 +93,9 @@ export const TableOfContents = () => {
       {topics && (
         <div className="flex justify-around gap-4 bg-projectBlue rounded-b-lg p-2">
           {topics.map((t) => (
-            <p className="text-white text-sm">- {t}</p>
+            <p key={t} className="text-white text-sm">
+              - {t}
+            </p>
           ))}
         </div>
       )}

@@ -2,6 +2,8 @@
 
 import Image from "next/image"
 
+const assetsUrl = process.env.NEXT_SUPABASE_BUCKET_URL
+
 export const Arrow = () => {
   const handleClickScroll = () => {
     const element = document.getElementById("section-1")
@@ -17,7 +19,7 @@ export const Arrow = () => {
       onClick={handleClickScroll}
     >
       <Image
-        src="/assets/arrow-down.png"
+        src={`${assetsUrl}/arrow-down.png`}
         alt="arrow-down"
         width="80"
         height="60"
