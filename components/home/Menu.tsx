@@ -5,7 +5,7 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Link from "next/link"
 
-const assetsUrl = process.env.NEXT_SUPABASE_BUCKET_URL
+const assetsUrl = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_URL
 
 export const Menu = () => {
   const [open, setOpen] = useState(false)

@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import ThemeSwitch from "@/components/ThemeSwitch"
 
-const assetsUrl = process.env.NEXT_SUPABASE_BUCKET_URL
+const assetsUrl = process.env.NEXT_PUBLIC_SUPABASE_BUCKET_URL
 
 export const Footer = ({ app }: { app?: boolean }) => (
   <footer
