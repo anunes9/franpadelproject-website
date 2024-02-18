@@ -3,10 +3,6 @@ import Image from "next/image"
 const textStyle =
   "text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[40px] leading-normal text-center font-projectFontMedium"
 
-const assetsUrl = `${decodeURI(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!
-)}/storage/v1/object/public/public-assets`
-
 export const Content = () => (
   <>
     <div
@@ -28,7 +24,7 @@ export const Content = () => (
 
       <Image
         className=" z-[2]"
-        src={`${assetsUrl}/hero.png`}
+        src="/assets/hero.png"
         alt="hero"
         width={800}
         height={800}
@@ -37,7 +33,7 @@ export const Content = () => (
       <div className="flex flex-col items-center mt-[-72px] mb-24 z-[2]">
         <Image
           className="z-10 w-12"
-          src={`${assetsUrl}/quotes.png`}
+          src="/assets/quotes.png"
           alt="quotes"
           width={100}
           height={100}

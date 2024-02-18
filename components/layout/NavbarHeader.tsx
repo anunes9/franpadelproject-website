@@ -2,10 +2,6 @@ import { getSession } from "@/lib/supabase/api"
 import Image from "next/image"
 import Link from "next/link"
 
-const assetsUrl = `${decodeURI(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!
-)}/storage/v1/object/public/public-assets`
-
 export const NavbarHeader = async () => {
   const session = await getSession()
 
@@ -15,7 +11,7 @@ export const NavbarHeader = async () => {
         <Link href={session ? "/dashboard" : "/"}>
           <Image
             alt="logo"
-            src={`${assetsUrl}/fran-padel-project-logo-green.svg`}
+            src="/assets/fran-padel-project-logo-green.svg"
             height={48}
             width={128}
           />
