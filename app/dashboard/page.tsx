@@ -1,48 +1,52 @@
-import { PlayersTable } from "@/components/players/PlayersTable"
-import { Title } from "@/components/generic/Typography"
-import { getClub, getPlayers } from "@/lib/supabase/api"
+import { getClub } from "@/lib/supabase/api"
+import { Mesocycles } from "@/lib/mesocycles"
+import {
+  IconBallTennis,
+  IconNotebook,
+  IconPresentation,
+} from "@tabler/icons-react"
+import { Item } from "@/components/dashboard/Item"
+import { SectionHeader } from "@/components/dashboard/SecionHeader"
 
 export default async function Page() {
-  const [club, players] = await Promise.all([getClub(), getPlayers()])
+  const club = await getClub()
 
   return (
-    <>
-      <section className="text-gray-600 body-font bg-zinc-100 rounded-md">
-        <div className="container p-4 mx-auto">
-          <Title heading="1" className="mb-4">
-            {club?.name}
-          </Title>
+    <section>
+      <SectionHeader title={club?.name} page="O meu clube" />
 
-          <div className="flex flex-wrap -m-4 text-center">
-            <div className="p-4 sm:w-1/4 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                {players?.length}
-              </h2>
-              <p className="leading-relaxed">Players</p>
-            </div>
-            <div className="p-4 sm:w-1/4 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                {players?.length}
-              </h2>
-              <p className="leading-relaxed">Games</p>
-            </div>
-            <div className="p-4 sm:w-1/4 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                35
-              </h2>
-              <p className="leading-relaxed">Downloads</p>
-            </div>
-            <div className="p-4 sm:w-1/4 w-1/2">
-              <h2 className="title-font font-medium sm:text-4xl text-3xl text-gray-900">
-                4
-              </h2>
-              <p className="leading-relaxed">Products</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {Mesocycles.map((item) => (
+          <Item
+            href={`dashboard/planning/${item.id}`}
+            key={item.id}
+            icon={item.icon}
+            title={item.name}
+            details={item.concept}
+          />
+        ))}
 
-      <PlayersTable />
-    </>
+        <Item
+          href="dashboard/methodology"
+          icon={<IconPresentation width={32} height={32} stroke={1.5} />}
+          title="Formação 1"
+          details="Apresentação Mesociclo 1 e 2 e pancadas terrestres"
+        />
+
+        <Item
+          href="dashboard/exercises"
+          icon={<IconBallTennis width={32} height={32} stroke={1.5} />}
+          title="Exercícios"
+          details="Lista de exercícios"
+        />
+
+        <Item
+          href="dashboard/methodology"
+          icon={<IconNotebook width={32} height={32} stroke={1.5} />}
+          title="Metodologia"
+          details="Lista de exercícios"
+        />
+      </div>
+    </section>
   )
 }

@@ -1,6 +1,5 @@
-import Image from "next/image"
-import Logo from "@assets/logo_green.svg"
 import { TableOfContents } from "@/components/methodology/TableOfContents"
+import { SectionHeader } from "@/components/dashboard/SecionHeader"
 
 export default function RootLayout({
   children,
@@ -9,12 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="w-full flex flex-col">
-      <Image
-        alt="fran-methodology"
-        src={Logo}
-        className="m-auto"
-        height={120}
-      />
+      <SectionHeader title="Metodologia" page="Conceitos e informações" />
 
       <TableOfContents />
 

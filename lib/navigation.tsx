@@ -7,25 +7,25 @@ import {
 
 export const NavigationLinks = [
   {
-    name: "Dashboard",
+    name: "O meu clube",
     href: "/dashboard",
     icon: <IconHome width={24} height={24} stroke={1.5} />,
     current: true,
   },
   {
-    name: "Methodology",
+    name: "Metodologia",
     href: "/dashboard/methodology",
     icon: <IconNotebook width={24} height={24} stroke={1.5} />,
     current: false,
   },
   {
-    name: "Planning",
+    name: "Planeamento",
     href: "/dashboard/planning",
     icon: <IconCalendarStats width={24} height={24} stroke={1.5} />,
     current: false,
   },
   {
-    name: "Exercises",
+    name: "Exercícios",
     href: "/dashboard/exercises",
     icon: <IconBallTennis width={24} height={24} stroke={1.5} />,
     current: false,

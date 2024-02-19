@@ -1,4 +1,4 @@
-import { Title } from "@/components/generic/Typography"
+import { SectionHeader } from "@/components/dashboard/SecionHeader"
 import { getSession, getClub, getUser } from "@/lib/supabase/api"
 
 export default async function Profile() {
@@ -10,7 +10,7 @@ export default async function Profile() {
 
   return (
     <div className="flow-root">
-      <Title>Profile</Title>
+      <SectionHeader title="Perfil" page="As minhas informações" />
 
       <dl className="-my-3 divide-y divide-gray-100 text-sm">
         <div className="grid grid-cols-1 gap-1 py-3 even:bg-gray-50 sm:grid-cols-3 sm:gap-4">
