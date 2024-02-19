@@ -12,7 +12,7 @@ export default async function Login({
   searchParams: { message: string }
 }) {
   const session = await getSession()
-  if (session) redirect("/dashboard")
+  if (session) redirect("/club")
 
   const signIn = async (formData: FormData) => {
     "use server"
@@ -23,7 +23,7 @@ export default async function Login({
     const error = await handleLogin({ email, password })
 
     if (error) return redirect("/login?message=Could not authenticate user")
-    return redirect("/dashboard")
+    return redirect("/club")
   }
 
   return (

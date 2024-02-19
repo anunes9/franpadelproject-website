@@ -11,7 +11,7 @@ const Sidebar = ({ children }: { children: ReactNode }) => (
       <div className="flex flex-col w-full">
         <Navbar />
         {/* <div className="flex justify-center border-b border-b-foreground/10 py-4">
-          <Link href="/dashboard">
+          <Link href="/club">
             <Image alt="logo" src={Logo} height={48} />
           </Link>
         </div> */}

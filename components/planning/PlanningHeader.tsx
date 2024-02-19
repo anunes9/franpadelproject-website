@@ -4,7 +4,7 @@ import { ReactNode } from "react"
 
 export const PlanningHeader = ({ icon }: { icon: ReactNode }) => (
   <div className="flex flex-row gap-8">
-    <ButtonLink href="/dashboard/planning">
+    <ButtonLink href="/club/planning">
       <IconArrowLeft height={18} width={18} className="self-center" />
     </ButtonLink>
 

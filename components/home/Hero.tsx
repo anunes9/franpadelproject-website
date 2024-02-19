@@ -23,7 +23,7 @@ export const Hero = () => (
 
     <video
       className="w-screen h-screen h-max-[1000px] object-cover"
-      // autoPlay
+      autoPlay
       loop
       muted
       src="/assets/video.mov"

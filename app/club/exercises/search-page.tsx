@@ -17,7 +17,7 @@ export default function Page() {
     return (
       <>
         <div className="flex rounded-t mb-4 items-center gap-4">
-          <ButtonLink href={`/dashboard/exercises`}>
+          <ButtonLink href={`/club/exercises`}>
             <IconChevronLeft height={24} width={24} />
           </ButtonLink>
           <h3 className="text-3xl font-semibold">{exercise?.title}</h3>
@@ -75,7 +75,7 @@ export default function Page() {
 
       <section className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {Exercises.map(({ id, title, tags, image }) => (
-          <Link key={id} href={`/dashboard/exercises?selected=${id}`}>
+          <Link key={id} href={`/club/exercises?selected=${id}`}>
             <div className="w-full rounded-md bg-gray-200 hover:opacity-75 hover:cursor-pointer sm:py-8">
               <Image
                 height={200}

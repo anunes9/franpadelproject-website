@@ -8,7 +8,7 @@ export const NavbarHeader = async () => {
   return (
     <nav className="bg-projectBlue w-full">
       <div className="px-8 m-auto lg:max-w-screen-lg 2xl:max-w-screen-xl 3xl:max-w-screen-2xl flex justify-center py-2 text-sm ">
-        <Link href={session ? "/dashboard" : "/"}>
+        <Link href={session ? "/club" : "/"}>
           <Image
             alt="logo"
             src="/assets/fran-padel-project-logo-green.svg"

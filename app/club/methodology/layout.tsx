@@ -1,5 +1,5 @@
 import { TableOfContents } from "@/components/methodology/TableOfContents"
-import { SectionHeader } from "@/components/dashboard/SecionHeader"
+import { SectionHeader } from "@/components/club/SecionHeader"
 
 export default function RootLayout({
   children,

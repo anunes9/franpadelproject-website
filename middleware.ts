@@ -16,7 +16,7 @@ export async function middleware(request: NextRequest) {
     } = await supabase.auth.getUser()
 
     // if user is not signed in redirect the user to /auth/login
-    if (request.url.includes("dashboard") && !user) {
+    if (request.url.includes("club") && !user) {
       return NextResponse.redirect(new URL("/login", request.url))
     }
 

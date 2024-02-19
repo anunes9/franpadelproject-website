@@ -1,4 +1,4 @@
-import { SectionHeader } from "@/components/dashboard/SecionHeader"
+import { SectionHeader } from "@/components/club/SecionHeader"
 import { Text } from "@/components/generic/Typography"
 import { Mesocycles } from "@/lib/mesocycles"
 import Link from "next/link"

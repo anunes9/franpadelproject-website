@@ -5,8 +5,8 @@ import {
   IconNotebook,
   IconPresentation,
 } from "@tabler/icons-react"
-import { Item } from "@/components/dashboard/Item"
-import { SectionHeader } from "@/components/dashboard/SecionHeader"
+import { Item } from "@/components/club/Item"
+import { SectionHeader } from "@/components/club/SecionHeader"
 
 export default async function Page() {
   const club = await getClub()
@@ -18,7 +18,7 @@ export default async function Page() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {Mesocycles.map((item) => (
           <Item
-            href={`dashboard/planning/${item.id}`}
+            href={`club/planning/${item.id}`}
             key={item.id}
             icon={item.icon}
             title={item.name}
@@ -27,21 +27,21 @@ export default async function Page() {
         ))}
 
         <Item
-          href="dashboard/methodology"
+          href="club/methodology"
           icon={<IconPresentation width={32} height={32} stroke={1.5} />}
           title="Formação 1"
           details="Apresentação Mesociclo 1 e 2 e pancadas terrestres"
         />
 
         <Item
-          href="dashboard/exercises"
+          href="club/exercises"
           icon={<IconBallTennis width={32} height={32} stroke={1.5} />}
           title="Exercícios"
           details="Lista de exercícios"
         />
 
         <Item
-          href="dashboard/methodology"
+          href="club/methodology"
           icon={<IconNotebook width={32} height={32} stroke={1.5} />}
           title="Metodologia"
           details="Lista de exercícios"

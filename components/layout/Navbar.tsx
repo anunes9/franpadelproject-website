@@ -32,7 +32,7 @@ export const Navbar = () => {
 
               <div className="flex flex-1 items-center justify-center sm:items-stretch">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link href="/dashboard">
+                  <Link href="/club">
                     <Image alt="logo" src={Logo} height={48} />
                   </Link>
                 </div>

@@ -8,25 +8,25 @@ import {
 export const NavigationLinks = [
   {
     name: "O meu clube",
-    href: "/dashboard",
+    href: "/club",
     icon: <IconHome width={24} height={24} stroke={1.5} />,
     current: true,
   },
   {
     name: "Metodologia",
-    href: "/dashboard/methodology",
+    href: "/club/methodology",
     icon: <IconNotebook width={24} height={24} stroke={1.5} />,
     current: false,
   },
   {
     name: "Planeamento",
-    href: "/dashboard/planning",
+    href: "/club/planning",
     icon: <IconCalendarStats width={24} height={24} stroke={1.5} />,
     current: false,
   },
   {
     name: "Exercícios",
-    href: "/dashboard/exercises",
+    href: "/club/exercises",
     icon: <IconBallTennis width={24} height={24} stroke={1.5} />,
     current: false,
   },

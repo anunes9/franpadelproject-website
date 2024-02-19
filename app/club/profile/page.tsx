@@ -1,4 +1,4 @@
-import { SectionHeader } from "@/components/dashboard/SecionHeader"
+import { SectionHeader } from "@/components/club/SecionHeader"
 import { getSession, getClub, getUser } from "@/lib/supabase/api"
 
 export default async function Profile() {

@@ -1,4 +1,4 @@
-import { SectionHeader } from "@/components/dashboard/SecionHeader"
+import { SectionHeader } from "@/components/club/SecionHeader"
 import { ExercisesList } from "@/components/exercises/ExercisesList"
 import { Exercises } from "@/lib/exercises"
 

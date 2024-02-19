@@ -3,14 +3,14 @@
 import { usePathname } from "next/navigation"
 
 const TOC = [
-  { title: "Introdução", href: "/dashboard/methodology" },
+  { title: "Introdução", href: "/club/methodology" },
   {
     title: "Conceito 5 em Linha",
-    href: "/dashboard/methodology/5-in-a-row-concepts",
+    href: "/club/methodology/5-in-a-row-concepts",
   },
   {
     title: "Técnicas Terrestres",
-    href: "/dashboard/methodology/ground-techniques",
+    href: "/club/methodology/ground-techniques",
   },
 ]
 
