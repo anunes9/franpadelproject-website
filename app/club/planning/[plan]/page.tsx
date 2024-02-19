@@ -11,7 +11,7 @@ export default function Page({ params }: { params: { plan: string } }) {
   if (mesocycle)
     return (
       <section>
-        <PlanningHeader icon={mesocycle.icon} />
+        <PlanningHeader title={mesocycle.name} icon={mesocycle.icon} />
 
         <Tabs
           tabs={["details", "exercises"]}
