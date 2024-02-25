@@ -12,7 +12,7 @@ export const Menu = () => {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="absolute right-8 top-8 cursor-pointer z-10 hover:bg-slate-100/10 p-2 rounded-md"
+        className="cursor-pointer z-10 hover:bg-slate-100/10 p-2 rounded-md"
       >
         <Image src="/assets/menu.png" alt="menu" width="40" height="60" />
       </button>

@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'gt-america';
+  src: url('/fonts/GT-America-Regular.OTF');
+}
+
+@font-face {
+  font-family: 'gt-america-medium';
+  src: url('/fonts/GT-America-Medium.OTF');
+}
+
+@font-face {
+  font-family: 'gt-america-medium-extended';
+  src: url('/fonts/GT-America-Extended-Medium.OTF');
+}
+
 @layer base {
   :root {
     --background: 200 20% 98%;  /* #f9fafb */

@@ -13,7 +13,7 @@ export const Arrow = () => {
 
   return (
     <button
-      className="animate-bounce z-10 hover:cursor-pointer"
+      className="animate-bounce z-10 hover:cursor-pointer pb-24"
       onClick={handleClickScroll}
     >
       <Image

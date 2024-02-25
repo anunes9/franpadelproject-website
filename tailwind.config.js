@@ -7,6 +7,12 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "480px", // default mobile
+        md: "768px", // tablet
+        lg: "976px", // desktop
+        xl: "1440px", // large desktop
+      },
       backgroundImage: {
         "hero-pattern":
           "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), linear-gradient(to bottom, transparent 0%, transparent 50%, white 100%), url('/assets/pattern.png')",
@@ -18,8 +24,9 @@ module.exports = {
         "100%": "100%",
       },
       fontFamily: {
-        projectFontMedium: ["var(--font-gt-america-medium)"],
-        projectFont: ["var(--font-gt-america)"],
+        projectFontMedium: ["gt-america-medium"],
+        projectFontMediumExtended: ["gt-america-medium-extended"],
+        projectFont: ["gt-america"],
         roboto: ["var(--font-roboto)"],
       },
       colors: {
