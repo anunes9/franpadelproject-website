@@ -59,19 +59,19 @@ const MenuComponent = ({
 )
 
 const textStyle =
-  "text-white hover:text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[32px] leading-normal text-center font-projectFontMedium"
+  "text-white hover:text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[32px] leading-normal text-center font-projectFontExtended"
 
 const MenuContent = ({ handleClose }: { handleClose: any }) => (
-  <div className="flex h-full flex-col p-4 md:p-12">
+  <div className="flex h-full max-w-[1200px] m-auto flex-col p-4 md:p-12">
     <div className="flex flex-row justify-between items-center">
-      <Image alt="logo" src="/assets/fr-logo.png" height={32} width={80} />
+      <Image alt="logo" src="/assets/fr-logo.png" height={57} width={87} />
 
       <button
         type="button"
         className="rounded-md hover:bg-slate-100/10 p-2"
         onClick={handleClose}
       >
-        <Image alt="logo" src="/assets/cross.png" height={24} width={24} />
+        <Image alt="logo" src="/assets/cross.png" height={38} width={38} />
       </button>
     </div>
 
@@ -91,6 +91,17 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
       <Link className={textStyle} href="/sponsors">
         Sponsors
       </Link>
+    </div>
+
+    <div className="flex justify-center mt-32">
+      <a href="https://www.instagram.com/franfreitas.padel/" target="_blank">
+        <Image
+          src="/assets/instagram.png"
+          width={58}
+          height={58}
+          alt="fran-logo"
+        />
+      </a>
     </div>
   </div>
 )

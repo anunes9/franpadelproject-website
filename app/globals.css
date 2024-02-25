@@ -8,6 +8,11 @@
 }
 
 @font-face {
+  font-family: 'gt-america-extended';
+  src: url('/fonts/GT-America-Extended-Regular.OTF');
+}
+
+@font-face {
   font-family: 'gt-america-medium';
   src: url('/fonts/GT-America-Medium.OTF');
 }

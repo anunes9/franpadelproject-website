@@ -27,6 +27,7 @@ module.exports = {
         projectFontMedium: ["gt-america-medium"],
         projectFontMediumExtended: ["gt-america-medium-extended"],
         projectFont: ["gt-america"],
+        projectFontExtended: ["gt-america-extended"],
         roboto: ["var(--font-roboto)"],
       },
       colors: {
