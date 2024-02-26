@@ -30,6 +30,12 @@ module.exports = {
         projectFontExtended: ["gt-america-extended"],
         roboto: ["var(--font-roboto)"],
       },
+      fontSize: {
+        sm: "14px",
+        base: "16px",
+        lg: "22px",
+        xl: "29px",
+      },
       colors: {
         projectBlue: "#122C49",
         projectGreen: "#6bb8a4",

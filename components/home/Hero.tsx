@@ -8,7 +8,7 @@ export const Hero = () => (
 
     <div className="absolute w-screen h-screen h-max-[1000px] max-w-[1200px]">
       <div className="h-full flex flex-col justify-between items-center">
-        <div className="flex justify-end w-full pr-[80px] pt-[40px]">
+        <div className="flex justify-end w-full pr-6 sm:pr-12 lg:pr-20 pt-6 sm:pt-10">
           <Menu />
         </div>
 

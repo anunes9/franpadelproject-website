@@ -13,14 +13,14 @@ export const Arrow = () => {
 
   return (
     <button
-      className="animate-bounce z-10 hover:cursor-pointer pb-24"
+      className="animate-bounce z-10 hover:cursor-pointer pb-24 w-16 sm:w-20"
       onClick={handleClickScroll}
     >
       <Image
         src="/assets/arrow-down.png"
         alt="arrow-down"
-        width="80"
-        height="60"
+        fill
+        className="!relative"
       />
     </button>
   )
