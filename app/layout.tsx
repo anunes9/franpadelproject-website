@@ -28,7 +28,6 @@ export default function RootLayout({
       lang="en"
       className={`
         ${RobotoFont.className}
-        max-w-[1200px] m-auto
       `}
     >
       <body className="bg-background text-foreground">

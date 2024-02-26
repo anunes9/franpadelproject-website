@@ -4,9 +4,9 @@ import Image from "next/image"
 
 export const Hero = () => (
   <>
-    <div className="absolute w-screen h-screen h-max-[1000px] bg-projectBlue/20 max-w-[1200px]" />
+    <div className="absolute w-screen h-screen h-max-[1000px] bg-projectBlue/20" />
 
-    <div className="absolute w-screen h-screen h-max-[1000px] max-w-[1200px]">
+    <div className="absolute w-screen h-screen h-max-[1000px]">
       <div className="h-full flex flex-col justify-between items-center">
         <div className="flex justify-end w-full pr-6 sm:pr-12 lg:pr-20 pt-6 sm:pt-10">
           <Menu />
@@ -27,7 +27,7 @@ export const Hero = () => (
 
     <video
       className="w-screen h-screen h-max-[1000px] object-cover"
-      // autoPlay
+      autoPlay
       loop
       muted
       src="/assets/video.mov"
