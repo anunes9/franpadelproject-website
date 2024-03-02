@@ -14,9 +14,9 @@ export const Content = () => (
       </p>
     </div>
 
-    <div className="relative bg-hero-color flex flex-col justify-center items-center">
+    <div className="relative bg-heroColor flex flex-col justify-center items-center">
       <div>
-        <div className="bg-hero-pattern bg-cover h-full w-full absolute left-0 z-[1]" />
+        <div className="bg-heroPattern bg-cover h-full w-full absolute left-0 z-[1]" />
       </div>
 
       <Image

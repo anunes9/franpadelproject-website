@@ -14,9 +14,13 @@ module.exports = {
         xl: "1440px", // large desktop
       },
       backgroundImage: {
-        "hero-pattern":
+        blueWhite:
+          "linear-gradient(to bottom, #122C49 0%, #122C49 1075px, white 1075px, white 100%)",
+        blueWhitePattern:
+          "linear-gradient(to bottom, #122C49 0%, rgba(18, 44, 73, 0.5) 1075px, transparent 1075px, white 100%), url('/assets/pattern.png')",
+        heroPattern:
           "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), linear-gradient(to bottom, transparent 0%, transparent 50%, white 100%), url('/assets/pattern.png')",
-        "hero-color":
+        heroColor:
           "linear-gradient(to top, white 0%, white 50%, #122C49 50%, #122C49 100%)",
         menu: "url('/assets/menu-background.png')",
       },
@@ -28,6 +32,7 @@ module.exports = {
         projectFontMediumExtended: ["gt-america-medium-extended"],
         projectFont: ["gt-america"],
         projectFontExtended: ["gt-america-extended"],
+        projectFontExtendedBlack: ["gt-america-extended-black"],
         roboto: ["var(--font-roboto)"],
       },
       fontSize: {
@@ -39,6 +44,7 @@ module.exports = {
       colors: {
         projectBlue: "#122C49",
         projectGreen: "#6bb8a4",
+        projectGray: "#F4F4F4",
         green: {
           50: "#f3faf7",
           100: "#d7f0e8",
@@ -59,6 +65,9 @@ module.exports = {
           "background-hover": "hsl(var(--btn-background-hover))",
         },
         dimmed: "hsl(var(--dimmed))",
+      },
+      boxShadow: {
+        out: "10px 10px 50px 0px rgba(0,0,0,0.75)",
       },
     },
   },

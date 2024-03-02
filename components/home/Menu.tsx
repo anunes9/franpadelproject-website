@@ -83,7 +83,7 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
     </div>
 
     <div className="flex flex-col gap-4 items-center py-12">
-      <Link className={textStyle} href="/academy">
+      <Link className={textStyle} href="/academia">
         Academia
       </Link>
       <Link className={textStyle} href="/padel-clinics">

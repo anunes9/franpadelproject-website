@@ -22,6 +22,11 @@
   src: url('/fonts/GT-America-Extended-Medium.OTF');
 }
 
+@font-face {
+  font-family: 'gt-america-extended-black';
+  src: url('/fonts/GT-America-Extended-Black.OTF');
+}
+
 @layer base {
   :root {
     --background: 200 20% 98%;  /* #f9fafb */
@@ -54,4 +59,24 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.bgOverlay {
+  position: relative;
+  /* height: 1000px; */
+  height: 100%;
+  width: 100%;
+  background-color: #122C49;
+}
+
+.bgOverlay::before {
+    content: "";
+    background-image: url('/assets/pattern.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.05;
 }

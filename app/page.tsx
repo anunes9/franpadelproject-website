@@ -2,7 +2,7 @@ import { Content } from "@/components/home/Content"
 import { Hero } from "@/components/home/Hero"
 import { Footer } from "@/components/layout/Footer"
 
-const Index = () => (
+const Page = () => (
   <div>
     <Hero />
 
@@ -12,4 +12,4 @@ const Index = () => (
   </div>
 )
 
-export default Index
+export default Page
