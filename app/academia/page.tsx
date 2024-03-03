@@ -1,5 +1,5 @@
-import { Menu } from "@/components/home/Menu"
 import { Footer } from "@/components/layout/Footer"
+import { HeaderBlue } from "@/components/layout/Header"
 import Image from "next/image"
 
 const Page = () => (
@@ -9,20 +9,20 @@ const Page = () => (
     </div>
 
     <div className="relative max-w-[1200px] m-auto z-1">
-      <Header title="Academia" />
+      <HeaderBlue title="Academia" />
 
-      <div className="flex flex-row items-center justify-between mt-[100px] w-[1027px] m-auto">
-        <div className="w-[418px] h-[831px] z-10 mr-[-180px] shadow-out">
+      <div className="flex flex-col sm:flex-row items-center justify-between mt-12 sm:mt-[100px] sm:w-[1027px] m-auto">
+        <div className="w-3/4 sm:w-[418px] h-full sm:h-[831px] z-10 sm:mr-[-180px] shadow-out">
           <Image
             alt="fran-logo"
-            src="/assets/academia/fran-academia.png"
+            src="/assets/fran-academia.png"
             fill
             className="!relative"
           />
         </div>
 
-        <div className="bg-projectGreen py-12 w-[787px] h-[940px] pr-8 flex items-center">
-          <p className="ml-[230px] font-projectFontExtended text-lg leading-normal text-white">
+        <div className="bg-projectGreen py-12 sm:w-[787px] sm:h-[940px] px-8 sm:pr-8 flex items-center mt-[-200px] sm:mt-0 pt-[240px] sm:pt-0">
+          <p className="sm:ml-[230px] font-projectFontExtended text-base sm:text-lg leading-normal text-white">
             A Academia FRAN Padel project <br />é um{" "}
             <span className="font-projectFontMediumExtended">
               espaço de aprendizagem e formação
@@ -44,26 +44,26 @@ const Page = () => (
         </div>
       </div>
 
-      <div className="bg-projectGray w-[1027px] m-auto p-[68px] mt-[177px] mb-[151px]">
-        <div className="flex flex-row items-center justify-between">
-          <div className="w-[386px]">
+      <div className="bg-projectGray sm:w-[1027px] m-auto p-10 sm:p-[68px] mt-24 sm:mt-[177px] mb-[151px]">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-8">
+          <div className="w-3/4 m-auto sm:w-[386px]">
             <Image
               alt="fran-logo"
-              src="/assets/academia/cv-fran.png"
+              src="/assets/cv-fran.png"
               fill
               className="!relative"
             />
           </div>
 
-          <div className="font-projectFontMedium text-lg text-projectBlue mr-[80px]">
+          <div className="font-projectFontMedium text-base sm:text-lg text-projectBlue sm:mr-[80px]">
             <ul className="list-disc">
-              <li className="mb-8">
+              <li className="sm:mb-8">
                 Fundador{" "}
                 <span className="font-projectFontMediumExtended font-bold">
                   FRAN Padel Project
                 </span>
               </li>
-              <li className="mb-8">
+              <li className="sm:mb-8">
                 Criador{" "}
                 <span className="font-projectFontMediumExtended font-bold">
                   FRAN Methodology
@@ -74,7 +74,7 @@ const Page = () => (
           </div>
         </div>
 
-        <div className="flex flex-col justify-center w-fit m-auto font-projectFontMedium text-lg leading-relaxed text-projectBlue mt-14">
+        <div className="flex flex-col justify-center w-fit m-auto font-projectFontMedium text-base sm:text-lg leading-relaxed text-projectBlue sm:mt-14">
           <ul className="list-disc">
             <li>Horácio Alvarez Clementi, “HAC”, Ambassador; </li>
             <li>
@@ -121,26 +121,3 @@ const Page = () => (
 )
 
 export default Page
-
-const Header = ({ title }: { title: string }) => (
-  <div className="relative flex h-full m-auto flex-col px-4 py-6 md:p-12">
-    <div className="flex flex-row justify-between items-center">
-      <div className="w-16 sm:w-24 ml-4 sm:ml-0">
-        <Image
-          alt="fran-logo"
-          src="/assets/fr-logo.png"
-          fill
-          className="!relative"
-        />
-      </div>
-
-      <Menu />
-    </div>
-
-    <div>
-      <p className="font-projectFontExtendedBlack text-[90px] text-projectGreen underline underline-offset-8 decoration-4 text-center leading-[108px]">
-        {title}
-      </p>
-    </div>
-  </div>
-)

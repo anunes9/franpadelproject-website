@@ -23,6 +23,7 @@ module.exports = {
         heroColor:
           "linear-gradient(to top, white 0%, white 50%, #122C49 50%, #122C49 100%)",
         menu: "url('/assets/menu-background.png')",
+        headerPattern: "url('/assets/header-pattern.png')",
       },
       backgroundSize: {
         "100%": "100%",

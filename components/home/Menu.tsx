@@ -5,16 +5,31 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Link from "next/link"
 
-export const Menu = () => {
+export const Menu = ({ variant = "blue" }: { variant: "green" | "blue" }) => {
   const [open, setOpen] = useState(false)
 
   return (
     <>
       <button
         onClick={() => setOpen(true)}
-        className="cursor-pointer z-10 hover:bg-slate-100/10 p-2 rounded-md"
+        className="cursor-pointer z-10 hover:bg-slate-100/10 rounded-md w-7 sm:w-10"
       >
-        <Image src="/assets/menu.png" alt="menu" width="40" height="60" />
+        {variant === "green" && (
+          <Image
+            src="/assets/menu-green.svg"
+            alt="menu"
+            fill
+            className="!relative"
+          />
+        )}
+        {variant === "blue" && (
+          <Image
+            src="/assets/menu-blue.svg"
+            alt="menu"
+            fill
+            className="!relative"
+          />
+        )}
       </button>
 
       <MenuComponent open={open} handleClose={() => setOpen(false)} />
@@ -95,8 +110,8 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
       <Link className={textStyle} href="/pro-players">
         Pro Players
       </Link>
-      <Link className={textStyle} href="/sponsors">
-        Sponsors
+      <Link className={textStyle} href="/patrocinadores">
+        Patrocinadores
       </Link>
     </div>
 
