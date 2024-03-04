@@ -5,7 +5,7 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Link from "next/link"
 
-export const Menu = ({ variant = "blue" }: { variant: "green" | "blue" }) => {
+export const Menu = ({ variant }: { variant: "green" | "blue" }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -101,7 +101,7 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
       <Link className={textStyle} href="/academia">
         Academia
       </Link>
-      <Link className={textStyle} href="/padel-clinics">
+      <Link className={textStyle} href="/clinicas-padel">
         Clinicas de Padel
       </Link>
       <Link className={textStyle} href="/login">

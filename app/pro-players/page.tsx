@@ -1,6 +1,6 @@
-import { Players } from "@/app/pro-players/[player]/page"
 import { Footer } from "@/components/layout/Footer"
 import { HeaderBlue } from "@/components/layout/Header"
+import { Players } from "@/lib/content"
 import Image from "next/image"
 import Link from "next/link"
 
