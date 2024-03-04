@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const Footer = () => (
-  <footer className="bg-projectBlue w-full text-white flex flex-col justify-center py-12 sm:h-[280px]">
+  <footer className="relative bg-projectBlue w-full text-white flex flex-col justify-center py-12 sm:h-[280px]">
     <div className="w-[90%] max-w-[1200px] mx-auto flex flex-col sm:flex-row gap-6 sm:gap-0 items-center justify-between mb-4 md:px-12">
       <div className="relative w-20 sm:w-24 lg:w/28">
         <Image

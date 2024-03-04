@@ -63,7 +63,7 @@ const MenuComponent = ({
             // leaveFrom="translate-x-0"
             // leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="pointer-events-auto relative w-screen bg-menu bg-contain sm:bg-cover bg-top sm:bg-center">
+            <Dialog.Panel className="pointer-events-auto relative w-screen bg-menu bg-cover bg-top sm:bg-center">
               <MenuContent handleClose={handleClose} />
             </Dialog.Panel>
           </Transition.Child>
