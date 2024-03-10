@@ -17,18 +17,18 @@ export default function Page({ params }: { params: { player: string } }) {
         <div className="relative max-w-[1200px] m-auto z-1">
           <HeaderBlue title="Pro Players" />
 
-          <div className="bg-projectGray sm:w-[1027px] sm:h-[949px] m-auto px-10 pt-10 pb-20 sm:p-[68px] mt-24 sm:mt-[177px] sm:mb-[151px]">
-            <div className="grid grid-cols-1 sm:grid-cols-2 mt-12 gap-16 sm:gap-8">
-              <div className="grid-item h-[357px]">
+          <div className="bg-projectGray lg:w-[1027px] sm:h-[949px] m-auto px-10 pt-10 pb-20 sm:p-[68px] mt-12 sm:mt-24 lg:mt-[177px] sm:mb-[151px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:mt-12 gap-16 sm:gap-8">
+              <div className="grid-item h-[357px] w-fit m-auto">
                 <Image
                   alt="pro1"
                   src={player.image}
                   fill
-                  className="!relative sm:!w-fit mx-auto"
+                  className="!relative mx-auto"
                 />
               </div>
 
-              <div className="grid-item px-4 sm:px-0">
+              <div className="grid-item px-4 sm:px-0 lg:py-8 xl:py-0">
                 <div className="font-projectFontMedium text-base sm:text-lg leading-relaxed text-projectBlue">
                   <ul className="list-disc">
                     <li>{`Data de nascimento: ${player.dob}`}</li>

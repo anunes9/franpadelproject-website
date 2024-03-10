@@ -24,7 +24,7 @@ const Page = () => (
         </div>
 
         <div className="bg-projectGreen py-12 sm:w-[200px] lg:w-[787px] px-8 sm:pr-8 flex flex-1 mt-[-220px] sm:mt-0 pt-[240px] sm:pt-20">
-          <p className="sm:ml-[250px] font-projectFontExtended text-base sm:text-lg leading-normal text-white">
+          <p className="mx-auto sm:mr-0 sm:ml-[250px] font-projectFontExtended text-base sm:text-lg leading-normal text-white">
             O centro de treino acolhe
             <br />
             o ramo do padel profissional
@@ -46,7 +46,7 @@ const Page = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-28">
           {Players.map((p) => (
             <Link
-              className={`grid-item max-h-[357px] sm:h-[257px] lg:h-[357px] mx-auto hover:cursor-pointer hover:bg-gray-200 col-start-${p.colStart}`}
+              className={`grid-item w-3/4 sm:w-fit max-h-[357px] sm:h-[257px] lg:h-[357px] mx-auto hover:cursor-pointer hover:bg-gray-200 col-start-${p.colStart}`}
               href={`/pro-players/${p.name}`}
               key={p.name}
             >
@@ -54,7 +54,7 @@ const Page = () => (
                 alt="pro1"
                 src={p.image}
                 fill
-                className="!relative !w-fit mx-auto"
+                className="!relative mx-auto"
               />
             </Link>
           ))}

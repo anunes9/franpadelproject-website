@@ -11,8 +11,8 @@ const Page = () => (
     <div className="relative max-w-[1200px] m-auto z-1">
       <HeaderBlue title="Academia" />
 
-      <div className="flex flex-col sm:flex-row items-center justify-between mt-12 sm:mt-[100px] sm:w-[1027px] m-auto">
-        <div className="w-3/4 sm:w-[418px] h-full sm:h-[831px] z-10 sm:mr-[-180px] shadow-out">
+      <div className="flex flex-col sm:flex-row items-center justify-between mt-12 sm:mt-[100px] lg:w-[1027px] m-auto">
+        <div className="w-3/4 sm:w-1/3 lg:w-[418px] h-full lg:h-[831px] z-10 sm:mr-[-80px] lg:mr-[-180px] shadow-out">
           <Image
             alt="fran-logo"
             src="/assets/fran-academia.png"
@@ -21,8 +21,8 @@ const Page = () => (
           />
         </div>
 
-        <div className="bg-projectGreen py-12 sm:w-[787px] sm:h-[940px] px-8 sm:pr-8 flex items-center mt-[-200px] sm:mt-0 pt-[240px] sm:pt-0">
-          <p className="sm:ml-[230px] font-projectFontExtended text-base sm:text-lg leading-normal text-white">
+        <div className="bg-projectGreen py-12 w-3/4 lg:w-[787px] sm:h-[540px] lg:h-[940px] px-8 lg:pr-8 flex items-center mt-[-200px] sm:mt-0 pt-[240px] sm:pt-0">
+          <p className="sm:ml-[100px] lg:ml-[230px] font-projectFontExtended text-base lg:text-lg leading-normal text-white">
             A Academia FRAN Padel project <br />é um{" "}
             <span className="font-projectFontMediumExtended">
               espaço de aprendizagem e formação
@@ -44,7 +44,7 @@ const Page = () => (
         </div>
       </div>
 
-      <div className="bg-projectGray sm:w-[1027px] m-auto p-10 sm:p-[68px] mt-24 sm:mt-[177px] mb-[151px]">
+      <div className="bg-projectGray lg:w-[1027px] m-auto sm:p-[68px] mt-24 sm:mt-[177px] mb-[151px]">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-8">
           <div className="w-3/4 m-auto sm:w-[386px]">
             <Image
@@ -55,7 +55,7 @@ const Page = () => (
             />
           </div>
 
-          <div className="font-projectFontMedium text-base sm:text-lg text-projectBlue sm:mr-[80px]">
+          <div className="hidden sm:block font-projectFontMedium text-sm sm:text-base lg:text-lg text-projectBlue sm:mr-[80px]">
             <ul className="list-disc">
               <li className="sm:mb-8">
                 Fundador{" "}
@@ -74,8 +74,11 @@ const Page = () => (
           </div>
         </div>
 
-        <div className="flex flex-col justify-center w-fit m-auto font-projectFontMedium text-base sm:text-lg leading-relaxed text-projectBlue sm:mt-14">
+        <div className="flex flex-col justify-center w-fit m-auto font-projectFontMedium text-sm sm:text-base lg:text-lg leading-relaxed text-projectBlue sm:mt-14 pb-8 px-14 sm:px-0">
           <ul className="list-disc">
+            <li className="sm:hidden mt-12">Fundador FRAN Padel Project </li>
+            <li className="sm:hidden">Criador FRAN Methodology</li>
+            <li className="sm:hidden">Head Coach</li>
             <li>Horácio Alvarez Clementi, “HAC”, Ambassador; </li>
             <li>
               Technical Coach & Sparring in Horácio Alvarez Clementi

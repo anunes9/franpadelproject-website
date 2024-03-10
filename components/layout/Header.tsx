@@ -3,12 +3,12 @@ import Image from "next/image"
 import Link from "next/link"
 
 const titleStyle =
-  "font-projectFontExtendedBlack text-xl sm:text-[90px]  underline underline-offset-8 decoration-4 text-center"
+  "font-projectFontExtendedBlack text-xl sm:text-[54px] lg:text-[90px]  underline underline-offset-8 decoration-4 text-center"
 
 export const HeaderGreen = ({ title }: { title: string }) => (
-  <div className="h-48 sm:h-[396px] bg-projectGreen">
+  <div className="h-48 sm:h-[296px] lg:h-[396px] bg-projectGreen">
     <div>
-      <div className="absolute left-0 w-full h-48 sm:h-[396px] z-1 bg-headerPattern bg-cover" />
+      <div className="absolute left-0 w-full h-48 sm:h-[296px] lg:h-[396px] z-1 bg-headerPattern bg-cover" />
     </div>
 
     <div className="relative flex flex-col gap-4 sm:gap-8 px-4 py-6 md:p-12 max-w-[1200px] m-auto">
@@ -17,7 +17,7 @@ export const HeaderGreen = ({ title }: { title: string }) => (
           <Link href="/">
             <Image
               alt="fran-logo"
-              src="/assets/fr-logo.png"
+              src="/assets/LOGO_FR_BLUE.png"
               fill
               className="!relative"
             />

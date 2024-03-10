@@ -1,30 +1,30 @@
-import { redirect, useSearchParams } from "next/navigation"
+import { redirect } from "next/navigation"
 import FranMethodology from "@assets/fran-methodology.png"
 import Image from "next/image"
-import { getSession, handleUpdatePassword } from "@/lib/supabase/api"
+import { getSession2, handleUpdatePassword } from "@/lib/supabase/api"
 import Link from "next/link"
 import { IconChevronLeft } from "@tabler/icons-react"
 
 export default async function Login({
   searchParams,
 }: {
-  searchParams: { message: string }
+  searchParams: { message: string; code: string }
 }) {
-  const session = await getSession()
-  if (session) redirect("/club")
+  const session = await getSession2()
 
   const resetPassword = async (formData: FormData) => {
     "use server"
 
     const password = formData.get("password") as string
-    const confirmPassword = formData.get("confirmPassword") as string
 
-    const searchParams = useSearchParams()
-    const code = searchParams.get("token") || ""
+    console.log("session", session)
+    console.log("code", searchParams.code)
 
     if (password) {
-      console.log("code", code)
-      const error = await handleUpdatePassword({ code, password })
+      const error = await handleUpdatePassword({
+        code: searchParams.code,
+        password,
+      })
 
       if (error) return redirect("/recover?message=Could not authenticate user")
       return redirect("/club")
@@ -67,18 +67,6 @@ export default async function Login({
             placeholder="••••••••"
             required
           />
-
-          {/* <label className="text-md" htmlFor="password">
-            Confirm new password
-          </label>
-
-          <input
-            className="rounded-md px-4 py-2 bg-inherit border mb-6"
-            type="password"
-            name="confirmPassword"
-            placeholder="••••••••"
-            required
-          /> */}
 
           <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
             Confirm

@@ -13,6 +13,18 @@ export const getAssetsUrl = (filePath: string) => {
   return data.publicUrl
 }
 
+export async function getSession2() {
+  const supabase = createServerSupabaseClient()
+  try {
+    const { data } = await supabase.auth.getSession()
+    console.log("data session", data)
+    return data
+  } catch (error) {
+    console.error("Error:", error)
+    return null
+  }
+}
+
 export async function getSession() {
   const supabase = createServerSupabaseClient()
   try {
