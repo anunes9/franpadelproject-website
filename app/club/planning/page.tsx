@@ -1,6 +1,8 @@
 import { SectionHeader } from "@/components/club/SecionHeader"
 import { Text } from "@/components/generic/Typography"
 import { Mesocycles } from "@/lib/mesocycles"
+import { getAssetsUrl } from "@/lib/supabase/api"
+import { IconDownload } from "@tabler/icons-react"
 import Link from "next/link"
 
 export default function Page() {
@@ -26,16 +28,19 @@ export default function Page() {
         ))}
 
         <Link
-          href={`planning}`}
+          href={`${getAssetsUrl("Fran Methodology - Meso 1-2.pdf")}?download`}
           className="hover:opacity-75 hover:cursor-pointer shadow-md rounded-md"
         >
-          <div className="h-20 flex justify-center gap-2 self-stretch items-center w-full rounded-lg bg-green-400 font-bold font-mono">
-            Formação 1
+          <div className="h-20 flex justify-center gap-2 self-stretch items-center w-full rounded-lg bg-green-400 font-bold font-mono px-4">
+            Apresentação Mesociclo 1 e 2 - Pancadas Terrestres
           </div>
 
-          <Text className="font-semibold text-center mt-2 px-2">
-            Apresentação Mesociclo 1 e 2 e pancadas terrestres
-          </Text>
+          <div className="flex flex-row justify-center items-center">
+            <IconDownload height={24} width={24} />
+            <Text className="font-semibold text-center mt-2 px-2">
+              Download
+            </Text>
+          </div>
         </Link>
 
         <Link

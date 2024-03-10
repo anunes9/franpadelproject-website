@@ -101,6 +101,8 @@ export const Clinics = [
     height: 112,
     color: "Blue",
     colStart: 1,
+    description:
+      "Se gostavas de ter viver uma experiência de padel intensivo em Espanha, numa academia que funciona como um complemento ao método aplicado no centro de treino, então faz por juntar 8 a 16 pessoas para puderem embarcar nesta aventura.",
   },
   {
     name: "train-as-a-pro",
@@ -109,6 +111,8 @@ export const Clinics = [
     height: 84,
     color: "Green",
     colStart: 2,
+    description:
+      "Um produto destinado a todos os jogadores de carácter social que ambicionem viver uma experiência de cinco dias, com as rotinas de treinos de padel, fisico, jogos e sessões de coaching com foco na análise técnica, táctica e técnico-táctica, idêntica a um jogador professional.",
   },
   {
     name: "master-clinic-evolution",
@@ -117,6 +121,8 @@ export const Clinics = [
     height: 116,
     color: "Green",
     colStart: 1,
+    description:
+      "Um produto formativo de segmento internacional que reúne jogadores, treinadores e preparadores físicos, estrangeiros e nacionais, na aplicação do método aplicado no centro de treino na transmissão de conhecimentos técnicos, táticos e físicos.",
   },
   {
     name: "padel-wonderland",
@@ -125,6 +131,8 @@ export const Clinics = [
     height: 70,
     color: "Blue",
     colStart: 2,
+    description:
+      "Um evento que promove a criação de uma aldeia de padel dentro de um clube anfitrião com a recepção de jogadores, treinadores e preparadores físicos, de carácter nacional e internacional. Palestras técnico-tacticos, sessão de autógrafos, jogos de padel e ações de formação orientadas para jogadores e treinadores de segmento social e profissional.",
   },
   {
     name: "master-clinic",
@@ -133,6 +141,8 @@ export const Clinics = [
     height: 93,
     color: "Blue",
     colStart: 1,
+    description:
+      "Produto formativo de segmento nacional que procura dar a conhecer o método aplicado no centro de treino com elementos pertencentes há equipa técnica de Fran Padel Project a clubes com a ambição de conhecer a nossa perspectiva sobre o padel.",
   },
   {
     name: "padel-company-big-day",
@@ -141,12 +151,15 @@ export const Clinics = [
     height: 133,
     color: "Green",
     colStart: 2,
+    description:
+      "Uma actividade formativa direcionada a empresas com interesse em promover actividades de team building junto dos seus colaboradores com o padel a ter um papel de destaque na promoção de competências relacionadas com o trabalhar em grupo, comunicação efectiva, atitude positiva, gerir emoções (raiva, alegria, medo) e saber estar de acordo com o contexto. Uma ótima oportunidade para dinamizar e incentivar os colaboradores de uma empresa a praticarem exercício físico num ambiente descontraído.",
   },
   {
     name: "",
     image: null,
     color: "Green",
     colStart: 1,
+    description: "",
   },
   {
     name: "play-like-a-pro",
@@ -155,5 +168,7 @@ export const Clinics = [
     height: 92,
     color: "Blue",
     colStart: 2,
+    description:
+      "Um produto que promove uma experiência ao interessado em partilhar um campo de padel como adversário e parceiro de um jogador professional durante um jogo de 1h com uma rotatividade de 20 minutos em cada função.",
   },
 ]

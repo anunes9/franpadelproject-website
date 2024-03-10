@@ -11,20 +11,20 @@ export default function Page({ params }: { params: { player: string } }) {
     return (
       <div className="bg-blueWhite">
         <div>
-          <div className="bg-blueWhitePattern bg-cover h-[1820px] w-full absolute left-0" />
+          <div className="bg-blueWhitePattern bg-cover h-full sm:h-[1820px] w-full absolute left-0" />
         </div>
 
         <div className="relative max-w-[1200px] m-auto z-1">
           <HeaderBlue title="Pro Players" />
 
-          <div className="bg-projectGray sm:w-[1027px] h-[949px] m-auto p-10 sm:p-[68px] mt-24 sm:mt-[177px] mb-[151px]">
+          <div className="bg-projectGray sm:w-[1027px] sm:h-[949px] m-auto px-10 pt-10 pb-20 sm:p-[68px] mt-24 sm:mt-[177px] sm:mb-[151px]">
             <div className="grid grid-cols-1 sm:grid-cols-2 mt-12 gap-16 sm:gap-8">
               <div className="grid-item h-[357px]">
                 <Image
                   alt="pro1"
                   src={player.image}
                   fill
-                  className="!relative !w-fit mx-auto"
+                  className="!relative sm:!w-fit mx-auto"
                 />
               </div>
 

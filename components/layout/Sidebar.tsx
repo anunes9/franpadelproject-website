@@ -1,4 +1,4 @@
-import { LogoutButton } from "@/components/LogoutButton"
+import { LogoutButtonMobile, LogoutButton } from "@/components/LogoutButton"
 import { SidebarItem } from "@/components/layout/SidebarItem"
 import { UserInformation } from "@/components/layout/UserInformation"
 import { Navbar } from "@/components/layout/Navbar"
@@ -9,12 +9,7 @@ const Sidebar = ({ children }: { children: ReactNode }) => (
   <div className="flex flex-col sm:flex-row flex-auto">
     <nav className="flex sm:w-64 border-r border-r-foreground/10">
       <div className="flex flex-col w-full">
-        <Navbar />
-        {/* <div className="flex justify-center border-b border-b-foreground/10 py-4">
-          <Link href="/club">
-            <Image alt="logo" src={Logo} height={48} />
-          </Link>
-        </div> */}
+        <Navbar logoutButton={<LogoutButtonMobile />} />
 
         <ul className="hidden sm:block mx-2 py-4 space-y-1 font-light">
           {NavigationLinks.map(({ name, href, icon }, i) => (

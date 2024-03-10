@@ -36,7 +36,7 @@ export const Content = () => (
           />
         </div>
 
-        <div className="bg-gray-100 shadow-md py-8 xl:py-20 px-4 md:px-16 lg:px-24 xl:px-32 mt-[-12px]">
+        <div className="bg-gray-100 shadow-green py-8 xl:py-20 px-4 md:px-16 lg:px-24 xl:px-32 mt-[-12px]">
           <p className="text-projectGreen text-base md:text-lg lg:text-xl text-center font-projectFontMediumExtended z-[2]">
             “Competir é ter a sensação de poder
             <br /> ganhar ou perder dentro dos 10x20m.

@@ -27,26 +27,26 @@ export const ExerciseItemDetails = ({
       <Title className="font-semibold !mb-0">{title}</Title>
     </div>
 
-    <div className="mx-4 w-[80%] self-center">
-      <Image
-        height={200}
-        width={200}
-        src={image}
-        alt={title}
-        className="w-full object-contain"
-      />
+    <div className="flex gap-1 flex-wrap mb-6">
+      {tags.map((t, i) => (
+        <Badge text={t} key={i} />
+      ))}
+    </div>
 
-      <Text className="!font-semibold mt-4">Description</Text>
+    <div className="lg:w-4/5 lg:mx-auto">
+      <Image alt="title" src={image} fill className="!relative" />
+    </div>
 
-      <div className="mb-4">
+    <div className="lg:w-4/5 mx-auto">
+      {description.length > 0 && (
+        <Text className="!font-semibold text-lg my-4">
+          Detalhes do exercício
+        </Text>
+      )}
+
+      <div className="m-4">
         {description.map((t, i) => (
           <Text key={i}>{`- ${t}`}</Text>
-        ))}
-      </div>
-
-      <div className="flex gap-1 flex-wrap">
-        {tags.map((t, i) => (
-          <Badge text={t} key={i} />
         ))}
       </div>
     </div>

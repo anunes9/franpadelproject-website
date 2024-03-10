@@ -5,10 +5,6 @@ import { usePathname } from "next/navigation"
 const TOC = [
   { title: "Introdução", href: "/club/methodology" },
   {
-    title: "Conceito 5 em Linha",
-    href: "/club/methodology/5-in-a-row-concepts",
-  },
-  {
     title: "Técnicas Terrestres",
     href: "/club/methodology/ground-techniques",
   },

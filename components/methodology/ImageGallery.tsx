@@ -1,19 +1,18 @@
+import { getAssetsUrl } from "@/lib/supabase/api"
 import Image from "next/image"
 
-const assetsUrl = `${decodeURI(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!
-)}/storage/v1/object/public/public-assets`
-
 export const ImageGallery = ({ images }: { images: string[] }) => (
-  <div className="flex flex-col lg:flex-row mt-8 gap-2">
+  <div className="flex flex-row mt-8 gap-2 flex-wrap">
     {images.map((img, i) => (
-      <Image
-        key={i}
-        src={`${assetsUrl}/${img}`}
-        alt="img"
-        width={120}
-        height={180}
-      />
+      <div className="w-32 lg:w-64">
+        <Image
+          key={i}
+          src={getAssetsUrl(img)}
+          alt="img"
+          fill
+          className="!relative"
+        />
+      </div>
     ))}
   </div>
 )

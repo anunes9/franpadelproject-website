@@ -1,4 +1,3 @@
-import { ExerciseType, Exercises } from "@/lib/exercises"
 import { IconHexagonNumber1, IconHexagonNumber2 } from "@tabler/icons-react"
 import { ReactNode } from "react"
 
@@ -8,7 +7,7 @@ export type MesocycleType = {
   name: string
   concept: string
   duration: string
-  exercises: ExerciseType[]
+  filter: string
   details: { title: string; details: string[]; inset?: boolean }[]
 }
 
@@ -19,7 +18,7 @@ export const Mesocycles: MesocycleType[] = [
     name: "Mesociclo 1",
     concept: "5-in-a-row Concept",
     duration: "4 - 6 weeks",
-    exercises: Exercises.filter(({ tags }) => tags.includes("mesocycle-1")),
+    filter: "mesocycle-1",
     details: [
       {
         title: "Postura",
@@ -85,7 +84,7 @@ export const Mesocycles: MesocycleType[] = [
     name: "Mesociclo 2",
     concept: "Conceitos transversais ao jogo aereo e terrestre",
     duration: "4 - 6 weeks",
-    exercises: Exercises.filter(({ id }) => ["2a", "2b"].includes(id)),
+    filter: "mesocycle-2",
     details: [
       {
         title: "Direcao",
