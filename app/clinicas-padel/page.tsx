@@ -9,7 +9,7 @@ const Page = () => (
     <HeaderGreen title="Clínicas de Padel" />
 
     <div className="bg-projectGray m-auto pt-24 sm:pt-[77px] lg:pt-[177px] pb-16 lg:pb-[151px] flex justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 bg-projectGreen">
         {Clinics.map((p) => (
           <Link
             className={`grid-item aspect-square lg:h-[510px] max-h-[510px] lg:w-[510px] max-w-[510px] hover:cursor-pointer hover:bg-opacity-80
