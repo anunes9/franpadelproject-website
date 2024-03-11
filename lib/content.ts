@@ -97,6 +97,7 @@ export const Clinics = [
   {
     name: "ibe",
     image: "/assets/LOGO_IBE.png",
+    contentImage: "/assets/CONTENT_IBE.png",
     width: 267,
     height: 112,
     color: "Blue",
@@ -107,6 +108,7 @@ export const Clinics = [
   {
     name: "train-as-a-pro",
     image: "/assets/LOGO_TRAIN_AS_A_PRO.png",
+    contentImage: "/assets/CONTENT_TRAIN_AS_A_PRO.png",
     width: 231,
     height: 84,
     color: "Green",
@@ -117,6 +119,7 @@ export const Clinics = [
   {
     name: "master-clinic-evolution",
     image: "/assets/LOGO_MASTER_CLINIC_EVOLUTION.png",
+    contentImage: "/assets/CONTENT_MASTER_CLINIC_EVOLUTION.png",
     width: 285,
     height: 116,
     color: "Green",
@@ -127,6 +130,7 @@ export const Clinics = [
   {
     name: "padel-wonderland",
     image: "/assets/LOGO_PADEL_WONDERLAND.png",
+    contentImage: "/assets/CONTENT_PADEL_WONDERLAND.png",
     width: 418,
     height: 70,
     color: "Blue",
@@ -137,6 +141,7 @@ export const Clinics = [
   {
     name: "master-clinic",
     image: "/assets/LOGO_MASTER_CLINIC.png",
+    contentImage: "/assets/CONTENT_MASTER_CLINIC.png",
     width: 310,
     height: 93,
     color: "Blue",
@@ -147,6 +152,7 @@ export const Clinics = [
   {
     name: "padel-company-big-day",
     image: "/assets/LOGO_PADEL_COMPANY_BIG_DAY.png",
+    contentImage: "/assets/CONTENT_PADEL_COMPANY_BIG_DAY.png",
     width: 353,
     height: 133,
     color: "Green",
@@ -157,13 +163,15 @@ export const Clinics = [
   {
     name: "",
     image: null,
-    color: "Green",
+    contentImage: null,
+    CONTENTr: "Green",
     colStart: 1,
     description: "",
   },
   {
     name: "play-like-a-pro",
     image: "/assets/LOGO_PLAY_LIKE_A_PRO.png",
+    contentImage: "/assets/CONTENT_PLAY_LIKE_A_PRO.png",
     width: 231,
     height: 92,
     color: "Blue",
