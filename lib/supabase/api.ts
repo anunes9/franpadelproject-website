@@ -9,7 +9,6 @@ export const createServerSupabaseClient = cache(() =>
 export const getAssetsUrl = (filePath: string) => {
   const supabase = createServerSupabaseClient()
   const { data } = supabase.storage.from("public-assets").getPublicUrl(filePath)
-  console.log(data.publicUrl)
   return data.publicUrl
 }
 
