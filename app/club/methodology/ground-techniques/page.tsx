@@ -1,7 +1,11 @@
 import { ImageGallery } from "@/components/methodology/ImageGallery"
 import { H1Title, H2Title, PText } from "@/components/methodology/Typography"
+import { Exercises } from "@/lib/exercises"
+import { getAssetsUrl } from "@/lib/supabase/api"
 
 export default async function Page() {
+  const ex = Exercises.map((e) => ({ ...e, image: getAssetsUrl(e.image) }))
+
   return (
     <section>
       <H1Title>Técnicas Terrestres</H1Title>
@@ -36,14 +40,16 @@ export default async function Page() {
         abordagem personalizada.
       </PText>
 
-      <ImageGallery
+      <ImageGallery images={ex} />
+
+      {/* <ImageGallery
         images={[
           "forehand/forehand-1.jpg",
           "forehand/forehand-2.jpg",
           "forehand/forehand-3.jpg",
           "forehand/forehand-4.jpg",
         ]}
-      />
+      /> */}
 
       <H2Title>Esquerda sem vidro</H2Title>
 
@@ -75,14 +81,14 @@ export default async function Page() {
         pés, o posicionamento do corpo e a pega, adaptando-os a cada jogador.
       </PText>
 
-      <ImageGallery
+      {/* <ImageGallery
         images={[
           "backhand/backhand-1.jpg",
           "backhand/backhand-2.jpg",
           "backhand/backhand-3.jpg",
           "backhand/backhand-4.jpg",
         ]}
-      />
+      /> */}
 
       <H2Title>Volley de direita</H2Title>
 
