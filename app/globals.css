@@ -38,11 +38,17 @@
 
   /* @media (prefers-color-scheme: dark) { */
     .dark {
-      --background: 200 50% 3%; /* #04090b */
-      --btn-background: 200 10% 9%; /* #151819 */
-      --btn-background-hover: 200 10% 12%; /* #1c2022 */
-      --foreground: 200 20% 96%; /* #f3f5f7 */
-      --dimmed: 200 5% 50% /* #8f9ca3 */
+      --background: 200 20% 98%;  /* #f9fafb */
+    --btn-background: 200 10% 91%;  /* #e6e9ea */
+    --btn-background-hover: 200 10% 89%;  /* #e0e4e6 */
+    --foreground: 200 50% 3%;  /* #04090b */
+    --dimmed: 200 5% 75% /* #8f9ca3 */
+
+      /* --background: 200 50% 3%; #04090b */
+      /* --btn-background: 200 10% 9%; #151819 */
+      /* --btn-background-hover: 200 10% 12%; #1c2022 */
+      /* --foreground: 200 20% 96%; #f3f5f7 */
+      /* --dimmed: 200 5% 50% #8f9ca3 */
   }
 }
 
