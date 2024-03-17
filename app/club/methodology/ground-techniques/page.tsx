@@ -38,10 +38,10 @@ export default async function Page() {
 
       <ImageGallery
         images={[
-          "/forehand/forehand-1.jpg",
-          "/forehand/forehand-2.jpg",
-          "/forehand/forehand-3.jpg",
-          "/forehand/forehand-4.jpg",
+          "forehand/forehand-1.jpg",
+          "forehand/forehand-2.jpg",
+          "forehand/forehand-3.jpg",
+          "forehand/forehand-4.jpg",
         ]}
       />
 
@@ -77,10 +77,10 @@ export default async function Page() {
 
       <ImageGallery
         images={[
-          "/backhand/backhand-1.jpg",
-          "/backhand/backhand-2.jpg",
-          "/backhand/backhand-3.jpg",
-          "/backhand/backhand-4.jpg",
+          "backhand/backhand-1.jpg",
+          "backhand/backhand-2.jpg",
+          "backhand/backhand-3.jpg",
+          "backhand/backhand-4.jpg",
         ]}
       />
 
