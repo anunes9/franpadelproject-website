@@ -17,7 +17,7 @@ export const Dropdown = ({ items }: { items: DropdownItem[] }) => {
     <>
       <button
         onClick={toggleDropdown}
-        className="flex items-center justify-between w-full py-2 px-4 dark:text-gray-200 text-gray-800 hover:bg-btn-background-hover"
+        className="flex items-center justify-between w-full py-2 px-4 text-gray-800 hover:bg-btn-background-hover"
       >
         <span>Dropdown</span>
 
@@ -38,7 +38,7 @@ export const Dropdown = ({ items }: { items: DropdownItem[] }) => {
           <a
             key={i}
             href={href}
-            className="block py-2 px-4 dark:text-gray-200 text-gray-800 hover:bg-btn-background-hover border-l-2 pl-2"
+            className="block py-2 px-4 text-gray-800 hover:bg-btn-background-hover border-l-2 pl-2"
           >
             {title}
           </a>

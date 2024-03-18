@@ -22,7 +22,7 @@ export default function ThemeSwitch() {
         <IconSun
           height="auto"
           width={16}
-          className="stroke-gray-500 dark:stroke-dimmed"
+          className="stroke-gray-500"
           onClick={() => setTheme("light")}
         />
       </button>
@@ -36,7 +36,7 @@ export default function ThemeSwitch() {
           height="auto"
           width={16}
           onClick={() => setTheme("dark")}
-          className="stroke-dimmed dark:stroke-gray-300"
+          className="stroke-dimmed"
         />
       </button>
     </div>

@@ -62,7 +62,7 @@ export default async function Login({
             required
           />
 
-          <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+          <button className="bg-green-300 rounded-md px-4 py-2 text-foreground mb-2">
             Recover Password
           </button>
 

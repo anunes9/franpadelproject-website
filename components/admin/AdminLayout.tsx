@@ -44,7 +44,7 @@ export default function AdminLayout({
                   )
                 }
               >
-                <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+                <button className="bg-green-300 rounded-md px-4 py-2 text-foreground mb-2">
                   List
                 </button>
 
@@ -87,7 +87,7 @@ export default function AdminLayout({
                   required
                 />
 
-                <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+                <button className="bg-green-300 rounded-md px-4 py-2 text-foreground mb-2">
                   Update
                 </button>
 
@@ -130,7 +130,7 @@ export default function AdminLayout({
                   required
                 />
 
-                <button className="bg-green-300 dark:bg-green-700 rounded-md px-4 py-2 text-foreground mb-2">
+                <button className="bg-green-300 rounded-md px-4 py-2 text-foreground mb-2">
                   Create
                 </button>
 

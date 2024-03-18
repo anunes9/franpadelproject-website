@@ -15,7 +15,7 @@ export const Title = ({
     case "1":
       return (
         <h1
-          className={`roboto text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-2xl md:text-3xl font-bold text-gray-900 mb-4 ${className}`}
         >
           {children}
         </h1>
@@ -23,7 +23,7 @@ export const Title = ({
     case "3":
       return (
         <h3
-          className={`roboto text-lg md:text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-lg md:text-xl font-bold text-gray-900 mb-4 ${className}`}
         >
           {children}
         </h3>
@@ -31,7 +31,7 @@ export const Title = ({
     default:
       return (
         <h2
-          className={`roboto text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 ${className}`}
+          className={`roboto text-xl md:text-2xl font-bold text-gray-900 mb-4 ${className}`}
         >
           {children}
         </h2>
@@ -46,9 +46,7 @@ export const Text = ({
   children?: string | null | ReactNode
   className?: string
 }) => (
-  <p
-    className={`roboto text-base font-light text-gray-900 dark:text-gray-200 mb-2 ${className}`}
-  >
+  <p className={`roboto text-base font-light text-gray-900 mb-2 ${className}`}>
     {children}
   </p>
 )

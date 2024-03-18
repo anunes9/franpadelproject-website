@@ -17,7 +17,7 @@ export const SidebarItem = ({
     <li
       className={`rounded-md hover:bg-btn-background-hover ${
         pathname === href && "bg-btn-background-hover"
-      } text-sm dark:text-gray-200 text-gray-800`}
+      } text-sm text-gray-800`}
     >
       <a href={href} className="flex items-center p-2 space-x-3 rounded-md">
         {icon}

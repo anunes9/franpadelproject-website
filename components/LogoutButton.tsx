@@ -15,7 +15,7 @@ export async function LogoutButton({ className }: { className?: string }) {
   if (session)
     return (
       <div
-        className={`rounded-md hover:bg-btn-background-hover text-sm dark:text-gray-200 text-gray-800 ${className}`}
+        className={`rounded-md hover:bg-btn-background-hover text-sm text-gray-800 ${className}`}
       >
         <form action={handleForm}>
           <button className="flex items-center p-2 space-x-3 rounded-md">

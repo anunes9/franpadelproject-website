@@ -6,43 +6,33 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     h1: (props) => (
       <h1
         {...props}
-        className="roboto text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8 mb-6"
+        className="roboto text-2xl md:text-3xl font-bold text-gray-900 mt-8 mb-6"
       />
     ),
     h2: (props) => (
       <h2
         {...props}
-        className="roboto text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mt-6 mb-4"
+        className="roboto text-xl md:text-2xl font-bold text-gray-900 mt-6 mb-4"
       />
     ),
     h3: (props) => (
       <h3
         {...props}
-        className="roboto text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mt-6 mb-4"
+        className="roboto text-md md:text-lg font-bold text-gray-900 mt-6 mb-4"
       />
     ),
     h4: (props) => (
       <h4
         {...props}
-        className="roboto text-md md:text-lg font-bold text-gray-900 dark:text-gray-100 mt-6 mb-4"
+        className="roboto text-md md:text-lg font-bold text-gray-900 mt-6 mb-4"
       />
     ),
-    h5: (props) => (
-      <h5
-        {...props}
-        className="roboto text-gray-900 dark:text-gray-100 mt-4 mb-2"
-      />
-    ),
-    h6: (props) => (
-      <h6
-        {...props}
-        className="roboto text-gray-900 dark:text-gray-100 mt-4 mb-2"
-      />
-    ),
+    h5: (props) => <h5 {...props} className="roboto text-gray-900 mt-4 mb-2" />,
+    h6: (props) => <h6 {...props} className="roboto text-gray-900 mt-4 mb-2" />,
     p: (props) => (
       <p
         {...props}
-        className="roboto text-base font-light text-gray-900 dark:text-gray-200 mb-2"
+        className="roboto text-base font-light text-gray-900 mb-2"
       />
     ),
     li: (props) => <li {...props} className="my-2 roboto font-light" />,
