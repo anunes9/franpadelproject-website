@@ -12,18 +12,6 @@ export const getAssetsUrl = (filePath: string) => {
   return data.publicUrl
 }
 
-export async function getSession2() {
-  const supabase = createServerSupabaseClient()
-  try {
-    const { data } = await supabase.auth.getSession()
-    console.log("data session", data)
-    return data
-  } catch (error) {
-    console.error("Error:", error)
-    return null
-  }
-}
-
 export async function getSession() {
   const supabase = createServerSupabaseClient()
   try {
@@ -78,11 +66,11 @@ export async function handleUpdatePassword({
   const supabase = createServerSupabaseClient()
   try {
     await supabase.auth.exchangeCodeForSession(code)
-    const { error } = await supabase.auth.updateUser({ password })
-    return error
+    await supabase.auth.updateUser({ password })
+    return { ok: true }
   } catch (error) {
     console.error("Error:", error)
-    return error
+    return { ok: false, message: "Something went wrong updating user" }
   }
 }
 

@@ -84,7 +84,7 @@ export default async function Login({
 
           <div className="flex gap-2">
             <Text>Don't have an account? </Text>
-            <Link href={"/contact-us"}>
+            <Link href={"/contact"}>
               <Text className="text-projectGreen !font-semibold hover:underline hover:cursor-pointer">
                 Contact us here.
               </Text>

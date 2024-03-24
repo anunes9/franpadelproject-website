@@ -1,7 +1,7 @@
 import { redirect } from "next/navigation"
 import FranMethodology from "@assets/fran-methodology.png"
 import Image from "next/image"
-import { getSession2, handleUpdatePassword } from "@/lib/supabase/api"
+import { handleUpdatePassword } from "@/lib/supabase/api"
 import Link from "next/link"
 import { IconChevronLeft } from "@tabler/icons-react"
 
@@ -10,24 +10,19 @@ export default async function Login({
 }: {
   searchParams: { message: string; code: string }
 }) {
-  const session = await getSession2()
-
   const resetPassword = async (formData: FormData) => {
     "use server"
 
     const password = formData.get("password") as string
 
-    console.log("session", session)
-    console.log("code", searchParams.code)
-
     if (password) {
-      const error = await handleUpdatePassword({
+      const { ok, message } = await handleUpdatePassword({
         code: searchParams.code,
         password,
       })
 
-      if (error) return redirect("/recover?message=Could not authenticate user")
-      return redirect("/club")
+      if (ok) return redirect("/club")
+      return redirect(`/recover?message=${message}`)
     }
 
     return alert("Passwords do not match")

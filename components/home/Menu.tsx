@@ -113,6 +113,9 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
       <Link className={textStyle} href="/patrocinadores">
         Patrocinadores
       </Link>
+      <Link className={textStyle} href="/contact">
+        Entrar em Contacto
+      </Link>
     </div>
 
     <div className="flex justify-center mt-32">
