@@ -9,7 +9,7 @@ const Page = () => (
       allow="geolocation; microphone; camera"
       src="https://my.forms.app/form/660010e244e8ee0a50190cc9"
       frameborder="0"
-      style="width: 100vw; min-width:100%; height:100vh; border:none;"
+      className="contactForm"
     ></iframe>
   </div>
 )
