@@ -21,7 +21,7 @@ export default async function Login({
         password,
       })
 
-      if (ok) return redirect("/club")
+      if (ok) return redirect(`/recover-ok`)
       return redirect(`/recover?message=${message}`)
     }
 
