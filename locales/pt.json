@@ -1,0 +1,33 @@
+{
+  "home": {
+    "intro": {
+      "line-1": "Focados no crescimento do jogador,",
+      "line-2": " a academia desenvolve uma",
+      "line-3": " estratégia atendendo às suas",
+      "line-4": " necessidades específicas."
+    },
+    "quote": {
+      "line-1": "“Competir é ter a sensação de poder",
+      "line-2": " ganhar ou perder dentro dos 10x20.",
+      "line-3": " Convido a todos os que procuram",
+      "line-4": " gerir melhor esta dicotomia presente",
+      "line-5": " na vida de um competidor",
+      "line-6": " a experimentar o centro de treino”"
+    }
+  },
+  "menu": {
+    "academy": "Academia",
+    "padel-clinics": "Clínicas de Padel",
+    "methodology": "FRAN Methodology",
+    "pro-players": "Pro Players",
+    "sponsors": "Patrocinadores",
+    "get-in-touch": "Entrar em Contacto"
+  },
+  "page": {
+    "academy": "Academia",
+    "padel-clinics": "Clínicas de Padel",
+    "methodology": "FRAN Methodology",
+    "pro-players": "Pro Players",
+    "sponsors": "Patrocinadores"
+  }
+}

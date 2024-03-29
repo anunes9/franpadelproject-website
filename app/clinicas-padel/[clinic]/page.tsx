@@ -10,7 +10,7 @@ const Page = ({ params }: { params: { clinic: string } }) => {
   if (clinic)
     return (
       <div>
-        <HeaderGreen title="Clínicas de Padel" />
+        <HeaderGreen title="padel-clinics" />
 
         <div className="bg-projectGray lg:py-[86px]">
           <div className="bg-projectGray lg:w-[1027px] m-auto p-8 lg:p-16">

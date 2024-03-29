@@ -4,6 +4,7 @@ import Image from "next/image"
 import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Link from "next/link"
+import { t } from "@/locales"
 
 export const Menu = ({ variant }: { variant: "green" | "blue" }) => {
   const [open, setOpen] = useState(false)
@@ -99,22 +100,22 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
 
     <div className="flex flex-col gap-4 items-center py-12">
       <Link className={textStyle} href="/academia">
-        Academia
+        {t("menu", "academy")}
       </Link>
       <Link className={textStyle} href="/clinicas-padel">
-        Clinicas de Padel
+        {t("menu", "padel-clinics")}
       </Link>
       <Link className={textStyle} href="/login">
-        FRAN Methodology
+        {t("menu", "methodology")}
       </Link>
       <Link className={textStyle} href="/pro-players">
-        Pro Players
+        {t("menu", "pro-players")}
       </Link>
       <Link className={textStyle} href="/patrocinadores">
-        Patrocinadores
+        {t("menu", "sponsors")}
       </Link>
       <Link className={textStyle} href="/contact">
-        Entrar em Contacto
+        {t("menu", "get-in-touch")}
       </Link>
     </div>
 

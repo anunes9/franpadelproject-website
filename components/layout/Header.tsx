@@ -1,4 +1,7 @@
+"use client"
+
 import { Menu } from "@/components/home/Menu"
+import { t } from "@/locales"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -26,7 +29,7 @@ export const HeaderGreen = ({ title }: { title: string }) => (
 
         <Menu variant="blue" />
       </div>
-      <p className={`${titleStyle} text-projectBlue`}>{title}</p>
+      <p className={`${titleStyle} text-projectBlue`}>{t("pages", title)}</p>
     </div>
   </div>
 )
@@ -48,6 +51,6 @@ export const HeaderBlue = ({ title }: { title: string }) => (
       <Menu variant="green" />
     </div>
 
-    <p className={`${titleStyle} text-projectGreen`}>{title}</p>
+    <p className={`${titleStyle} text-projectGreen`}>{t("pages", title)}</p>
   </div>
 )

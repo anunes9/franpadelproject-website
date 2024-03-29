@@ -1,3 +1,4 @@
+import { ContentIntro, ContentQuote } from "@/components/home/ContentClient"
 import Image from "next/image"
 
 export const Content = () => (
@@ -6,12 +7,7 @@ export const Content = () => (
       id="section-1"
       className="bg-projectBlue flex justify-center items-center py-16 lg:h-[400px]"
     >
-      <p className="text-projectGreen text-base md:text-lg lg:text-xl text-center font-projectFontMediumExtended z-[2]">
-        Focados no crescimento do jogador
-        <br /> a academia desenvolve uma
-        <br /> estratégia atendendo às suas
-        <br /> necessidades específicas.
-      </p>
+      <ContentIntro />
     </div>
 
     <div className="relative bg-heroColor flex flex-col justify-center items-center">
@@ -37,14 +33,7 @@ export const Content = () => (
         </div>
 
         <div className="bg-gray-100 shadow-green py-8 xl:py-20 px-4 md:px-16 lg:px-24 xl:px-32 mt-[-12px]">
-          <p className="text-projectGreen text-base md:text-lg lg:text-xl text-center font-projectFontMediumExtended z-[2]">
-            “Competir é ter a sensação de poder
-            <br /> ganhar ou perder dentro dos 10x20m.
-            <br /> Convido a todos os que procuram
-            <br /> gerir melhor esta dicotomia presente
-            <br /> na vida de um competidor
-            <br />a experimentar o centro de treino”
-          </p>
+          <ContentQuote />
         </div>
       </div>
     </div>

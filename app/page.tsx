@@ -1,15 +1,18 @@
 import { Content } from "@/components/home/Content"
 import { Hero } from "@/components/home/Hero"
 import { Footer } from "@/components/layout/Footer"
+import { Suspense } from "react"
 
 const Page = () => (
-  <div>
-    <Hero />
+  <Suspense>
+    <div>
+      <Hero />
 
-    <Content />
+      <Content />
 
-    <Footer />
-  </div>
+      <Footer />
+    </div>
+  </Suspense>
 )
 
 export default Page

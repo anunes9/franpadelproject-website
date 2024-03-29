@@ -15,7 +15,7 @@ export default function Page({ params }: { params: { player: string } }) {
         </div>
 
         <div className="relative max-w-[1200px] m-auto z-1">
-          <HeaderBlue title="Pro Players" />
+          <HeaderBlue title="pro-players" />
 
           <div className="bg-projectGray lg:w-[1027px] sm:h-[949px] m-auto px-10 pt-10 pb-20 sm:p-[68px] mt-12 sm:mt-24 lg:mt-[177px] sm:mb-[151px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:mt-12 gap-16 sm:gap-8">

@@ -1,0 +1,33 @@
+{
+  "home": {
+    "intro": {
+      "line-1": "Focused on player growth,",
+      "line-2": " the academy develops a",
+      "line-3": " custom strategy to meet",
+      "line-4": " your specific needs."
+    },
+    "quote": {
+      "line-1": "“Competing is having the feeling of ",
+      "line-2": " win or lose within the 10x20.",
+      "line-3": " I invite everyone who seeks",
+      "line-4": " better manage of this dichotomy",
+      "line-5": " in the life of a competitor",
+      "line-6": " to try out the training center”"
+    }
+  },
+  "menu": {
+    "academy": "Academy",
+    "padel-clinics": "Padel Clinics",
+    "methodology": "FRAN Methodology",
+    "pro-players": "Pro Players",
+    "sponsors": "Sponsors",
+    "get-in-touch": "Get in touch"
+  },
+  "page": {
+    "academy": "Academy",
+    "padel-clinics": "Padel Clinics",
+    "methodology": "FRAN Methodology",
+    "pro-players": "Pro Players",
+    "sponsors": "Sponsors"
+  }
+}
