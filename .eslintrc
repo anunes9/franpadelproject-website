@@ -18,7 +18,7 @@
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "max-len": ["error", { "code": 120, "ignoreComments": true }],
     "linebreak-style": ["error", "unix"],
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "quote-props": ["error", "as-needed"],
     "jsx-quotes": ["error", "prefer-double"],
     "semi": ["error", "never"],
