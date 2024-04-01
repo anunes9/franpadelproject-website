@@ -5,6 +5,7 @@ import { Dialog, Transition } from "@headlessui/react"
 import { Fragment, useState } from "react"
 import Link from "next/link"
 import { t } from "@/locales"
+import { LanguageSwitch } from "@/components/layout/LanguageSwitch"
 
 export const Menu = ({ variant }: { variant: "green" | "blue" }) => {
   const [open, setOpen] = useState(false)
@@ -119,7 +120,9 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => (
       </Link>
     </div>
 
-    <div className="flex justify-center mt-32">
+    <div className="flex justify-center items-center gap-12 mt-32">
+      <LanguageSwitch />
+
       <a
         href="https://www.instagram.com/franfreitas.padel/"
         target="_blank"
