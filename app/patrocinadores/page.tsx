@@ -1,29 +1,36 @@
+"use client"
+
 import { Footer } from "@/components/layout/Footer"
 import { HeaderGreen } from "@/components/layout/Header"
+import { t } from "@/locales"
 import Image from "next/image"
 import { Suspense } from "react"
 
-const Page = () => (
-  <Suspense>
-    <div>
-      <HeaderGreen title="sponsors" />
+const Page = () => {
+  const locale = window?.localStorage.getItem("lang") || "pt"
 
-      <div className="bg-projectGray py-12 sm:py-[86px]">
-        <div className="bg-projectBlue w-screen sm:w-[1027px] h-full sm:h-[577px] mx-auto py-24 mb-8">
-          <div className="w-[199px] h-[115px] m-auto">
-            <Image
-              alt="fran-logo"
-              src="/assets/cork-logo.png"
-              fill
-              className="!relative"
-            />
+  return (
+    <Suspense>
+      <div>
+        <HeaderGreen title={t(locale, "pages", "sponsors")} />
+
+        <div className="bg-projectGray py-12 sm:py-[86px]">
+          <div className="bg-projectBlue w-screen sm:w-[1027px] h-full sm:h-[577px] mx-auto py-24 mb-8">
+            <div className="w-[199px] h-[115px] m-auto">
+              <Image
+                alt="fran-logo"
+                src="/assets/cork-logo.png"
+                fill
+                className="!relative"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <Footer />
-    </div>
-  </Suspense>
-)
+        <Footer />
+      </div>
+    </Suspense>
+  )
+}
 
 export default Page

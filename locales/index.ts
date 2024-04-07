@@ -1,10 +1,7 @@
 import { pt } from "@/locales/pt"
 import { en } from "@/locales/en"
-import { useSearchParams } from "next/navigation"
 
-export const t = (namespace: string, key: string) => {
-  const searchParams = useSearchParams()
-  const locale = searchParams.get("lang") || "pt"
+export const t = (locale: string, namespace: string, key: string) => {
   // @ts-expect-error
   if (locale === "pt") return pt[namespace][key]
   // @ts-expect-error

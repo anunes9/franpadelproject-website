@@ -21,17 +21,6 @@ export async function middleware(request: NextRequest) {
       return response
     }
 
-    // if request.url.endsWith("?lang=en") then append "?lang=en" to all requests
-    if (
-      request.url.endsWith("?lang=en") &&
-      request.nextUrl.search.length === 0 &&
-      !request.nextUrl.pathname.startsWith("/fonts") &&
-      !request.nextUrl.pathname.startsWith("/assets")
-    )
-      return NextResponse.redirect(
-        new URL(`${request.nextUrl.pathname}?lang=en`, request.url)
-      )
-
     return response
   } catch (e) {
     // If you are here, a Supabase client could not be created!

@@ -1,16 +1,20 @@
+"use client"
+
 import { Footer } from "@/components/layout/Footer"
 import { HeaderGreen } from "@/components/layout/Header"
 import { Clinics } from "@/lib/content"
+import { t } from "@/locales"
 import Image from "next/image"
 import { redirect } from "next/navigation"
 
 const Page = ({ params }: { params: { clinic: string } }) => {
   const clinic = Clinics.find(({ name }) => name === params.clinic)
+  const locale = window?.localStorage.getItem("lang") || "pt"
 
   if (clinic)
     return (
       <div>
-        <HeaderGreen title="padel-clinics" />
+        <HeaderGreen title={t(locale, "pages", "padel-clinics")} />
 
         <div className="bg-projectGray lg:py-[86px]">
           <div className="bg-projectGray lg:w-[1027px] m-auto p-8 lg:p-16">
@@ -27,7 +31,7 @@ const Page = ({ params }: { params: { clinic: string } }) => {
               )}
 
               <p className="font-projectFontMediumExtended text-sm sm:text-lg lg:text-xl text-white mt-12 lg:mt-[88px]">
-                {clinic.description}
+                {t(locale, "clinics", clinic.description)}
               </p>
 
               {clinic.contentImage && (

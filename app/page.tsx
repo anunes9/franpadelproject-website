@@ -3,16 +3,20 @@ import { Hero } from "@/components/home/Hero"
 import { Footer } from "@/components/layout/Footer"
 import { Suspense } from "react"
 
-const Page = () => (
-  <Suspense>
-    <div>
-      <Hero />
+const Page = () => {
+  const locale = "en"
 
-      <Content />
+  return (
+    <Suspense>
+      <div>
+        <Hero />
 
-      <Footer />
-    </div>
-  </Suspense>
-)
+        <Content locale={locale} />
+
+        <Footer />
+      </div>
+    </Suspense>
+  )
+}
 
 export default Page

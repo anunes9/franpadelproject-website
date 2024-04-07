@@ -1,26 +1,27 @@
 "use client"
 
 import { t } from "@/locales"
-import { useRouter, usePathname, useSearchParams } from "next/navigation"
+import { useRouter } from "next/navigation"
 
 export const LanguageSwitch = () => {
   const router = useRouter()
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-  const locale = searchParams.get("lang") || "pt"
+  const locale = window?.localStorage.getItem("lang") || "pt"
 
   return (
     <div>
-      <p className="text-white">{t("menu", "language")}</p>
+      <p className="text-white">{t(locale, "menu", "language")}</p>
 
       <select
-        onChange={(e) => router.replace(`${pathname}?lang=${e.target.value}`)}
+        onChange={(e) => {
+          window.localStorage.setItem("lang", e.target.value)
+          router.refresh()
+        }}
       >
         <option value="en" selected={locale === "en"}>
           English
         </option>
         <option value="pt" selected={locale === "pt"}>
-          Portuguẽs
+          Português
         </option>
       </select>
     </div>
