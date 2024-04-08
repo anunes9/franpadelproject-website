@@ -1,18 +1,22 @@
-"use client"
-
 import { Footer } from "@/components/layout/Footer"
-import { HeaderGreen } from "@/components/layout/Header"
-import { t } from "@/locales"
 import Image from "next/image"
 import { Suspense } from "react"
+import dynamic from "next/dynamic"
+const HeaderGreen = dynamic(
+  () =>
+    import("@/components/layout/HeaderGreen").then(
+      (module) => module.default
+    ) as any,
+  {
+    ssr: false,
+  }
+) as any
 
 const Page = () => {
-  const locale = window?.localStorage.getItem("lang") || "pt"
-
   return (
     <Suspense>
       <div>
-        <HeaderGreen title={t(locale, "pages", "sponsors")} />
+        <HeaderGreen title={"sponsors"} />
 
         <div className="bg-projectGray py-12 sm:py-[86px]">
           <div className="bg-projectBlue w-screen sm:w-[1027px] h-full sm:h-[577px] mx-auto py-24 mb-8">

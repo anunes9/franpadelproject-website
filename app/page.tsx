@@ -1,22 +1,25 @@
-import { Content } from "@/components/home/Content"
 import { Hero } from "@/components/home/Hero"
 import { Footer } from "@/components/layout/Footer"
 import { Suspense } from "react"
+import dynamic from "next/dynamic"
+const Content = dynamic(
+  () =>
+    import("@/components/home/Content").then((module) => module.default) as any,
+  {
+    ssr: false,
+  }
+) as any
 
-const Page = () => {
-  const locale = "en"
+const Page = () => (
+  <Suspense>
+    <div>
+      <Hero />
 
-  return (
-    <Suspense>
-      <div>
-        <Hero />
+      <Content />
 
-        <Content locale={locale} />
-
-        <Footer />
-      </div>
-    </Suspense>
-  )
-}
+      <Footer />
+    </div>
+  </Suspense>
+)
 
 export default Page

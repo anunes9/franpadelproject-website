@@ -1,7 +1,11 @@
+"use client"
+
 import { t } from "@/locales"
 import Image from "next/image"
 
-export const Content = ({ locale }: { locale: string }) => {
+const Content = () => {
+  const locale = window?.localStorage.getItem("lang") || "pt"
+
   return (
     <>
       <div
@@ -53,3 +57,5 @@ export const Content = ({ locale }: { locale: string }) => {
     </>
   )
 }
+
+export default Content
