@@ -1,6 +1,7 @@
 import "./globals.css"
 import { ThemeProviders } from "./theme-providers"
 import { Roboto } from "next/font/google"
+import { Analytics } from "@vercel/analytics/react"
 
 const RobotoFont = Roboto({
   weight: "400",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <main className="min-h-screen">
           <ThemeProviders>{children}</ThemeProviders>
         </main>
+        <Analytics />
       </body>
     </html>
   )
