@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
         <Text className="!font-bold mt-4">Contact Us</Text>
         <Text>
           If you have any questions about this Privacy Policy, please contact us
-          at [your contact email].
+          at fran@franpadelproject.com.
         </Text>
 
         <Text className="mt-4">

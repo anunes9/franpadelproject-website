@@ -94,7 +94,7 @@ export default function TermsOfService() {
         <Text className="!font-bold mt-4">Contact Us</Text>
         <Text>
           If you have any questions about this Terms of Service, please contact
-          us at [your contact email].
+          us at fran@franpadelproject.com.
         </Text>
 
         <Text className="mt-4">

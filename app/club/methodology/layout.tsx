@@ -1,5 +1,5 @@
 import { TableOfContents } from "@/components/methodology/TableOfContents"
-import { SectionHeader } from "@/components/club/SecionHeader"
+import { SectionHeader } from "@/components/club/SectionHeader"
 
 export default function RootLayout({
   children,
@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <div className="w-full flex flex-col">
-      <SectionHeader title="Metodologia" page="Conceitos e informações" />
+      <SectionHeader title="Methodology" page="Concepts and documentation" />
 
       <TableOfContents />
 

@@ -15,7 +15,7 @@ export default function RootLayout({
       <div className="min-h-screen flex-1 w-full flex flex-col">
         <Sidebar>{children}</Sidebar>
 
-        <Footer />
+        <Footer app />
       </div>
     </div>
   )

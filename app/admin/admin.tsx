@@ -77,11 +77,34 @@ export default async function Login() {
     else if (error) return error
   }
 
+  const deleteUser = async (formData: FormData) => {
+    "use server"
+
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_SERVICE_ROLE!,
+      {
+        auth: {
+          autoRefreshToken: false,
+          persistSession: false,
+        },
+      }
+    )
+
+    const userID = formData.get("userID") as string
+
+    const { data, error } = await supabase.auth.admin.deleteUser(userID)
+
+    if (data) return "User deleted!"
+    else if (error) return error
+  }
+
   return (
     <AdminLayout
       listUsers={listUsers}
       updateUser={updateUser}
       createUser={createUser}
+      deleteUser={deleteUser}
     />
   )
 }

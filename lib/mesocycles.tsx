@@ -5,10 +5,22 @@ export type MesocycleType = {
   id: string
   icon: ReactNode
   name: string
+  title: string
   concept: string
+  description: string
   duration: string
   filter: string
-  details: { title: string; details: string[]; inset?: boolean }[]
+  level: string
+  details: {
+    title: string
+    description?: string
+    details: string[]
+    section?: {
+      title: string
+      description?: string
+      details: string[]
+    }
+  }[]
 }
 
 export const Mesocycles: MesocycleType[] = [
@@ -17,63 +29,81 @@ export const Mesocycles: MesocycleType[] = [
     icon: <IconHexagonNumber1 width={48} height={48} />,
     name: "Mesociclo 1",
     concept: "5-in-a-row Concept",
+    title: "Master the 5-in-a-row Concept",
+    description:
+      "This course covers professional playing stances, essential preparatory movements, and effective mobility techniques. It includes drills for shot accuracy, stability management through the Traffic Light Concept, and advanced techniques for enhanced gameplay. Perfect for both beginners and experienced players aiming to refine their skills and elevate their game.",
     duration: "4 - 6 weeks",
+    level: "Beginner",
     filter: "mesocycle-1",
     details: [
       {
-        title: "Postura",
+        title: "Posture",
+        description:
+          "Learn various professional playing stances and the Arigato Concept for optimal body alignment.",
         details: [
-          "Estilo Bela, Estilo Paquito, Estilo Chingotto",
-          "Arigato Concept + Cintura Escapular + Pros e Contras de cada estilo",
+          "Posture Bela, Paquito and Chingotto",
+          "Arigato Concept and Scapular Waist",
+          "Pros and cons of each style",
         ],
       },
       {
-        title: "Preparacao",
+        title: "Preparation",
+        description:
+          "Master the preparing movements before executing a stroke.",
         details: [
-          "Passo de pivot ou de reaccao (rotacao dos ombros, cintura e desbloqueio da anca)",
-          "Passos de ajuste",
-          "Direita sem vidro, esquerda sem vidro, voley de direita, voley esquerda",
+          "Pivot or reaction step (shoulder rotation, waist and hip release)",
+          "Adjustment steps",
+          "Forehand and backhand shots",
+          "Forehand and backhand volleys",
         ],
       },
       {
-        title: "Mobilidade",
+        title: "Mobility",
+        description:
+          "Unlock the ability to execute frontal, lateral, regressive, and diagonal movements effectively.",
         details: [
-          "Tipos de deslocamento (Deslocamento frontal, lateral, regressivo e diagonal)",
+          "Types of movement (forward, lateral, backward and diagonal displacement)",
         ],
+        section: {
+          title: "Technical Corrections",
+          description:
+            "Improve shot accuracy with drills, understand stride dynamics, and optimize hand positioning.",
+          details: [
+            "Superman, spider, boxer postures",
+            "Long stride vs. short stride",
+            "Shoulder tilt",
+            "Lateral distance from hand to center of body",
+          ],
+        },
       },
       {
-        title: "Correcoes tecnicas",
+        title: "Stability",
+        description:
+          "Apply the Traffic Light Concept to manage movement stability and control.",
         details: [
-          "Superhomem, dartanha, boxeador",
-          "Passada larga vs Passada curta",
-          "Inclinacao dos ombros",
-          "Distancia lateral da mao ao centro do corpo",
+          "Traffic Light concept associated with the stop before the shot",
+          "Green, Yellow and Red zones",
         ],
-        inset: true,
+        section: {
+          title: "Advanced Techniques",
+          description:
+            "Enhance your game with the Paparazzi Concept, proper body axis rotation, and explosive movements.",
+          details: [
+            "Paparazzi Concept",
+            "Rotation on the body axis",
+            "Electrical discharges",
+          ],
+        },
       },
       {
-        title: "Estabilidade",
+        title: "Execution",
+        description:
+          "Perfect your shot completion, understand anatomical rotation, and ensure proper racket positioning at impact.",
         details: [
-          "Conceito de semaforo associado a paragem",
-          "Verde, amarelo e vermelho",
-        ],
-      },
-      {
-        title: "Correcoes tecnicas",
-        details: [
-          "Conceito Paparazzi",
-          "Rotacao sobre o eixo corporal",
-          "Descargas eletricas",
-        ],
-        inset: true,
-      },
-      {
-        title: "Execução",
-        details: [
-          "Terminacao do gesto tecnico",
-          "Anatomia (rotacao lado direito e esquerdo)",
-          "Teoria do magnetismo",
-          "Posicao da raquete no ponto de impacto",
+          "Termination of technical gesture",
+          "Anatomy of right and left side rotations",
+          "Magnetism theory",
+          "Racket position at the point of impact",
         ],
       },
     ],
@@ -82,36 +112,51 @@ export const Mesocycles: MesocycleType[] = [
     id: "2",
     icon: <IconHexagonNumber2 width={48} height={48} />,
     name: "Mesociclo 2",
-    concept: "Conceitos transversais ao jogo aereo e terrestre",
+    concept: "Transversal concepts in aerial and ground game",
+    title: "Transversal concepts in aerial and ground game",
+    description:
+      "Dive deep into the transversal concepts essential for mastering both aerial and ground strokes in padel.",
+    level: "Beginner",
     duration: "4 - 6 weeks",
     filter: "mesocycle-2",
     details: [
       {
-        title: "Direcao",
-        details: ["Cara da raquete"],
+        title: "Direction",
+        description:
+          "Master the art of controlling ball direction by perfecting your racquet face positioning, ensuring every shot lands precisely where you intend.",
+        details: ["Adapt the face of racket when hitting the ball"],
       },
       {
-        title: "Altura",
-        details: ["Ponta da raquete"],
+        title: "Height",
+        description:
+          "Learn to adjust the height of your shots with finesse, utilizing the tip of your racket to achieve optimal trajectories and control over the ball.",
+        details: ["Dictated by the tip of the racket"],
       },
       {
-        title: "Profundidade",
-        details: ["Amplitude da terminaçåo"],
+        title: "Depth",
+        description:
+          "Explore the nuanced range of finish in your strokes to define the depth of your shots.",
+        details: ["Range of termination of the shot"],
       },
       {
-        title: "Velocidade",
-        details: ["Categorização 1 - 5"],
+        title: "Speed",
+        description:
+          "Dive into a categorization system ranging from 1 to 5 to effectively modulate shot speed, allowing you to adapt to different game situations.",
+        details: ["Shot Speed 1 - 5"],
       },
       {
-        title: "Aceleraçåo",
-        details: ["Passagem da mão sobre a bola"],
+        title: "Acceleration",
+        description:
+          "Practice making your hand move over the ball quickly to get the most power and spin out of each swing.",
+        details: ["Hand over ball concept"],
       },
       {
-        title: "Força",
+        title: "Force",
+        description:
+          "Learn how to use the amplitude of the stroke to make controlled yet forceful shots.",
         details: [
-          "Formula",
-          "Dismistificaçåo da amplitude",
-          "Conceito de controlo (Distância do cotovelo ao corpo)",
+          "Formula: x + 1",
+          "Concept of Control (distance from elbow to body)",
         ],
       },
     ],

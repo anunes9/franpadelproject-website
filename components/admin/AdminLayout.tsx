@@ -7,10 +7,12 @@ export default function AdminLayout({
   listUsers,
   updateUser,
   createUser,
+  deleteUser,
 }: {
   listUsers: any
   updateUser: any
   createUser: any
+  deleteUser: any
 }) {
   const [message, setMessage] = useState("")
 
@@ -31,6 +33,9 @@ export default function AdminLayout({
             </Tab>
             <Tab className="ui-selected:bg-blue-500 ui-selected:text-white ui-not-selected:text-black px-4 py-2 mx-2 rounded-sm">
               Create User
+            </Tab>
+            <Tab className="ui-selected:bg-blue-500 ui-selected:text-white ui-not-selected:text-black px-4 py-2 mx-2 rounded-sm">
+              Delete User
             </Tab>
           </Tab.List>
 
@@ -132,6 +137,38 @@ export default function AdminLayout({
 
                 <button className="bg-green-300 rounded-md px-4 py-2 text-foreground mb-2">
                   Create
+                </button>
+
+                {message && (
+                  <p className="mt-4 p-4 bg-foreground/10 text-foreground text-center">
+                    {message}
+                  </p>
+                )}
+              </form>
+            </Tab.Panel>
+
+            <Tab.Panel>
+              <form
+                className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground pt-4"
+                action={(formData) =>
+                  deleteUser(formData).then((m: any) =>
+                    setMessage(JSON.stringify(m))
+                  )
+                }
+              >
+                <label className="text-md" htmlFor="email">
+                  User ID
+                </label>
+
+                <input
+                  className="rounded-md px-4 py-2 bg-inherit border mb-6"
+                  type="text"
+                  name="userID"
+                  required
+                />
+
+                <button className="bg-green-300 rounded-md px-4 py-2 text-foreground mb-2">
+                  Delete
                 </button>
 
                 {message && (
