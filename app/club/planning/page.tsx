@@ -25,10 +25,17 @@ export default function Page() {
         ))}
 
         <Card
-          url={`${getAssetsUrl("Fran Methodology - Meso 1-2.pdf")}?download`}
+          url={`${getAssetsUrl("FranMethodology-Meso1-2.pdf")}?download`}
           icon={<IconPresentation height={32} width={32} />}
-          title={`Course 1`}
-          subtitle="Mesocycle 1-2 and ground shots"
+          title="Mesocycle 1-2"
+          text="download"
+          bottomIcon={<IconDownload height={24} width={24} />}
+        />
+
+        <Card
+          url={`${getAssetsUrl("FranMethodology-Meso3-4.pdf")}?download`}
+          icon={<IconPresentation height={32} width={32} />}
+          title="Mesocycle 3-4"
           text="download"
           bottomIcon={<IconDownload height={24} width={24} />}
         />
@@ -59,10 +66,10 @@ const Card = ({
     key={title}
     className="hover:opacity-75 hover:cursor-pointer shadow-md p-4 bg-slate-100 min-h-[12rem]"
   >
-    <div className="flex flex-col justify-around h-full">
+    <div className="flex flex-col justify-around items-center h-full">
       <div className="flex justify-center items-center gap-4 rounded-md">
         {icon}
-        <Text className="!font-bold !font-mono text-center">{title}</Text>
+        <Text className="!font-bold !font-mono text-center !m-0">{title}</Text>
       </div>
 
       {subtitle && <Text className="text-center">{subtitle}</Text>}

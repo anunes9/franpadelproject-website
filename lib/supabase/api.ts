@@ -88,7 +88,7 @@ export async function handleLogout() {
 export async function getUser() {
   const supabase = createServerSupabaseClient()
   try {
-    const { data } = await supabase.from("users").select("*").single()
+    const { data } = await supabase.from("users_app").select("*").single()
     return data
   } catch (error) {
     console.error("Error:", error)
@@ -99,53 +99,10 @@ export async function getUser() {
 export async function getClub() {
   const supabase = createServerSupabaseClient()
   try {
-    const { data } = await supabase.from("clubs").select("*").single()
+    const { data } = await supabase.from("clubs_app").select("*").single()
     return data
   } catch (error) {
     console.error("Error:", error)
     return null
   }
-}
-
-export async function getPlayers() {
-  const supabase = createServerSupabaseClient()
-  try {
-    const { data } = await supabase.from("players").select("*")
-    return data
-  } catch (error) {
-    console.error("Error:", error)
-    return null
-  }
-}
-
-export async function getSubscription() {
-  const supabase = createServerSupabaseClient()
-  try {
-    const { data: subscription } = await supabase
-      .from("subscriptions")
-      .select("*, prices(*, products(*))")
-      .in("status", ["trialing", "active"])
-      .maybeSingle()
-      .throwOnError()
-    return subscription
-  } catch (error) {
-    console.error("Error:", error)
-    return null
-  }
-}
-
-export const getActiveProductsWithPrices = async () => {
-  const supabase = createServerSupabaseClient()
-  const { data, error } = await supabase
-    .from("products")
-    .select("*, prices(*)")
-    .eq("active", true)
-    .eq("prices.active", true)
-    .order("metadata->index")
-    .order("unit_amount", { foreignTable: "prices" })
-
-  if (error) {
-    console.log(error.message)
-  }
-  return data ?? []
 }

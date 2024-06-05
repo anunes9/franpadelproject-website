@@ -16,6 +16,14 @@ export type UpdateType = {
 
 export const Updates: UpdateType[] = [
   {
+    title: "New Mesosycle 3 available",
+    description:
+      "Mesocycle 3 - Mindset for attack, defense, and counter-attack, the Principle of Equity, Consistency and Speed is now available in the planning section.",
+    date: "June 2024",
+    url: "/club/planning/3",
+    icon: <IconCalendarStats width={24} height={24} />,
+  },
+  {
     title: "Course 1 available to download",
     description:
       "Course 1 - Mesocycles 1-2 and ground shots is available to download",

@@ -1,4 +1,8 @@
-import { IconHexagonNumber1, IconHexagonNumber2 } from "@tabler/icons-react"
+import {
+  IconHexagonNumber1,
+  IconHexagonNumber2,
+  IconHexagonNumber3,
+} from "@tabler/icons-react"
 import { ReactNode } from "react"
 
 export type MesocycleType = {
@@ -157,6 +161,80 @@ export const Mesocycles: MesocycleType[] = [
         details: [
           "Formula: x + 1",
           "Concept of Control (distance from elbow to body)",
+        ],
+      },
+    ],
+  },
+  {
+    id: "3",
+    icon: <IconHexagonNumber3 width={48} height={48} />,
+    name: "Mesociclo 3",
+    concept:
+      "Mindset for attack, defense, and counter-attack, the Principle of Equity, Consistency and Speed",
+    title:
+      "Mindset for attack, defense, and counter-attack, the Principle of Equity, Consistency and Speed",
+    description:
+      "This section covers key areas including the polarities of technical execution, ensuring your preparation matches the ball's characteristics and racket handling. We will dive into biomechanical movement patterns for attack, defense, and counter-attack, and the interpretation of ball trajectories. It also cover forehand and backhand shots with glass, and techniques for maintaining consistency and controlling shot speeds.",
+    level: "Beginner",
+    duration: "4 - 6 weeks",
+    filter: "mesocycle-3",
+    details: [
+      {
+        title: "Polarities of Technical Execution",
+        description: "",
+        details: [
+          "Positive + Positive (++): The highest level of technical execution, combining optimal positioning and shot quality for maximum effectiveness.",
+          "Positive (+): High-quality execution that meets most technical and strategic requirements, though not at the absolute peak.",
+          "Neutral (=): Standard execution that maintains the game without significant advantage or disadvantage.",
+          "Negative (-): Subpar execution that may result in a compromised position or shot quality, potentially putting you at a disadvantage.",
+          "Negative + Negative (--): The lowest level of execution, where poor positioning and shot quality significantly reduce effectiveness.",
+        ],
+      },
+      {
+        title: "Technical Preparation Greater Than or Equal to Ball Polarity",
+        description:
+          "Ensuring your technical preparation meets or exceeds the polarity of the ball, adjusting your stance, grip, and shot execution to match the incoming ball's characteristics for optimal control and response.",
+        details: [],
+      },
+      {
+        title: "Racket Handling",
+        description:
+          "The side and angle of the racket that makes contact with the ball, influencing spin, trajectory, and control.",
+        details: [
+          "Open Face: The racket is angled upward, typically used for lifting the ball, generating backspin, or executing defensive lobs.",
+          "Neutral Face: The racket is perpendicular to the ground, ideal for neutral shots that maintain control and precision.",
+          "Closed Face: The racket is angled downward, often used for driving shots, generating topspin, or aggressive attacks.",
+        ],
+      },
+      {
+        title: "Biomechanical Movement Patterns",
+        description:
+          "All Patterns Independent of Positional Zone, movement patterns should be adaptable and effective regardless of the player's position on the court.",
+        details: [
+          "Attack - Downward Movement Pattern: Utilizing downward movements to generate power and precision in attacking shots, such as smashes or volleys.",
+          "Defence - Upward Movement Pattern: Using upward movements to lift the ball defensively, often employed in lobs or high defensive shots.",
+          "Counter-Attack - Rectilinear Movement Pattern: Executing straight-line movements to quickly transition from defense to offense, maintaining control and speed.",
+        ],
+      },
+      {
+        title: "Ball Reading Interpretation Based on the Parabola Trajectory",
+        description:
+          "Knowing how to read and interpret the ball's trajectory is crucial to decide what shot to play and where.",
+        details: [
+          "Ascension Point: The phase where the ball is rising after the bounce, critical for timing defensive and neutral shots.",
+          "Maximum Height: The peak of the ball’s trajectory, offering the best opportunity for offensive shots or strategic placements.",
+          "Inflection Point: The point where the ball starts descending, crucial for precise timing of counter-attacks or attacking shots",
+        ],
+      },
+      {
+        title: "Consistency and Control of the Speedometer",
+        description:
+          "Adapting shot speed based on position to maintain control and effectiveness.",
+        details: [
+          "Sector 0 <> Speed 1 and 2: Executing shots at slower speeds, focusing on control and precision in defensive and neutral plays.",
+          "Sector 1 <> Speed 2 and 3: Moderate speed shots that balance control and aggression, useful for maintaining rallies and setting up plays.",
+          "Sector 2 <> Speed 3 and 4: Faster shots that increase pressure on the opponent, suitable for aggressive plays and finishing points.",
+          "Sector 3 <> Speed 4 and 5: Maximum speed shots aimed at overpowering the opponent, requiring high precision and control to avoid errors.",
         ],
       },
     ],
