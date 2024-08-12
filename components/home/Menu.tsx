@@ -114,7 +114,7 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => {
         <Link className={textStyle} href="/clinicas-padel">
           {t(locale, "menu", "padel-clinics")}
         </Link>
-        <Link className={textStyle} href="/login">
+        <Link className={textStyle} href="app.franpadelproject.com">
           {t(locale, "menu", "methodology")}
         </Link>
         <Link className={textStyle} href="/pro-players">
