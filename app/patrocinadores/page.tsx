@@ -19,11 +19,25 @@ const Page = () => {
         <HeaderGreen title={"sponsors"} />
 
         <div className="bg-projectGray py-12 sm:py-[86px]">
-          <div className="bg-projectBlue w-screen sm:w-[1027px] h-full sm:h-[577px] mx-auto py-24 mb-8">
-            <div className="w-[199px] h-[115px] m-auto">
+          <div className="bg-projectBlue w-screen h-full mx-auto py-24 max-w-xl">
+            <div className="w-[199px] m-auto flex flex-col gap-16">
               <Image
                 alt="fran-logo"
                 src="/assets/cork-logo.png"
+                fill
+                className="!relative"
+              />
+
+              <Image
+                alt="fran-logo"
+                src="/assets/DFL.png"
+                fill
+                className="!relative"
+              />
+
+              <Image
+                alt="fran-logo"
+                src="/assets/proframe_branco2.png"
                 fill
                 className="!relative"
               />
