@@ -29,13 +29,13 @@ const HeaderGreen = ({ title }: { title: string }) => {
 
           <Menu variant="blue" />
         </div>
-        <p
+        <h1
           className={
             "font-projectFontExtendedBlack text-xl sm:text-[54px] lg:text-[90px]  underline underline-offset-8 decoration-4 text-center text-projectBlue"
           }
         >
           {t(locale, "pages", title)}
-        </p>
+        </h1>
       </div>
     </div>
   )

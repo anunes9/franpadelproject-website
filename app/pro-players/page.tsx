@@ -50,7 +50,7 @@ const Page = () => (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-28">
             {Players.map((p) => (
               <Link
-                className={`grid-item w-3/4 max-h-[357px] sm:h-[257px] lg:h-[357px] mx-auto hover:cursor-pointer hover:bg-gray-200 col-start-${p.colStart}`}
+                className={`grid-item max-h-[357px] sm:h-[257px] lg:h-[357px] mx-auto hover:cursor-pointer hover:bg-gray-200 col-start-${p.colStart}`}
                 href={`/pro-players/${p.name}`}
                 key={p.name}
               >

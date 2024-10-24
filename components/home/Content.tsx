@@ -27,7 +27,7 @@ const Content = () => {
 
         <Image
           className="z-[2] mt-[-4rem] sm:mt-[-8rem] lg:mt-[-200px] !relative max-w-[1200px]"
-          src="/assets/hero.png"
+          src="/assets/hero2.png"
           alt="hero"
           fill
         />
