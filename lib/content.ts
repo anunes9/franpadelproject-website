@@ -22,8 +22,11 @@ export const Players = [
     position: "Right-side (Right-Handed Player)",
     mainTitles: [
       "Open Juniors World Padel Championship 2023, 3rd Place",
-      "Sub-16 Nacional Championship 2023, 1st Place",
-      "Nacional Championship 2023, Semifinalist",
+      "Sub-16 National Championship 2023, 1st Place",
+      "National Championship 2023, Semifinalist",
+      "FIP Juniors European Padel Championship 2024, 3rd Place",
+      "FPP Master 2024, 2nd Place",
+      "Sub-18 National Championship 2024, 1st Place",
     ],
     fppRanking: 9,
     wptRanking: null,
