@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Suspense } from "react"
 import dynamic from "next/dynamic"
-import { getAllPlayers } from "@/lib/api"
+import { getAllPlayers } from "@/lib/players"
 const HeaderBlue = dynamic(
   () =>
     import("@/components/layout/HeaderBlue").then(

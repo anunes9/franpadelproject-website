@@ -1,7 +1,7 @@
 import { Footer } from "@/components/layout/Footer"
-import { Clinics } from "@/lib/content"
 import { redirect } from "next/navigation"
 import dynamic from "next/dynamic"
+import { getClinic } from "@/lib/clinics"
 const HeaderGreen = dynamic(
   () =>
     import("@/components/layout/HeaderGreen").then(
@@ -21,8 +21,8 @@ const ClinicDetails = dynamic(
   }
 ) as any
 
-const Page = ({ params }: { params: { clinic: string } }) => {
-  const clinic = Clinics.find(({ name }) => name === params.clinic)
+export default async function Page({ params }: { params: { slug: string } }) {
+  const clinic = await getClinic(params.slug)
 
   if (clinic)
     return (
@@ -38,5 +38,3 @@ const Page = ({ params }: { params: { clinic: string } }) => {
     )
   redirect("/not-found")
 }
-
-export default Page

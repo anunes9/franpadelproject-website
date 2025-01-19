@@ -2,7 +2,7 @@ import { Footer } from "@/components/layout/Footer"
 import Image from "next/image"
 import { redirect } from "next/navigation"
 import dynamic from "next/dynamic"
-import { getPlayer } from "@/lib/api"
+import { getPlayer } from "@/lib/players"
 import { PlayerType } from "@/lib/types"
 const HeaderBlue = dynamic(
   () =>
