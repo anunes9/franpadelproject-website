@@ -2,21 +2,23 @@
 
 import { t } from "@/locales"
 
-const ProPlayersDetails = ({ player }: { player: any }) => {
+export default function ProPlayersDetails({ player }: { player: any }) {
   const locale = window?.localStorage.getItem("lang") || "pt"
 
   return (
     <div className="grid-item px-4 sm:px-0 lg:py-8 xl:py-0">
       <div className="font-projectFontMedium text-base sm:text-lg leading-relaxed text-projectBlue">
         <ul className="list-disc">
-          <li>{`${t(locale, "pro-players", "dob")}: ${player.dob}`}</li>
+          {player?.dob && (
+            <li>{`${t(locale, "pro-players", "dob")}: ${player.dob}`}</li>
+          )}
           <li>{`${t(locale, "pro-players", "position")}: ${
             player.position
           }`}</li>
           <li>{t(locale, "pro-players", "main-titles")}:</li>
           {
             // @ts-expect-error
-            player.mainTitles.map((t, i) => (
+            player.titles?.map((t, i) => (
               <li className="text-projectGreen ml-6" key={i}>
                 {t}
               </li>
@@ -43,5 +45,3 @@ const ProPlayersDetails = ({ player }: { player: any }) => {
     </div>
   )
 }
-
-export default ProPlayersDetails
