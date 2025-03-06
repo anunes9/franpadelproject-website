@@ -1,11 +1,6 @@
-"use client"
+import Link from "next/link"
 
-import { Button } from "@/components/generic/Button"
-import { useRouter } from "next/navigation"
-
-export const NotFound = () => {
-  const router = useRouter()
-
+export default function NotFound() {
   return (
     <div className="animate-in flex h-screen">
       <div className="flex flex-col items-start m-auto">
@@ -17,12 +12,10 @@ export const NotFound = () => {
           Looks like the page you are looking for doesn't exist.
         </p>
 
-        <Button className="my-8" onClick={() => router.back()}>
+        <Link className="my-8" href={"/"}>
           Go back
-        </Button>
+        </Link>
       </div>
     </div>
   )
 }
-
-export default NotFound

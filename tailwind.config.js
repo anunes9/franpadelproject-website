@@ -10,20 +10,24 @@ module.exports = {
       screens: {
         sm: "480px", // default mobile
         md: "768px", // tablet
-        lg: "976px", // desktop
-        xl: "1440px", // large desktop
+        lg: "1024px", // desktop
+        xl: "1200px", // large desktop
       },
       backgroundImage: {
         blueWhite:
           "linear-gradient(to bottom, #122C49 0%, #122C49 1075px, white 1075px, white 100%)",
+        greenWhite:
+          "linear-gradient(to bottom, #6bb8a4 0%, #6bb8a4 1075px, white 1075px, white 100%)",
         blueWhitePattern:
-          "linear-gradient(to bottom, #122C49 0%, rgba(18, 44, 73, 0.5) 1075px, transparent 1075px, white 100%), url('/assets/pattern.png')",
+          "linear-gradient(to bottom, rgba(18, 44, 73, 0.9) 0%, rgba(18, 44, 73, 0.9) 940px, transparent 1075px, white 100%), url('/assets/pattern.png')",
+        greenWhitePattern:
+          "linear-gradient(to bottom, #6bb8a4 0%, rgba(107, 184, 164, 0.75) 1075px, transparent 2000px, white 100%), url('/assets/pattern.png')",
         heroPattern:
           "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), linear-gradient(to bottom, transparent 0%, transparent 50%, white 100%), url('/assets/pattern.png')",
         heroColor:
           "linear-gradient(to top, white 0%, white 50%, #122C49 50%, #122C49 100%)",
         menu: "url('/assets/menu-background.png')",
-        headerPattern: "url('/assets/header-pattern.png')",
+        bodyPattern: "url('/assets/pattern.png')",
       },
       backgroundSize: {
         "100%": "100%",

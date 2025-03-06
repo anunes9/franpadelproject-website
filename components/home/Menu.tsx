@@ -7,7 +7,7 @@ import Link from "next/link"
 import { t } from "@/locales"
 import { LanguageSwitch } from "@/components/layout/LanguageSwitch"
 
-export const Menu = ({ variant }: { variant: "green" | "blue" }) => {
+export const Menu = () => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -16,22 +16,12 @@ export const Menu = ({ variant }: { variant: "green" | "blue" }) => {
         onClick={() => setOpen(true)}
         className="cursor-pointer z-10 hover:bg-slate-100/10 rounded-md w-7 sm:w-10"
       >
-        {variant === "green" && (
-          <Image
-            src="/assets/menu-green.svg"
-            alt="menu"
-            fill
-            className="!relative"
-          />
-        )}
-        {variant === "blue" && (
-          <Image
-            src="/assets/menu-blue.svg"
-            alt="menu"
-            fill
-            className="!relative"
-          />
-        )}
+        <Image
+          src="/assets/menu-green.svg"
+          alt="menu"
+          fill
+          className="!relative"
+        />
       </button>
 
       <MenuComponent open={open} handleClose={() => setOpen(false)} />

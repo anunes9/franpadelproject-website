@@ -6,7 +6,7 @@ const AcademyComponent = () => {
   const locale = window?.localStorage.getItem("lang") || "pt"
 
   return (
-    <div className="bg-projectGreen py-12 w-3/4 lg:w-[787px] sm:h-[540px] lg:h-[940px] px-8 lg:pr-8 flex items-center mt-[-200px] sm:mt-0 pt-[240px] sm:pt-0">
+    <div className="bg-projectGreen py-12 w-3/4 lg:w-[787px] sm:h-[540px] lg:h-[940px] px-8 flex items-center mt-[-200px] sm:mt-0 pt-[240px] sm:pt-0">
       <p className="sm:ml-[100px] lg:ml-[230px] font-projectFontExtended text-base lg:text-lg leading-normal text-white">
         {t(locale, "academy", "line-1")}
         <br />

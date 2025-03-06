@@ -6,9 +6,9 @@ const ClinicDetails = ({ clinic }: { clinic: any }) => {
   const locale = window?.localStorage.getItem("lang") || "pt"
 
   return (
-    <div className="bg-projectGray lg:w-[1027px] m-auto p-8 lg:p-16">
+    <div className="w-full m-auto my-16">
       <div
-        className={`bg-project${clinic.color} px-8 sm:px-16 lg:px-[123px] pt-12 sm:pt-24 lg:pt-[200px] pb-12`}
+        className={`bg-project${clinic.color} px-8 sm:px-16 lg:px-[123px] pt-12 sm:pt-24 lg:pt-[200px] pb-12 z-20`}
       >
         {clinic.image && (
           <Image
