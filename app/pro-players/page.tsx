@@ -1,8 +1,17 @@
 import Image from "next/image"
 import Link from "next/link"
 import { getAllPlayers } from "@/lib/players"
-import ProPlayers from "@/components/client/ProPlayers"
+const ProPlayers = dynamic(
+  () =>
+    import("@/components/client/ProPlayers").then(
+      (module) => module.default
+    ) as any,
+  {
+    ssr: false,
+  }
+) as any
 import { PageLayout } from "@/components/layout/Page"
+import dynamic from "next/dynamic"
 
 export default async function Page() {
   const players = await getAllPlayers()

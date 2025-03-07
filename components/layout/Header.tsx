@@ -4,11 +4,17 @@ import { MediaLink } from "@/components/generic/MediaLink"
 import { Menu } from "@/components/home/Menu"
 import { t } from "@/locales"
 
-export const Header = ({ title }: { title: string }) => {
+export const Header = ({
+  title,
+  noColor,
+}: {
+  title: string
+  noColor?: boolean
+}) => {
   const locale = window?.localStorage.getItem("lang") || "pt"
 
   return (
-    <div className="py-12 px-4 bg-projectBlue">
+    <div className={`py-12 px-4 ${noColor ? "" : "bg-projectBlue"}`}>
       <div className="flex justify-between items-center content">
         <MediaLink
           src="/assets/fr-logo.png"
@@ -21,8 +27,8 @@ export const Header = ({ title }: { title: string }) => {
           {t(locale, "pages", title)}
         </h1>
 
-        <div className="!w-12 md:!w-24 text-center">
-          <Menu variant="green" />
+        <div className="pl-4 md:pl-8">
+          <Menu />
         </div>
       </div>
     </div>

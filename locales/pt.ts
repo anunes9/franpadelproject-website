@@ -19,6 +19,7 @@ export const pt = {
     sponsors: "Patrocinadores",
     "get-in-touch": "Entrar em Contacto",
     language: "Idioma",
+    "fran-world-wide": "Fran World Wide",
   },
   pages: {
     academy: "Academia",

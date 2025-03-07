@@ -19,6 +19,7 @@ export const en = {
     sponsors: "Sponsors",
     "get-in-touch": "Get in touch",
     language: "Language",
+    "fran-world-wide": "Fran World Wide",
   },
   pages: {
     academy: "Academy",

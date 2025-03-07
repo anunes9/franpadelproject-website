@@ -97,3 +97,8 @@
 .content {
   @apply max-w-screen-xl mx-auto lg:px-16 relative
 }
+
+.sideText {
+  text-orientation: sideways;
+  writing-mode: sideways-lr;
+}

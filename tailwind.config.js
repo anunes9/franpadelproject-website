@@ -16,18 +16,15 @@ module.exports = {
       backgroundImage: {
         blueWhite:
           "linear-gradient(to bottom, #122C49 0%, #122C49 1075px, white 1075px, white 100%)",
-        greenWhite:
-          "linear-gradient(to bottom, #6bb8a4 0%, #6bb8a4 1075px, white 1075px, white 100%)",
-        blueWhitePattern:
-          "linear-gradient(to bottom, rgba(18, 44, 73, 0.9) 0%, rgba(18, 44, 73, 0.9) 940px, transparent 1075px, white 100%), url('/assets/pattern.png')",
-        greenWhitePattern:
-          "linear-gradient(to bottom, #6bb8a4 0%, rgba(107, 184, 164, 0.75) 1075px, transparent 2000px, white 100%), url('/assets/pattern.png')",
+        blueGreen:
+          "linear-gradient(to bottom, #122C49 0%, #6bb8a4 20%, #6bb8a4 100%)",
         heroPattern:
           "linear-gradient(to top, transparent 0%, transparent 50%, rgba(18, 44, 73, 0.5) 50%, rgba(18, 44, 73, 1) 100%), linear-gradient(to bottom, transparent 0%, transparent 50%, white 100%), url('/assets/pattern.png')",
         heroColor:
           "linear-gradient(to top, white 0%, white 50%, #122C49 50%, #122C49 100%)",
         menu: "url('/assets/menu-background.png')",
         bodyPattern: "url('/assets/pattern.png')",
+        flag: "-webkit-linear-gradient(-45deg, #FFFFFF 50%, transparent 50%);",
       },
       backgroundSize: {
         "100%": "100%",

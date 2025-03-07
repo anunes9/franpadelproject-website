@@ -1,6 +1,15 @@
 import Image from "next/image"
-import AcademyComponent from "@/components/client/Academy"
 import { PageLayout } from "@/components/layout/Page"
+import dynamic from "next/dynamic"
+const AcademyComponent = dynamic(
+  () =>
+    import("@/components/client/Academy").then(
+      (module) => module.default
+    ) as any,
+  {
+    ssr: false,
+  }
+) as any
 
 const Page = () => (
   <PageLayout headerTitle={"academy"} bgColor>

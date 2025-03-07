@@ -48,12 +48,6 @@ const MenuComponent = ({
             leave="transition-opacity duration-500"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            // enter="transform transition ease-in-out duration-500 sm:duration-700"
-            // enterFrom="translate-x-full"
-            // enterTo="translate-x-0"
-            // leave="transform transition ease-in-out duration-500 sm:duration-700"
-            // leaveFrom="translate-x-0"
-            // leaveTo="translate-x-full"
           >
             <Dialog.Panel className="pointer-events-auto relative w-screen bg-menu bg-cover bg-top sm:bg-center">
               <MenuContent handleClose={handleClose} />
@@ -98,12 +92,14 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => {
       </div>
 
       <div className="flex flex-col gap-4 items-center py-12">
-        <Link className={textStyle} href="/academia">
+        <Link className={textStyle} href="/academy">
           {t(locale, "menu", "academy")}
         </Link>
-        <Link className={textStyle} href="/clinicas-padel">
+
+        <Link className={textStyle} href="/clinics">
           {t(locale, "menu", "padel-clinics")}
         </Link>
+
         <Link
           href="https://app.franpadelproject.com"
           rel="noopener noreferrer"
@@ -112,12 +108,19 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => {
         >
           {t(locale, "menu", "methodology")}
         </Link>
+
         <Link className={textStyle} href="/pro-players">
           {t(locale, "menu", "pro-players")}
         </Link>
-        <Link className={textStyle} href="/patrocinadores">
+
+        <Link className={textStyle} href="/sponsors">
           {t(locale, "menu", "sponsors")}
         </Link>
+
+        <Link className={textStyle} href="/fran-world-wide">
+          {t(locale, "menu", "fran-world-wide")}
+        </Link>
+
         <Link className={textStyle} href="/contact">
           {t(locale, "menu", "get-in-touch")}
         </Link>

@@ -1,6 +1,13 @@
 import { Hero } from "@/components/home/Hero"
+import dynamic from "next/dynamic"
 import { Suspense } from "react"
-import Content from "@/components/home/Content"
+const Content = dynamic(
+  () =>
+    import("@/components/home/Content").then((module) => module.default) as any,
+  {
+    ssr: false,
+  }
+) as any
 
 export default function Page() {
   return (

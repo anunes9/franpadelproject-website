@@ -1,5 +1,12 @@
-import { Header } from "@/components/layout/Header"
+import dynamic from "next/dynamic"
 import { ReactNode } from "react"
+const Header = dynamic(
+  () =>
+    import("@/components/layout/Header").then((module) => module.Header) as any,
+  {
+    ssr: false,
+  }
+) as any
 
 export const PageLayout = ({
   children,
