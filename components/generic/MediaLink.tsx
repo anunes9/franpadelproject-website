@@ -16,11 +16,7 @@ export const MediaLink = ({
   className?: string
   text?: string
 }) => (
-  <Link
-    href={href}
-    target="_blank"
-    className={`flex flex-row items-center ${className}`}
-  >
+  <Link href={href} className={`flex flex-row items-center ${className}`}>
     <Image src={src} alt={alt} className={`!relative ${width}`} fill />
     {text && <span>{text}</span>}
   </Link>
