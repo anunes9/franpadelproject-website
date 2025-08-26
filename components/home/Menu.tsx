@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { t } from '@/locales'
 import { LanguageSwitch } from '@/components/layout/LanguageSwitch'
 import { useLocale } from '@/lib/hooks'
+import { getLocalizedPath } from '@/lib/i18n'
 
 export const Menu = () => {
   const [open, setOpen] = useState(false)
@@ -72,11 +73,11 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => {
       </div>
 
       <div className="flex flex-col gap-4 items-center py-12">
-        <Link className={textStyle} href="/academy">
+        <Link className={textStyle} href={getLocalizedPath('/academy', locale)}>
           {t(locale, 'menu', 'academy')}
         </Link>
 
-        <Link className={textStyle} href="/clinics">
+        <Link className={textStyle} href={getLocalizedPath('/clinics', locale)}>
           {t(locale, 'menu', 'padel-clinics')}
         </Link>
 
@@ -84,19 +85,19 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => {
           {t(locale, 'menu', 'methodology')}
         </Link>
 
-        <Link className={textStyle} href="/pro-players">
+        <Link className={textStyle} href={getLocalizedPath('/pro-players', locale)}>
           {t(locale, 'menu', 'pro-players')}
         </Link>
 
-        <Link className={textStyle} href="/sponsors">
+        <Link className={textStyle} href={getLocalizedPath('/sponsors', locale)}>
           {t(locale, 'menu', 'sponsors')}
         </Link>
 
-        <Link className={textStyle} href="/fran-world-wide">
+        <Link className={textStyle} href={getLocalizedPath('/fran-world-wide', locale)}>
           {t(locale, 'menu', 'fran-world-wide')}
         </Link>
 
-        <Link className={textStyle} href="/contact">
+        <Link className={textStyle} href={getLocalizedPath('/contact', locale)}>
           {t(locale, 'menu', 'get-in-touch')}
         </Link>
       </div>

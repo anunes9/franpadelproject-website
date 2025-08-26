@@ -1,13 +1,16 @@
 import { useState, useEffect } from 'react'
+import { useLocale } from './i18n'
 
-export const useLocale = () => {
-  const [locale, setLocale] = useState('pt')
+// Re-export the useLocale hook from i18n
+export { useLocale }
+
+// Add any other custom hooks here if needed
+export const useMounted = () => {
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Only access localStorage on the client side
-    const savedLang = window.localStorage.getItem('lang') || 'pt'
-    setLocale(savedLang)
+    setMounted(true)
   }, [])
 
-  return locale
+  return mounted
 }

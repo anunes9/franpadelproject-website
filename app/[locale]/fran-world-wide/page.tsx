@@ -2,7 +2,14 @@ import { getAllClinics } from '@/lib/clinics'
 import Image from 'next/image'
 import { Header } from '@/components/layout/Header'
 
-export default async function Page() {
+interface FranWorldWidePageProps {
+  params: Promise<{
+    locale: string
+  }>
+}
+
+export default async function FranWorldWidePage({ params }: FranWorldWidePageProps) {
+  const { locale } = await params
   const clinics = await getAllClinics()
   const masterClinic = clinics.find((c) => c.name === 'Master Clinic')
   const masterClinicEvolution = clinics.find((c) => c.name === 'Master Clinic Evolution')

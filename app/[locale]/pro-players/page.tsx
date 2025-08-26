@@ -3,8 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { PageLayout } from '@/components/layout/Page'
 import ProPlayers from '@/components/client/ProPlayers'
+import { getLocalizedPath } from '@/lib/i18n'
 
-export default async function Page() {
+interface ProPlayersPageProps {
+  params: Promise<{
+    locale: string
+  }>
+}
+
+export default async function ProPlayersPage({ params }: ProPlayersPageProps) {
+  const { locale } = await params
   const players = await getAllPlayers()
 
   return (
@@ -22,7 +30,7 @@ export default async function Page() {
           {players.map((p) => (
             <Link
               className={`grid-item w-full mx-auto hover:cursor-pointer hover:bg-gray-200 col-start-${p.colStart}`}
-              href={`/pro-players/${p.slug}`}
+              href={getLocalizedPath(`/pro-players/${p.slug}`, locale)}
               key={p.name}
             >
               <Image alt="pro1" src={p.image.url} fill className="!relative mx-auto" />

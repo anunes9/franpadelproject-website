@@ -1,26 +1,43 @@
 import Image from 'next/image'
 import { redirect } from 'next/navigation'
 import { getPlayer } from '@/lib/players'
-import { PlayerType, PageProps } from '@/lib/types'
+import { PlayerType } from '@/lib/types'
 import ProPlayersDetails from '@/components/client/ProPlayersDetails'
 import { PageLayout } from '@/components/layout/Page'
+
+interface ProPlayerDetailPageProps {
+  params: Promise<{
+    locale: string
+    slug: string
+  }>
+}
 
 export const dynamic = 'force-dynamic'
 
 export async function generateStaticParams() {
-  return [
-    { slug: 'afonso-fazendeiro' },
-    { slug: 'sofia-formigal' },
-    { slug: 'martim-silva' },
-    { slug: 'bernardo-monteiro' },
-    { slug: 'constanca-gorito' },
-    { slug: 'bernardo-roque' },
-    { slug: 'plinio-ferrao' },
+  const locales = ['pt', 'en']
+  const slugs = [
+    'afonso-fazendeiro',
+    'sofia-formigal',
+    'martim-silva',
+    'bernardo-monteiro',
+    'constanca-gorito',
+    'bernardo-roque',
+    'plinio-ferrao',
   ]
+
+  const params = []
+  for (const locale of locales) {
+    for (const slug of slugs) {
+      params.push({ locale, slug })
+    }
+  }
+
+  return params
 }
 
-export default async function Page({ params }: PageProps) {
-  const { slug } = await params
+export default async function ProPlayerDetailPage({ params }: ProPlayerDetailPageProps) {
+  const { locale, slug } = await params
   const player = (await getPlayer(slug)) as unknown as PlayerType
 
   if (player)
