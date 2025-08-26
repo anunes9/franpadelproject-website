@@ -1,11 +1,18 @@
 import AcademyComponent from '@/components/client/Academy'
 import { PageLayout } from '@/components/layout/Page'
 import Image from 'next/image'
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
+import { Metadata } from 'next'
 
 interface AcademyPageProps {
   params: Promise<{
     locale: string
   }>
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return generateSEOMetadata(locale, 'academy')
 }
 
 const AcademyPage = async ({ params }: AcademyPageProps) => {

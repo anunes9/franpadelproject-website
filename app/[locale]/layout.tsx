@@ -1,6 +1,8 @@
 import { ReactNode } from 'react'
 import { notFound } from 'next/navigation'
 import { getLocales } from '@/lib/i18n'
+import { generateStructuredData } from '@/lib/seo'
+import Script from 'next/script'
 
 interface LocaleLayoutProps {
   children: ReactNode
@@ -23,5 +25,19 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
     notFound()
   }
 
-  return <div data-locale={locale}>{children}</div>
+  // Generate structured data for the current locale
+  const structuredData = generateStructuredData(locale, 'home')
+
+  return (
+    <div data-locale={locale}>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData),
+        }}
+      />
+      {children}
+    </div>
+  )
 }

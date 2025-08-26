@@ -4,11 +4,18 @@ import Link from 'next/link'
 import { PageLayout } from '@/components/layout/Page'
 import ProPlayers from '@/components/client/ProPlayers'
 import { getLocalizedPath } from '@/lib/i18n'
+import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
+import { Metadata } from 'next'
 
 interface ProPlayersPageProps {
   params: Promise<{
     locale: string
   }>
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return generateSEOMetadata(locale, 'proPlayers')
 }
 
 export default async function ProPlayersPage({ params }: ProPlayersPageProps) {

@@ -5,8 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/privacy-policy', '/terms-of-service', '/auth/*', '/club/*'],
+      disallow: ['/private/', '/admin/'],
     },
-    sitemap: 'https://acme.com/sitemap.xml',
+    sitemap: 'https://frapadelproject.com/sitemap.xml',
   }
 }
