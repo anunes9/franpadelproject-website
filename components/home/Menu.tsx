@@ -1,11 +1,12 @@
-"use client"
+'use client'
 
-import Image from "next/image"
-import { Dialog, Transition } from "@headlessui/react"
-import { Fragment, useState } from "react"
-import Link from "next/link"
-import { t } from "@/locales"
-import { LanguageSwitch } from "@/components/layout/LanguageSwitch"
+import Image from 'next/image'
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
+import Link from 'next/link'
+import { t } from '@/locales'
+import { LanguageSwitch } from '@/components/layout/LanguageSwitch'
+import { useLocale } from '@/lib/hooks'
 
 export const Menu = () => {
   const [open, setOpen] = useState(false)
@@ -16,12 +17,7 @@ export const Menu = () => {
         onClick={() => setOpen(true)}
         className="cursor-pointer z-10 hover:bg-slate-100/10 rounded-md w-7 sm:w-10"
       >
-        <Image
-          src="/assets/menu-green.svg"
-          alt="menu"
-          fill
-          className="!relative"
-        />
+        <Image src="/assets/menu-green.svg" alt="menu" fill className="!relative" />
       </button>
 
       <MenuComponent open={open} handleClose={() => setOpen(false)} />
@@ -29,13 +25,7 @@ export const Menu = () => {
   )
 }
 
-const MenuComponent = ({
-  open,
-  handleClose,
-}: {
-  open: boolean
-  handleClose: any
-}) => (
+const MenuComponent = ({ open, handleClose }: { open: boolean; handleClose: any }) => (
   <Transition.Root show={open} as={Fragment}>
     <Dialog as="div" className="relative z-10" onClose={handleClose}>
       <div className="absolute inset-0 overflow-hidden">
@@ -60,21 +50,16 @@ const MenuComponent = ({
 )
 
 const textStyle =
-  "text-white hover:text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[32px] leading-normal text-center font-projectFontExtended"
+  'text-white hover:text-projectGreen text-[16px] md:text-[20px] lg:text-[24px] xl:text-[32px] leading-normal text-center font-projectFontExtended'
 
 const MenuContent = ({ handleClose }: { handleClose: any }) => {
-  const locale = window?.localStorage.getItem("lang") || "pt"
+  const locale = useLocale()
 
   return (
     <div className="flex h-full max-w-[1200px] m-auto flex-col px-4 py-6 md:p-12">
       <div className="flex flex-row justify-between items-center">
         <div className="w-16 sm:w-24 ml-4 sm:ml-0">
-          <Image
-            alt="logo"
-            src="/assets/fr-logo.png"
-            fill
-            className="!relative"
-          />
+          <Image alt="logo" src="/assets/fr-logo.png" fill className="!relative" />
         </div>
 
         <button
@@ -82,64 +67,45 @@ const MenuContent = ({ handleClose }: { handleClose: any }) => {
           className="rounded-md hover:bg-slate-100/10 p-2 w-10 sm:w-12 lg:w-14"
           onClick={handleClose}
         >
-          <Image
-            alt="logo"
-            src="/assets/cross.png"
-            fill
-            className="!relative"
-          />
+          <Image alt="logo" src="/assets/cross.png" fill className="!relative" />
         </button>
       </div>
 
       <div className="flex flex-col gap-4 items-center py-12">
         <Link className={textStyle} href="/academy">
-          {t(locale, "menu", "academy")}
+          {t(locale, 'menu', 'academy')}
         </Link>
 
         <Link className={textStyle} href="/clinics">
-          {t(locale, "menu", "padel-clinics")}
+          {t(locale, 'menu', 'padel-clinics')}
         </Link>
 
-        <Link
-          href="https://app.franpadelproject.com"
-          rel="noopener noreferrer"
-          className={textStyle}
-          target="_blank"
-        >
-          {t(locale, "menu", "methodology")}
+        <Link href="https://app.franpadelproject.com" rel="noopener noreferrer" className={textStyle} target="_blank">
+          {t(locale, 'menu', 'methodology')}
         </Link>
 
         <Link className={textStyle} href="/pro-players">
-          {t(locale, "menu", "pro-players")}
+          {t(locale, 'menu', 'pro-players')}
         </Link>
 
         <Link className={textStyle} href="/sponsors">
-          {t(locale, "menu", "sponsors")}
+          {t(locale, 'menu', 'sponsors')}
         </Link>
 
         <Link className={textStyle} href="/fran-world-wide">
-          {t(locale, "menu", "fran-world-wide")}
+          {t(locale, 'menu', 'fran-world-wide')}
         </Link>
 
         <Link className={textStyle} href="/contact">
-          {t(locale, "menu", "get-in-touch")}
+          {t(locale, 'menu', 'get-in-touch')}
         </Link>
       </div>
 
       <div className="flex justify-center items-center gap-12 mt-32">
         <LanguageSwitch />
 
-        <a
-          href="https://www.instagram.com/franfreitas.padel/"
-          target="_blank"
-          className="w-12 sm:w-14"
-        >
-          <Image
-            src="/assets/instagram.png"
-            className="!relative"
-            fill
-            alt="fran-logo"
-          />
+        <a href="https://www.instagram.com/franfreitas.padel/" target="_blank" className="w-12 sm:w-14">
+          <Image src="/assets/instagram.png" className="!relative" fill alt="fran-logo" />
         </a>
       </div>
     </div>

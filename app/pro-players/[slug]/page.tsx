@@ -5,6 +5,20 @@ import { PlayerType, PageProps } from '@/lib/types'
 import ProPlayersDetails from '@/components/client/ProPlayersDetails'
 import { PageLayout } from '@/components/layout/Page'
 
+export const dynamic = 'force-dynamic'
+
+export async function generateStaticParams() {
+  return [
+    { slug: 'afonso-fazendeiro' },
+    { slug: 'sofia-formigal' },
+    { slug: 'martim-silva' },
+    { slug: 'bernardo-monteiro' },
+    { slug: 'constanca-gorito' },
+    { slug: 'bernardo-roque' },
+    { slug: 'plinio-ferrao' },
+  ]
+}
+
 export default async function Page({ params }: PageProps) {
   const { slug } = await params
   const player = (await getPlayer(slug)) as unknown as PlayerType
