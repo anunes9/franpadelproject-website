@@ -14,3 +14,7 @@ export interface PlayerType {
   wptRanking: string
   fipRanking: string
 }
+
+export interface PageProps {
+  params: Promise<{ slug: string; postType?: string }>
+}

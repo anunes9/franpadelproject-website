@@ -1,26 +1,12 @@
-import Image from "next/image"
-import { PageLayout } from "@/components/layout/Page"
-import dynamic from "next/dynamic"
-const AcademyComponent = dynamic(
-  () =>
-    import("@/components/client/Academy").then(
-      (module) => module.default
-    ) as any,
-  {
-    ssr: false,
-  }
-) as any
+import AcademyComponent from '@/components/client/Academy'
+import { PageLayout } from '@/components/layout/Page'
+import Image from 'next/image'
 
 const Page = () => (
-  <PageLayout headerTitle={"academy"} bgColor>
+  <PageLayout headerTitle={'academy'} bgColor>
     <div className="flex flex-col md:flex-row md:mt-12 items-center">
       <div className="w-3/4 md:w-1/3 lg:w-[418px] h-full z-10 sm:mr-[-80px] lg:mr-[-180px] shadow-out">
-        <Image
-          alt="fran-logo"
-          src="/assets/fran-academia.png"
-          fill
-          className="!relative"
-        />
+        <Image alt="fran-logo" src="/assets/fran-academia.png" fill className="!relative" />
       </div>
 
       <AcademyComponent />
@@ -29,27 +15,16 @@ const Page = () => (
     <div className="bg-projectGray mt-24 p-4 lg:p-12 w-full">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-8">
         <div className="w-3/4 md:w-1/3  m-auto sm:w-96">
-          <Image
-            alt="fran-logo"
-            src="/assets/fran-face.png"
-            fill
-            className="!relative"
-          />
+          <Image alt="fran-logo" src="/assets/fran-face.png" fill className="!relative" />
         </div>
 
         <div className="hidden sm:block font-projectFontMedium text-sm sm:text-base lg:text-lg text-projectBlue sm:mr-20">
           <ul className="list-disc">
             <li className="sm:mb-8">
-              Founder{" "}
-              <span className="font-projectFontMediumExtended font-bold">
-                FRAN Padel Project
-              </span>
+              Founder <span className="font-projectFontMediumExtended font-bold">FRAN Padel Project</span>
             </li>
             <li className="sm:mb-8">
-              Founder{" "}
-              <span className="font-projectFontMediumExtended font-bold">
-                FRAN Methodology
-              </span>
+              Founder <span className="font-projectFontMediumExtended font-bold">FRAN Methodology</span>
             </li>
             <li>Head Coach</li>
           </ul>
@@ -79,15 +54,9 @@ const Page = () => (
           <li>Psychology Degree in ISPA University; </li>
           <li>Grade I & II from IPDJ </li>
           <li>Main Coach: </li>
-          <li className="text-projectGreen ml-6">
-            Afonso Fazendeiro (2022-2023)
-          </li>
-          <li className="text-projectGreen ml-6">
-            Constança Gorito (2022-2024)
-          </li>
-          <li className="text-projectGreen ml-6">
-            Bernardo Monteiro (2021-2023)
-          </li>
+          <li className="text-projectGreen ml-6">Afonso Fazendeiro (2022-2023)</li>
+          <li className="text-projectGreen ml-6">Constança Gorito (2022-2024)</li>
+          <li className="text-projectGreen ml-6">Bernardo Monteiro (2021-2023)</li>
           <li className="text-projectGreen ml-6">Martim Silva (2022-2023)</li>
           <li className="text-projectGreen ml-6">Plínio Ferrão (2021-2023)</li>
           <li className="text-projectGreen ml-6">Sofia Formigal (2023-2024)</li>

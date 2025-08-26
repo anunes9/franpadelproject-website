@@ -1,42 +1,23 @@
-import Image from "next/image"
-import dynamic from "next/dynamic"
-import { getAllClinics } from "@/lib/clinics"
-const Header = dynamic(
-  () =>
-    import("@/components/layout/Header").then((module) => module.Header) as any,
-  {
-    ssr: false,
-  }
-) as any
+import { getAllClinics } from '@/lib/clinics'
+import Image from 'next/image'
+import { Header } from '@/components/layout/Header'
 
 export default async function Page() {
   const clinics = await getAllClinics()
-  const masterClinic = clinics.find((c) => c.name === "Master Clinic")
-  const masterClinicEvolution = clinics.find(
-    (c) => c.name === "Master Clinic Evolution"
-  )
-  const ibe = clinics.find((c) => c.name === "IBE")
-  const padelWonderland = clinics.find((c) => c.name === "Padel Wonderland")
+  const masterClinic = clinics.find((c) => c.name === 'Master Clinic')
+  const masterClinicEvolution = clinics.find((c) => c.name === 'Master Clinic Evolution')
+  const ibe = clinics.find((c) => c.name === 'IBE')
+  const padelWonderland = clinics.find((c) => c.name === 'Padel Wonderland')
 
   return (
     <div className="bg-blueGreen h-full flex flex-col ">
       <Header title="fran-around-the-world" noColor />
 
       <div className="pt-24 pb-64 text-center content flex-grow">
-        <Image
-          src="/assets/fran-world-wide-logo.png"
-          className="!relative max-w-[50%] m-auto"
-          fill
-          alt="fran-logo"
-        />
+        <Image src="/assets/fran-world-wide-logo.png" className="!relative max-w-[50%] m-auto" fill alt="fran-logo" />
       </div>
 
-      <Image
-        src="/assets/mapa.png"
-        className="!relative w-full max-w-screen-2xl mx-auto"
-        fill
-        alt="fran-logo"
-      />
+      <Image src="/assets/mapa.png" className="!relative w-full max-w-screen-2xl mx-auto" fill alt="fran-logo" />
 
       <div className="content w-full mb-16 mt-32 px-4 flex flex-col gap-32">
         <div className="flex">
@@ -76,10 +57,7 @@ export default async function Page() {
           <ClinicPlace name="Portugal" />
 
           <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-16 px-4">
-            <ClinicCard
-              title="Lisbon"
-              clinics={[padelWonderland, masterClinic, masterClinicEvolution]}
-            />
+            <ClinicCard title="Lisbon" clinics={[padelWonderland, masterClinic, masterClinicEvolution]} />
 
             <ClinicCard title="Azores" methodology />
           </div>
@@ -92,9 +70,7 @@ export default async function Page() {
 const ClinicPlace = ({ name }: { name: string }) => (
   <div className="flex">
     <div className="border-r-4 border-white flex items-center">
-      <p className="sideText text-xl text-white font-projectFontMedium">
-        {name}
-      </p>
+      <p className="sideText text-xl text-white font-projectFontMedium">{name}</p>
     </div>
 
     <div className="bg-flag w-12 h-12 pl-1">
@@ -113,9 +89,7 @@ const ClinicCard = ({
   methodology?: boolean
 }) => (
   <div className="p-4 flex flex-col items-center">
-    <p className="text-xl text-white font-projectFontMedium underline underline-offset-8 mb-8">
-      {title}
-    </p>
+    <p className="text-xl text-white font-projectFontMedium underline underline-offset-8 mb-8">{title}</p>
 
     <div className="flex flex-col items-center gap-8">
       {clinics.map((c, i) => (
@@ -129,14 +103,7 @@ const ClinicCard = ({
         />
       ))}
 
-      {methodology && (
-        <Image
-          className="!relative bg-white p-4"
-          alt="pro1"
-          src="/assets/fran-methodology.png"
-          fill
-        />
-      )}
+      {methodology && <Image className="!relative bg-white p-4" alt="pro1" src="/assets/fran-methodology.png" fill />}
     </div>
   </div>
 )

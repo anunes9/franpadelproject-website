@@ -1,12 +1,5 @@
-import dynamic from "next/dynamic"
-import { ReactNode } from "react"
-const Header = dynamic(
-  () =>
-    import("@/components/layout/Header").then((module) => module.Header) as any,
-  {
-    ssr: false,
-  }
-) as any
+import { ReactNode } from 'react'
+import { Header } from './Header'
 
 export const PageLayout = ({
   children,
@@ -17,7 +10,7 @@ export const PageLayout = ({
   headerTitle: string
   bgColor?: boolean
 }) => (
-  <div className={bgColor ? "bg-blueWhite" : ""}>
+  <div className={bgColor ? 'bg-blueWhite' : ''}>
     <div className="bg-bodyPattern bg-cover h-full w-full absolute left-0 opacity-10 z-0" />
 
     <Header title={headerTitle} />

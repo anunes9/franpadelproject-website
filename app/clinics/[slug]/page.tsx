@@ -1,10 +1,12 @@
-import { redirect } from "next/navigation"
-import { getClinic } from "@/lib/clinics"
-import ClinicDetails from "@/components/client/ClinicDetails"
-import { PageLayout } from "@/components/layout/Page"
+import { redirect } from 'next/navigation'
+import { getClinic } from '@/lib/clinics'
+import ClinicDetails from '@/components/client/ClinicDetails'
+import { PageLayout } from '@/components/layout/Page'
+import { PageProps } from '@/lib/types'
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const clinic = await getClinic(params.slug)
+export default async function Page({ params }: PageProps) {
+  const { slug } = await params
+  const clinic = await getClinic(slug)
 
   if (clinic)
     return (
@@ -12,5 +14,5 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <ClinicDetails clinic={clinic} />
       </PageLayout>
     )
-  redirect("/not-found")
+  redirect('/not-found')
 }
