@@ -23,13 +23,13 @@ export default async function ProPlayersPage({ params }: ProPlayersPageProps) {
   const players = await getAllPlayers()
 
   return (
-    <PageLayout headerTitle="pro-players" bgColor>
+    <PageLayout headerTitle="pro-players" bgColor locale={locale}>
       <div className="flex flex-col sm:flex-row justify-between mt-12 sm:mt-[100px]">
         <div className="w-3/4 sm:w-[300px] lg:w-[500px] h-full lg:h-[702px] m-auto z-10 sm:mr-[-250px] my-4 shadow-out">
           <Image alt="pro-players-hero" src="/assets/pro-players-hero.png" fill className="!relative" />
         </div>
 
-        <ProPlayers />
+        <ProPlayers locale={locale} />
       </div>
 
       <div className="bg-projectGray m-auto p-10 lg:p-[68px] mt-24 sm:mt-[177px] mb-[151px]">

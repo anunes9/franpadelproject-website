@@ -19,13 +19,13 @@ const AcademyPage = async ({ params }: AcademyPageProps) => {
   const { locale } = await params
 
   return (
-    <PageLayout headerTitle={'academy'} bgColor>
+    <PageLayout headerTitle={'academy'} bgColor locale={locale}>
       <div className="flex flex-col md:flex-row md:mt-12 items-center">
         <div className="w-3/4 md:w-1/3 lg:w-[418px] h-full z-10 sm:mr-[-80px] lg:mr-[-180px] shadow-out">
           <Image alt="fran-logo" src="/assets/fran-academia.png" fill className="!relative" />
         </div>
 
-        <AcademyComponent />
+        <AcademyComponent locale={locale} />
       </div>
 
       <div className="bg-projectGray mt-24 p-4 lg:p-12 w-full">

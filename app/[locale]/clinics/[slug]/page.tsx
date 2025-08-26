@@ -40,9 +40,10 @@ export default async function ClinicDetailPage({ params }: ClinicDetailPageProps
 
   if (clinic)
     return (
-      <PageLayout headerTitle="padel-clinics">
-        <ClinicDetails clinic={clinic} />
+      <PageLayout headerTitle="padel-clinics" locale={locale}>
+        <ClinicDetails clinic={clinic} locale={locale} />
       </PageLayout>
     )
+
   redirect('/not-found')
 }

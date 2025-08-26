@@ -17,7 +17,7 @@ const Page = async ({ params }: ContactPageProps) => {
   const { locale } = await params
 
   return (
-    <PageLayout headerTitle="get-in-touch">
+    <PageLayout headerTitle="get-in-touch" locale={locale}>
       <div>
         <iframe
           allowTransparency={true}

@@ -9,9 +9,8 @@ interface PrivacyPolicyPageProps {
 
 const Page = async ({ params }: PrivacyPolicyPageProps) => {
   const { locale } = await params
-
   return (
-    <PageLayout headerTitle="privacy-policy">
+    <PageLayout headerTitle="privacy-policy" locale={locale}>
       <div className="px-4 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto my-8">
         <Title>Privacy Policy </Title>
 

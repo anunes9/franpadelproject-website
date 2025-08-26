@@ -18,7 +18,7 @@ export default async function FranWorldWidePage({ params }: FranWorldWidePagePro
 
   return (
     <div className="bg-blueGreen h-full flex flex-col ">
-      <Header title="fran-around-the-world" noColor />
+      <Header title="fran-around-the-world" noColor locale={locale} />
 
       <div className="pt-24 pb-64 text-center content flex-grow">
         <Image src="/assets/fran-world-wide-logo.png" className="!relative max-w-[50%] m-auto" fill alt="fran-logo" />

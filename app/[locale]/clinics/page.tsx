@@ -22,7 +22,7 @@ export default async function ClinicsPage({ params }: ClinicsPageProps) {
   const clinics = await getAllClinics()
 
   return (
-    <PageLayout headerTitle="padel-clinics">
+    <PageLayout headerTitle="padel-clinics" locale={locale}>
       <div className="m-auto pt-24 sm:pt-[77px] lg:pt-[177px] pb-16 lg:pb-[151px] flex justify-center z-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 bg-projectGreen">
           {clinics.map((p) => (

@@ -22,9 +22,9 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <>
-      <Hero />
+      <Hero locale={locale} />
       <Suspense fallback={<div>Loading...</div>}>
-        <Content />
+        <Content locale={locale} />
       </Suspense>
     </>
   )

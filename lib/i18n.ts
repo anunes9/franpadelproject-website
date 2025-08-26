@@ -1,4 +1,3 @@
-import { headers } from 'next/headers'
 import { pt } from '@/locales/pt'
 import { en } from '@/locales/en'
 

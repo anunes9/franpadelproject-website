@@ -1,22 +1,10 @@
 import { Metadata } from 'next'
-import { t } from './i18n'
 
 // Base metadata configuration
 const baseMetadata = {
   metadataBase: new URL('https://frapadelproject.com'),
   alternates: {
     canonical: '/',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
   },
   verification: {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
@@ -62,7 +50,7 @@ export function generateMetadata(
     ...baseMetadata,
     title: pageData.title,
     description: pageData.description,
-    keywords: pageData.keywords,
+    keywords: pageData.keywords.split(',').map((k: string) => k.trim()),
     alternates: {
       canonical: pageData.url,
       languages: {

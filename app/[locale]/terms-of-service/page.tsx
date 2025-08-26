@@ -9,9 +9,8 @@ interface TermsOfServicePageProps {
 
 const Page = async ({ params }: TermsOfServicePageProps) => {
   const { locale } = await params
-
   return (
-    <PageLayout headerTitle="terms-of-service">
+    <PageLayout headerTitle="terms-of-service" locale={locale}>
       <div className="px-4 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto my-8">
         <Title>Terms of Service</Title>
 

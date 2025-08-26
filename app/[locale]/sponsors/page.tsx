@@ -9,9 +9,8 @@ interface SponsorsPageProps {
 
 const Page = async ({ params }: SponsorsPageProps) => {
   const { locale } = await params
-
   return (
-    <PageLayout headerTitle="sponsors">
+    <PageLayout headerTitle="sponsors" locale={locale}>
       <div className="w-2/3 md:w-1/2 mx-auto py-24 max-w-md">
         <div className="flex flex-col gap-20">
           <Image alt="fran-logo" src="/assets/cork.png" fill className="!relative" />
