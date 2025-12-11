@@ -12,6 +12,7 @@
     "@vercel/analytics": "^1.2.2",
     "autoprefixer": "10.4.15",
     "geist": "^1.0.0",
+    "lucide-react": "^0.560.0",
     "next": "latest",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.38",

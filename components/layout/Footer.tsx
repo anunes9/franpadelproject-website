@@ -1,35 +1,38 @@
-import Link from "next/link"
-import { MediaLink } from "@/components/generic/MediaLink"
+import Link from 'next/link'
+import Image from 'next/image'
 
 export const Footer = () => (
-  <footer className="bg-projectBlue font-projectFontMediumExtended text-sm text-white">
-    <div className="flex flex-col sm:flex-row justify-between gap-4 items-center md:items-start text-center content py-12 px-8 lg:px-4">
-      <MediaLink src="/assets/fr-logo.png" href="/" alt="logo" width="!w-14" />
-
-      <MediaLink
-        src="/assets/instagram.png"
-        href="https://www.instagram.com/franfreitas.padel/"
-        alt="instagram"
-        width="!w-12"
-        className="sm:order-5"
-      />
-
-      <div className="flex flex-col md:flex-row items-center gap-4">
-        <Link href="/privacy-policy" className="block">
-          Privacy Policy
-        </Link>
-
-        <Link href="/terms-of-service" className="block">
-          Terms of Service
-        </Link>
-
-        <MediaLink
-          href="https:anunes9.github.io/me/"
-          alt="an-logo"
-          src="/assets/an-logo-color.svg"
-          width="!w-14"
-          text="© 2024 All rights reserved"
+  <footer className="bg-black py-12 border-t border-gray-900">
+    <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="flex items-center gap-8">
+        <Image
+          src="/assets/fran-padel-project-logo-green.svg"
+          alt="Fran Padel Project"
+          width={48}
+          height={48}
+          className="h-12 w-auto"
         />
+
+        <a
+          href="https://anunes9.github.io/me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-80 transition-opacity"
+        >
+          <Image src="/assets/an-logo-color.svg" alt="AN" width={64} height={64} className="h-16 w-auto" />
+        </a>
+      </div>
+
+      <div className="text-gray-500 text-xs text-center md:text-right uppercase tracking-wider">
+        <p>&copy; {new Date().getFullYear()} Fran Padel Project. All rights reserved.</p>
+        <div className="flex justify-center md:justify-end gap-4 mt-2">
+          <Link href="/privacy-policy" className="hover:text-white transition-colors">
+            Privacy Policy
+          </Link>
+          <Link href="/terms-of-service" className="hover:text-white transition-colors">
+            Terms of Service
+          </Link>
+        </div>
       </div>
     </div>
   </footer>

@@ -1,10 +1,11 @@
-import { Hero } from '@/components/home/Hero'
-import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
+import Navbar from '@/components/home/Navbar'
+import Hero from '@/components/home/Hero'
+import Services from '@/components/home/Services'
+import About from '@/components/home/About'
+import WorldMap from '@/components/home/WorldMap'
+import Contact from '@/components/home/Contact'
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo'
 import { Metadata } from 'next'
-
-const Content = dynamic(() => import('@/components/home/Content').then((module) => module.default) as any) as any
 
 interface HomePageProps {
   params: Promise<{
@@ -21,11 +22,15 @@ export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params
 
   return (
-    <>
-      <Hero locale={locale} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Content locale={locale} />
-      </Suspense>
-    </>
+    <div className="min-h-screen font-sans selection:bg-fran-teal selection:text-fran-navy overflow-x-hidden">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <WorldMap />
+        <Contact />
+      </main>
+    </div>
   )
 }

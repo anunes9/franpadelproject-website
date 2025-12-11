@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Roboto } from 'next/font/google'
+import { Roboto, Montserrat, Archivo } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import { Footer } from '@/components/layout/Footer'
@@ -11,11 +11,25 @@ const RobotoFont = Roboto({
   display: 'swap',
 })
 
+const MontserratFont = Montserrat({
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-montserrat',
+})
+
+const ArchivoFont = Archivo({
+  weight: ['400', '600', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-archivo',
+})
+
 export const metadata = generateMetadata('pt', 'home')
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt" className={`${RobotoFont.className}`}>
+    <html lang="pt" className={`${RobotoFont.className} ${MontserratFont.variable} ${ArchivoFont.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/fran-logo.png" />
