@@ -1,10 +1,9 @@
 'use client'
 
 import { t, changeLocale, getLocaleDisplayName, getLocales } from '@/lib/i18n'
-import { useLocale } from '@/lib/i18n'
 import { useState, useEffect } from 'react'
 
-export const LanguageSwitch = () => {
+export default function LanguageSwitch() {
   const [locale, setLocale] = useState('pt')
   const [mounted, setMounted] = useState(false)
 

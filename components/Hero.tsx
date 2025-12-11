@@ -1,15 +1,12 @@
-'use client'
-
-import React from 'react'
 import { ArrowDown, Crosshair } from 'lucide-react'
 
-const Hero: React.FC = () => {
+export default function Hero() {
   return (
     <section
       id="hero"
       className="relative w-full flex items-center justify-center overflow-hidden pt-20 lg:pt-32 grid-bg"
     >
-      <div className="container mx-auto px-6 py-6 relative z-10 grid grid-cols-1 gap-12 items-center max-w-7xl w-full mx-auto">
+      <div className="container px-6 py-6 relative z-10 grid grid-cols-1 gap-12 items-center max-w-7xl w-full mx-auto">
         {/* Left Text */}
         <div className="flex flex-col justify-center">
           <h1 className="font-display font-black text-5xl md:text-8xl lg:text-9xl leading-[0.85] text-white mb-8 tracking-tighter">
@@ -64,5 +61,3 @@ const Hero: React.FC = () => {
     </section>
   )
 }
-
-export default Hero

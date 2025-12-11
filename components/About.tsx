@@ -1,9 +1,8 @@
-import React from 'react'
 import { CheckCircle2, GraduationCap, Trophy } from 'lucide-react'
 import { BIO_DATA } from '@/lib/constants'
 import Image from 'next/image'
 
-const About: React.FC = () => {
+export default function About() {
   return (
     <section id="bio" className="py-20 md:py-32 relative grid-bg">
       <div className="container max-w-7xl mx-auto px-6">
@@ -87,5 +86,3 @@ const About: React.FC = () => {
     </section>
   )
 }
-
-export default About

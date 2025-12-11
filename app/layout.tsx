@@ -1,9 +1,10 @@
+import './globals.css'
+import { Analytics } from '@vercel/analytics/react'
+import { generateMetadata } from '@/lib/seo'
 import { ReactNode } from 'react'
 import { Roboto, Montserrat, Archivo } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
-import './globals.css'
-import { Footer } from '@/components/layout/Footer'
-import { generateMetadata } from '@/lib/seo'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 
 const RobotoFont = Roboto({
   weight: '400',
@@ -37,7 +38,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="text-foreground">
-        <main className="min-h-screen">{children}</main>
+        <Navbar />
+        <main>{children}</main>
         <Footer />
         <Analytics />
       </body>

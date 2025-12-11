@@ -1,9 +1,8 @@
-import React from 'react'
 import { CLINICS } from '@/lib/constants'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 
-const Services: React.FC = () => {
+export default function Services() {
   return (
     <section id="clinics" className="py-24 bg-white">
       <div className="container max-w-7xl mx-auto px-6">
@@ -62,5 +61,3 @@ const Services: React.FC = () => {
     </section>
   )
 }
-
-export default Services

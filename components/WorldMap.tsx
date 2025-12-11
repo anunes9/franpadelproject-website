@@ -1,8 +1,7 @@
-import React from 'react'
 import { WORLD_LOCATIONS } from '@/lib/constants'
 import Image from 'next/image'
 
-const WorldMap: React.FC = () => {
+export default function WorldMap() {
   return (
     <section id="world" className="bg-fran-navy pt-32 relative overflow-hidden">
       {/* Decorative Abstract Map Background */}
@@ -55,5 +54,3 @@ const WorldMap: React.FC = () => {
     </section>
   )
 }
-
-export default WorldMap

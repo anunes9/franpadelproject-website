@@ -1,9 +1,8 @@
 'use client'
 
-import React from 'react'
 import { Mail, MapPin, Instagram, ArrowRight } from 'lucide-react'
 
-const Contact: React.FC = () => {
+export default function Contact() {
   return (
     <section id="contact" className="py-20 relative">
       <div className="container mx-auto px-6">
@@ -106,5 +105,3 @@ const Contact: React.FC = () => {
     </section>
   )
 }
-
-export default Contact

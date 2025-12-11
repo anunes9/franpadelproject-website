@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
-import { notFound } from 'next/navigation'
-import { getLocales } from '@/lib/i18n'
 import { generateStructuredData } from '@/lib/seo'
+import { getLocales } from '@/lib/i18n'
+import { notFound } from 'next/navigation'
+import { ReactNode } from 'react'
 import Script from 'next/script'
 
 interface LocaleLayoutProps {
