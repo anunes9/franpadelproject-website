@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "@tabler/icons-react": "^2.44.0",
     "@vercel/analytics": "^1.2.2",
     "autoprefixer": "10.4.15",
     "geist": "^1.0.0",
