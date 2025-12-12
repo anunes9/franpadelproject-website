@@ -18,3 +18,11 @@ export interface PlayerType {
 export interface PageProps {
   params: Promise<{ slug: string; postType?: string }>
 }
+
+export interface ServiceItem {
+  title: string
+  description: string
+  price?: string
+  features: string[]
+  icon: React.ReactNode
+}

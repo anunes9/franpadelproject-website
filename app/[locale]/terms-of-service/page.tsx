@@ -1,5 +1,4 @@
-import { Text, Title } from '@/components/generic/Typography'
-import { PageLayout } from '@/components/layout/Page'
+import { Text, Title } from '@/components/Typography'
 
 interface TermsOfServicePageProps {
   params: Promise<{
@@ -10,7 +9,7 @@ interface TermsOfServicePageProps {
 const Page = async ({ params }: TermsOfServicePageProps) => {
   const { locale } = await params
   return (
-    <PageLayout headerTitle="terms-of-service" locale={locale}>
+    <>
       <div className="px-4 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto my-8">
         <Title>Terms of Service</Title>
 
@@ -73,7 +72,7 @@ const Page = async ({ params }: TermsOfServicePageProps) => {
           If you have any questions about these Terms of Service, please contact us at fran@franpadelproject.com.
         </Text>
       </div>
-    </PageLayout>
+    </>
   )
 }
 
