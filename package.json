@@ -12,7 +12,7 @@
     "@vercel/analytics": "^1.2.2",
     "autoprefixer": "10.4.15",
     "geist": "^1.0.0",
-    "next": "latest",
+    "next": "15.5.8",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.38",
     "react": "18.2.0",
