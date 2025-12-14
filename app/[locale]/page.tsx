@@ -5,6 +5,7 @@ import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import WorldMap from '@/components/WorldMap'
+import SponsorsAndPartners from '@/components/SponsorsAndPartners'
 
 interface HomePageProps {
   params: Promise<{
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <About />
       <Services />
       <WorldMap />
+      <SponsorsAndPartners />
       <Contact />
     </div>
   )

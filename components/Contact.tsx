@@ -70,7 +70,7 @@ export default function Contact() {
 
               <div className="space-y-6">
                 <div
-                  className="flex items-center gap-4 group cursor-pointer"
+                  className="flex flex-wrap items-center gap-4 group cursor-pointer"
                   onClick={() => (window.location.href = 'mailto:fran@franpadelproject.com')}
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center text-fran-navy group-hover:bg-fran-navy group-hover:text-white transition-colors">
@@ -78,7 +78,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest opacity-60">Email</div>
-                    <div className="font-bold text-lg group-hover:underline transition-colors">
+                    <div className="font-bold text-md md:text-lg group-hover:underline transition-colors">
                       fran@franpadelproject.com
                     </div>
                   </div>
@@ -95,7 +95,9 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest opacity-60">Instagram</div>
-                    <div className="font-bold text-lg group-hover:underline transition-colors">@franfreitas.padel</div>
+                    <div className="font-bold text-md md:text-lg group-hover:underline transition-colors">
+                      @franfreitas.padel
+                    </div>
                   </div>
                 </a>
 
@@ -105,14 +107,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold uppercase tracking-widest opacity-60">Base</div>
-                    <div className="font-bold text-lg">Lisbon, Portugal</div>
+                    <div className="font-bold text-md md:text-lg">Lisbon, Portugal</div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Form */}
-            <div className="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl">
+            <div className="bg-white p-4 md:p-12 rounded-3xl shadow-xl">
               <form onSubmit={handleSubmit} className="space-y-6">
                 {submitStatus === 'success' && (
                   <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg flex items-center gap-2">

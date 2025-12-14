@@ -1,4 +1,3 @@
-import React from 'react'
 import { Globe, Users, Award, Briefcase, Zap, Trophy, Heart } from 'lucide-react'
 import { ServiceItem } from './types'
 
@@ -7,6 +6,7 @@ export const NAV_LINKS = [
   { name: 'Founder', href: '#bio' },
   { name: 'Clinics', href: '#clinics' },
   { name: 'World Wide', href: '#world' },
+  { name: 'Sponsors', href: '#sponsors-partners' },
 ]
 
 export const CLINICS: ServiceItem[] = [
@@ -89,4 +89,45 @@ export const WORLD_LOCATIONS = [
   { name: 'Talatona', country: 'Angola', products: ['Master Clinic', 'Fran Methodology'] },
   { name: 'Lisbon', country: 'Portugal', products: ['Padel Wonderland', 'Master Clinic', 'Master Clinic Evolution'] },
   { name: 'Azores', country: 'Portugal', products: ['Fran Methodology'] },
+]
+
+export interface Sponsor {
+  name: string
+  logo: string
+  url: string
+}
+
+export const SPONSORS: Sponsor[] = [
+  { name: 'Cork', logo: '/assets/cork.png', url: 'https://www.corkpadel.com/en/' },
+  { name: 'DFL', logo: '/assets/DFL.png', url: 'https://www.instagram.com/dfl.selectedmeat/' },
+  { name: 'Proframe', logo: '/assets/proframe.png', url: 'https://www.instagram.com/pro.frame_/' },
+  { name: 'AN', logo: '/assets/an-logo-color.svg', url: 'https://anunes9.github.io/me/' },
+]
+
+export interface PartnerClub {
+  name: string
+  logo: string
+  location: string
+  url: string
+}
+
+export const PARTNER_CLUBS: PartnerClub[] = [
+  {
+    name: 'Premier Padel Club',
+    logo: '/assets/premier-padel-banner.png',
+    location: 'Talatona, Angola',
+    url: 'https://www.instagram.com/padelclub.premier/',
+  },
+  {
+    name: 'My Padel Center Mafra',
+    logo: '/assets/mcp-banner.png',
+    location: 'Mafra, Portugal',
+    url: 'https://www.instagram.com/mypadelcentermafra/',
+  },
+  {
+    name: 'Azores Padel Club',
+    logo: '/assets/azores-banner.png',
+    location: 'Azores, Portugal',
+    url: 'https://www.instagram.com/azorespadelclub/',
+  },
 ]
