@@ -1,8 +1,13 @@
-import { CheckCircle2, GraduationCap, Trophy } from 'lucide-react'
+import { Users, CheckCircle2, GraduationCap, Trophy } from 'lucide-react'
 import { BIO_DATA } from '@/lib/constants'
 import Image from 'next/image'
+import { t } from '@/lib/i18n'
 
-export default function About() {
+interface AboutProps {
+  locale: string
+}
+
+export default function About({ locale }: AboutProps) {
   return (
     <section id="bio" className="py-20 md:py-32 relative grid-bg">
       <div className="container max-w-7xl mx-auto px-6">
@@ -16,7 +21,7 @@ export default function About() {
             className="h-20 md:h-32 w-auto"
           />
           <h2 className="text-white font-display font-black text-4xl md:text-6xl lg:text-7xl uppercase pt-4 ">
-            Methodology
+            {t(locale, 'about', 'methodology')}
           </h2>
         </div>
 
@@ -39,22 +44,19 @@ export default function About() {
             <div className="lg:col-span-7 space-y-8">
               <div>
                 <h3 className="font-display font-black text-2xl text-black uppercase mb-6 flex items-center gap-3">
-                  <GraduationCap className="text-fran-teal" /> Philosophy
+                  <GraduationCap className="text-fran-teal" /> {t(locale, 'about', 'philosophy')}
                 </h3>
 
                 <p className="text-slate-600 leading-relaxed text-lg">
-                  "We don't just teach shots; we teach <span className="text-fran-teal font-bold">decision making</span>
-                  . The court is a chessboard."
+                  "{t(locale, 'about', 'philosophy-quote')}{' '}
+                  <span className="text-fran-teal font-bold">{t(locale, 'about', 'philosophy-decision')}</span>
+                  {t(locale, 'about', 'philosophy-quote-end')}"
                 </p>
-                <p className="text-slate-500 mt-4 leading-relaxed">
-                  With over 15 years of experience, Fran has developed a unique training system that adapts to every
-                  player's level. Combining psychological insights with elite WPT coaching experience to create complete
-                  athletes.
-                </p>
+                <p className="text-slate-500 mt-4 leading-relaxed">{t(locale, 'about', 'philosophy-description')}</p>
               </div>
 
               <h3 className="font-display font-black text-2xl text-black uppercase mb-6 flex items-center gap-3">
-                <Trophy className="text-fran-teal" /> Pro Experience
+                <Trophy className="text-fran-teal" /> {t(locale, 'about', 'pro-experience')}
               </h3>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -67,7 +69,10 @@ export default function About() {
               </div>
 
               <div className="md:col-span-2 bg-white p-6 rounded-xl border border-gray-200">
-                <h4 className="font-bold text-xl mb-4 text-fran-navy">Main Coach For:</h4>
+                <h4 className="font-display font-black text-md text-black uppercase mb-6 flex items-center gap-3">
+                  <Users className="text-fran-teal" /> {t(locale, 'about', 'main-coach-for')}
+                </h4>
+
                 <div className="flex flex-wrap gap-3">
                   {BIO_DATA.coached.map((player, i) => (
                     <span

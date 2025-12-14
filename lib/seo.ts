@@ -97,67 +97,6 @@ function getPageData(locale: string, page: string, customData?: any) {
         url: `${baseUrl}/en`,
       },
     },
-    academy: {
-      pt: {
-        title: 'Academia Fran Padel Project - Formação de Jogadores',
-        description:
-          'Junte-se à Academia Fran Padel Project. Formação completa para jogadores de todos os níveis com metodologia comprovada.',
-        keywords: 'academia padel, formação padel, treino padel, fran padel project, jogadores padel',
-        url: `${baseUrl}/pt/academy`,
-      },
-      en: {
-        title: 'Fran Padel Project Academy - Player Development',
-        description:
-          'Join the Fran Padel Project Academy. Complete training for players of all levels with proven methodology.',
-        keywords: 'padel academy, padel training, padel coaching, fran padel project, padel players',
-        url: `${baseUrl}/en/academy`,
-      },
-    },
-    clinics: {
-      pt: {
-        title: 'Clínicas Fran Padel Project - Treinos Especializados',
-        description:
-          'Participe nas nossas clínicas especializadas de padel. Treinos intensivos com metodologia Fran Padel Project.',
-        keywords: 'clínicas padel, treinos padel, metodologia padel, fran padel project',
-        url: `${baseUrl}/pt/clinics`,
-      },
-      en: {
-        title: 'Fran Padel Project Clinics - Specialized Training',
-        description: 'Join our specialized padel clinics. Intensive training with Fran Padel Project methodology.',
-        keywords: 'padel clinics, padel training, padel methodology, fran padel project',
-        url: `${baseUrl}/en/clinics`,
-      },
-    },
-    proPlayers: {
-      pt: {
-        title: 'Jogadores Profissionais - Fran Padel Project',
-        description:
-          'Conheça os jogadores profissionais treinados pela metodologia Fran Padel Project. Sucessos e conquistas.',
-        keywords: 'jogadores profissionais padel, fran padel project, sucessos padel',
-        url: `${baseUrl}/pt/pro-players`,
-      },
-      en: {
-        title: 'Professional Players - Fran Padel Project',
-        description:
-          'Meet the professional players trained by Fran Padel Project methodology. Successes and achievements.',
-        keywords: 'professional padel players, fran padel project, padel success',
-        url: `${baseUrl}/en/pro-players`,
-      },
-    },
-    contact: {
-      pt: {
-        title: 'Contacto - Fran Padel Project',
-        description: 'Entre em contacto connosco. Informações sobre treinos, clínicas e formação de padel.',
-        keywords: 'contacto padel, fran padel project, treinos padel',
-        url: `${baseUrl}/pt/contact`,
-      },
-      en: {
-        title: 'Contact - Fran Padel Project',
-        description: 'Get in touch with us. Information about padel training, clinics and coaching.',
-        keywords: 'padel contact, fran padel project, padel training',
-        url: `${baseUrl}/en/contact`,
-      },
-    },
   }
 
   const pageData = pages[page as keyof typeof pages]?.[locale as 'pt' | 'en']

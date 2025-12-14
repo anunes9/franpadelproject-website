@@ -2,8 +2,13 @@ import { SPONSORS, PARTNER_CLUBS, PartnerClub, Sponsor } from '@/lib/constants'
 import Image from 'next/image'
 import { Award, Handshake } from 'lucide-react'
 import Link from 'next/link'
+import { t } from '@/lib/i18n'
 
-export default function SponsorsAndPartners() {
+interface SponsorsAndPartnersProps {
+  locale: string
+}
+
+export default function SponsorsAndPartners({ locale }: SponsorsAndPartnersProps) {
   return (
     <section id="sponsors-partners" className="py-24 bg-white">
       <div className="container max-w-7xl mx-auto px-6">
@@ -11,7 +16,9 @@ export default function SponsorsAndPartners() {
         <div className="mb-20">
           <div className="flex items-center gap-4 mb-12">
             <Award className="text-fran-teal w-8 h-8" />
-            <h2 className="text-fran-navy font-display font-black text-4xl md:text-6xl uppercase">Sponsors</h2>
+            <h2 className="text-fran-navy font-display font-black text-4xl md:text-6xl uppercase">
+              {t(locale, 'sponsors', 'sponsors')}
+            </h2>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
@@ -42,7 +49,9 @@ export default function SponsorsAndPartners() {
         <div>
           <div className="flex items-center gap-4 mb-12">
             <Handshake className="text-fran-teal w-8 h-8" />
-            <h2 className="text-fran-navy font-display font-black text-4xl md:text-6xl uppercase">Partner Clubs</h2>
+            <h2 className="text-fran-navy font-display font-black text-4xl md:text-6xl uppercase">
+              {t(locale, 'sponsors', 'partner-clubs')}
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

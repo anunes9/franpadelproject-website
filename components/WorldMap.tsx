@@ -1,7 +1,12 @@
 import { WORLD_LOCATIONS } from '@/lib/constants'
 import Image from 'next/image'
+import { t } from '@/lib/i18n'
 
-export default function WorldMap() {
+interface WorldMapProps {
+  locale: string
+}
+
+export default function WorldMap({ locale }: WorldMapProps) {
   return (
     <section id="world" className="bg-fran-navy pt-32 relative overflow-hidden">
       {/* Decorative Abstract Map Background */}
@@ -16,9 +21,9 @@ export default function WorldMap() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-20">
           <h2 className="font-display font-black text-5xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-b from-white to-white/20 uppercase mb-4">
-            Global <br /> Reach
+            {t(locale, 'world', 'global-reach')} <br /> {t(locale, 'world', 'reach')}
           </h2>
-          <p className="text-fran-teal text-xl max-w-2xl">The Fran Padel Project methodology is spreading worldwide.</p>
+          <p className="text-fran-teal text-xl max-w-2xl">{t(locale, 'world', 'intro-text')}</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-6">

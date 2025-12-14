@@ -1,6 +1,11 @@
 import { ArrowDown, Crosshair } from 'lucide-react'
+import { t } from '@/lib/i18n'
 
-export default function Hero() {
+interface HeroProps {
+  locale: string
+}
+
+export default function Hero({ locale }: HeroProps) {
   return (
     <section
       id="hero"
@@ -18,8 +23,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed mb-10 border-l border-white/70 pl-6">
-            Focused on player growth, the academy develops a custom strategy to meet your specific needs. Experience the
-            Fran Methodology.
+            {t(locale, 'hero', 'intro-text')}
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -27,14 +31,14 @@ export default function Hero() {
               href="#clinics"
               className="group flex items-center gap-4 bg-white text-fran-navy px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-fran-teal transition-colors"
             >
-              Explore Clinics
+              {t(locale, 'hero', 'explore-clinics')}
               <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
             </a>
             <a
               href="#bio"
               className="flex items-center gap-4 px-8 py-4 rounded-full font-bold uppercase tracking-wider text-white border border-white/20 hover:bg-white/5 transition-colors"
             >
-              Meet Fran
+              {t(locale, 'hero', 'meet-fran')}
             </a>
           </div>
         </div>

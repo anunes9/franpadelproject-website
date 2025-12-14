@@ -32,10 +32,14 @@ export default function LanguageSwitch() {
   if (!mounted) {
     return (
       <div className="flex items-center gap-2">
-        <p className="text-white text-sm">{t('pt', 'menu', 'language')}</p>
-        <select className="bg-transparent text-white border border-white rounded px-2 py-1 text-sm">
-          <option value="pt">Português</option>
-          <option value="en">English</option>
+        <p className="text-gray-400 text-xs uppercase tracking-wider">{t('pt', 'menu', 'language')}</p>
+        <select className="bg-transparent text-white border border-gray-700 rounded px-2 py-1 text-xs hover:border-gray-600 transition-colors">
+          <option value="pt" className="bg-black text-white">
+            Português
+          </option>
+          <option value="en" className="bg-black text-white">
+            English
+          </option>
         </select>
       </div>
     )
@@ -43,14 +47,14 @@ export default function LanguageSwitch() {
 
   return (
     <div className="flex items-center gap-2">
-      <p className="text-white text-sm">{t(locale, 'menu', 'language')}</p>
+      <p className="text-gray-400 text-xs uppercase tracking-wider">{t(locale, 'menu', 'language')}</p>
       <select
         value={locale}
         onChange={(e) => handleLocaleChange(e.target.value)}
-        className="bg-transparent text-white border border-white rounded px-2 py-1 text-sm cursor-pointer hover:bg-white/10 transition-colors"
+        className="bg-transparent text-white border border-gray-700 rounded px-2 py-1 text-xs cursor-pointer hover:border-gray-600 transition-colors"
       >
         {getLocales().map((loc) => (
-          <option key={loc} value={loc} className="bg-projectBlue text-white">
+          <option key={loc} value={loc} className="bg-black text-white">
             {getLocaleDisplayName(loc)}
           </option>
         ))}

@@ -1,63 +1,139 @@
 export const en = {
-  home: {
-    'intro-line-1': 'Focused on player growth,',
-    'intro-line-2': ' the academy develops a',
-    'intro-line-3': ' custom strategy to meet',
-    'intro-line-4': ' your specific needs.',
-    'quote-line-1': '“Competing is having the feeling of ',
-    'quote-line-2': ' win or lose within the 10x20.',
-    'quote-line-3': ' I invite everyone who seeks',
-    'quote-line-4': ' better manage of this dichotomy',
-    'quote-line-5': ' in the life of a competitor',
-    'quote-line-6': ' to try out the training center”',
-  },
   menu: {
-    academy: 'Academy',
-    'padel-clinics': 'Padel Clinics',
-    methodology: 'FRAN Methodology',
-    'pro-players': 'Pro Players',
-    sponsors: 'Sponsors',
-    'get-in-touch': 'Get in touch',
     language: 'Language',
-    'fran-world-wide': 'Fran World Wide',
-  },
-  pages: {
     academy: 'Academy',
-    'padel-clinics': 'Padel Clinics',
-    methodology: 'FRAN Methodology',
-    'pro-players': 'Pro Players',
+    founder: 'Founder',
+    clinics: 'Clinics',
+    'world-wide': 'World Wide',
     sponsors: 'Sponsors',
+    'book-now': 'Book Now',
+    'get-in-touch': 'Get in Touch',
+  },
+  hero: {
+    'intro-text':
+      'Focused on player growth, the academy develops a custom strategy to meet your specific needs. Experience the Fran Methodology.',
+    'explore-clinics': 'Explore Clinics',
+    'meet-fran': 'Meet Fran',
+  },
+  about: {
+    methodology: 'Methodology',
+    philosophy: 'Philosophy',
+    'philosophy-quote': "We don't just teach shots; we teach",
+    'philosophy-decision': 'decision making',
+    'philosophy-quote-end': '. The court is a chessboard.',
+    'philosophy-description':
+      "With over 15 years of experience, Fran has developed a unique training system that adapts to every player's level. Combining psychological insights with elite WPT coaching experience to create complete athletes.",
+    'pro-experience': 'Pro Experience',
+    'main-coach-for': 'Main Coach For',
+  },
+  services: {
+    clinics: 'Clinics',
+    'clinics-description':
+      'Designed for specific outcomes. From intensive tactical weeks to corporate high-performance days.',
+    'see-availability': 'See Availability',
+    'iberian-padel-experience': {
+      title: 'IBERIAN PADEL EXPERIENCE',
+      description:
+        'If you would like to have an intensive padel experience in Spain, in an academy that works as a complement to the method applied in the training center, then get 8 to 16 people together to embark on this adventure.',
+      features: {
+        'feature-1': 'Intensive experience in Spain',
+        'feature-2': 'Groups of 8 to 16 people',
+        'feature-3': 'Complementary methodology',
+      },
+    },
+    'train-as-a-pro': {
+      title: 'TRAIN AS A PRO',
+      description:
+        'A product aimed at all social players who want to live a five-day experience, with padel training routines, physical training, games and coaching sessions focusing on technical, tactical and technical-tactical analysis, identical to a professional player.',
+      features: {
+        'feature-1': '5-Day Experience',
+        'feature-2': 'Training Routines',
+        'feature-3': 'Physical Training',
+        'feature-4': 'Tech/Tac Analysis',
+      },
+    },
+    'master-clinic-evolution': {
+      title: 'MASTER CLINIC EVOLUTION',
+      description:
+        'An international segment training product that brings together players, coaches and physical trainers, both foreign and national, in the application of the method applied in the training center in the transmission of technical, tactical and physical knowledge.',
+      features: {
+        'feature-1': 'International Segment',
+        'feature-2': 'Coaches & Trainers',
+        'feature-3': 'Knowledge Transmission',
+      },
+    },
+    'padel-wonderland': {
+      title: 'PADEL WONDERLAND',
+      description:
+        'An event that recreates an environment characteristic of professional padel within a host club with the reception of national and international players, coaches and physical trainers. Technical and tactical talks, autograph sessions, padel games and training sessions.',
+      features: {
+        'feature-1': 'Pro Environment',
+        'feature-2': 'Talks & Autographs',
+        'feature-3': 'Social & Pro Segments',
+      },
+    },
+    'master-clinic': {
+      title: 'MASTER CLINIC',
+      description:
+        'Training product of national segment that seeks to make known the method applied in the training center with elements belonging to the technical team of Fran Padel Project to clubs with the ambition of knowing our perspective on padel.',
+      features: {
+        'feature-1': 'National Segment',
+        'feature-2': 'Technical Team',
+        'feature-3': 'Club Partnerships',
+      },
+    },
+    'padel-company-big-day': {
+      title: 'PADEL COMPANY BIG DAY',
+      description:
+        'A training activity aimed at companies with an interest in promoting team building activities among their employees with padel playing a prominent role in promoting skills related to working in groups, effective communication, and managing emotions.',
+      features: {
+        'feature-1': 'Team Building',
+        'feature-2': 'Communication Skills',
+        'feature-3': 'Emotional Management',
+      },
+    },
+    'play-like-a-pro': {
+      title: 'PLAY LIKE A PRO',
+      description:
+        'A product that promotes an experience for those interested in sharing a padel court as an opponent and partner of a professional player during a 1-hour game with a 20-minute rotation in each role.',
+      features: {
+        'feature-1': 'Play with Pros',
+        'feature-2': '1-Hour Game',
+        'feature-3': 'Rotation System',
+      },
+    },
+  },
+  contact: {
+    'start-your-evolution': 'Start Your',
+    evolution: 'Evolution',
+    'intro-text':
+      'Ready to take your padel game to the professional level? Reach out to us for clinic availability and personalized training plans.',
+    email: 'Email',
+    instagram: 'Instagram',
+    base: 'Base',
+    'lisbon-portugal': 'Lisbon, Portugal',
+    name: 'Name',
+    message: 'Message',
+    'name-placeholder': 'John Doe',
+    'email-placeholder': 'john@example.com',
+    'message-placeholder': 'Tell us about your level...',
+    sending: 'Sending...',
+    'send-message': 'Send Message',
+    'success-message': "Message sent successfully! We'll get back to you soon.",
+    'error-message': 'Failed to send message. Please try again.',
   },
   sponsors: {
-    'partner-club': 'Partners Clubs',
+    sponsors: 'Sponsors',
+    'partner-clubs': 'Partner Clubs',
   },
-  'pro-players': {
-    'hero-line-1': 'The training center is home to',
-    'hero-line-2': 'the professional padel branch',
-    'hero-line-3': 'where they work on',
-    'hero-line-4': 'technical, tactical, strategic',
-    'hero-line-5': 'and mental aspects of the players',
-    'hero-line-6': 'contribute to their personal',
-    'hero-line-7': 'personal goals.',
-    dob: 'Date of birth',
-    position: 'Position',
-    'main-titles': 'Main titles',
-    'national-ranking': 'National Ranking',
-    'international-ranking': 'International Ranking',
-    'academy-time': 'Academy Presence',
+  world: {
+    'global-reach': 'Global',
+    reach: 'Reach',
+    'intro-text': 'The Fran Padel Project methodology is spreading worldwide.',
   },
-  academy: {
-    'line-1': 'The FRAN Padel Project Academy',
-    'line-2.1': 'is a ',
-    'line-2.2': 'learning and training space ',
-    'line-2.3': 'focused on the player and their specific needs.',
-    'line-3.1': 'The ',
-    'line-3.2': 'FRAN Method ',
-    'line-3.3': 'developed by Francisco Freitas, is suitable for all players',
-    'line-3.4': 'and adapts to their level of play, always seeking sustained ',
-    'line-3.5': 'growth and always challenging them with each training session.',
-    'line-4.1': 'In addition to the training component, the Academy ',
-    'line-4.2': 'runs a variety of clinics, where it responds to ',
-    'line-4.3': "players' different needs on a one-off basis.",
+  footer: {
+    'privacy-policy': 'Privacy Policy',
+    'terms-of-service': 'Terms of Service',
+    'all-rights-reserved': 'All rights reserved.',
   },
 }

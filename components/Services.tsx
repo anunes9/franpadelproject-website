@@ -1,8 +1,56 @@
-import { CLINICS } from '@/lib/constants'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
+import { t } from '@/lib/i18n'
+import { Globe, Users, Award, Briefcase, Zap, Trophy, Heart } from 'lucide-react'
+import { pt } from '@/locales/pt'
+import { en } from '@/locales/en'
 
-export default function Services() {
+interface ServicesProps {
+  locale: string
+}
+
+// Helper function to get translated clinic data
+function getTranslatedClinics(locale: string) {
+  const translations = locale === 'pt' ? pt : en
+  const clinicKeys = [
+    'iberian-padel-experience',
+    'train-as-a-pro',
+    'master-clinic-evolution',
+    'padel-wonderland',
+    'master-clinic',
+    'padel-company-big-day',
+    'play-like-a-pro',
+  ]
+
+  const icons = [
+    <Globe className="w-10 h-10" />,
+    <Zap className="w-10 h-10" />,
+    <Users className="w-10 h-10" />,
+    <Award className="w-10 h-10" />,
+    <Trophy className="w-10 h-10" />,
+    <Briefcase className="w-10 h-10" />,
+    <Heart className="w-10 h-10" />,
+  ]
+
+  return clinicKeys.map((key, index) => {
+    // @ts-expect-error - Dynamic access to nested objects
+    const clinicData = translations.services[key]
+    return {
+      title: clinicData?.title || '',
+      description: clinicData?.description || '',
+      features: [
+        clinicData?.features?.['feature-1'],
+        clinicData?.features?.['feature-2'],
+        clinicData?.features?.['feature-3'],
+        clinicData?.features?.['feature-4'],
+      ].filter(Boolean),
+      icon: icons[index],
+    }
+  })
+}
+
+export default function Services({ locale }: ServicesProps) {
+  const translatedClinics = getTranslatedClinics(locale)
   return (
     <section id="clinics" className="py-24 bg-white">
       <div className="container max-w-7xl mx-auto px-6">
@@ -16,22 +64,22 @@ export default function Services() {
                 height={128}
                 className="h-32 w-auto"
               />
-              <h2 className="text-fran-navy font-display font-black text-5xl md:text-7xl uppercase pt-4 ">Clinics</h2>
+              <h2 className="text-fran-navy font-display font-black text-5xl md:text-7xl uppercase pt-4 ">
+                {t(locale, 'services', 'clinics')}
+              </h2>
             </div>
-            <p className="text-slate-500 mt-4 text-lg">
-              Designed for specific outcomes. From intensive tactical weeks to corporate high-performance days.
-            </p>
+            <p className="text-slate-500 mt-4 text-lg">{t(locale, 'services', 'clinics-description')}</p>
           </div>
           <a
             href="#contact"
             className="text-fran-navy font-bold flex items-center gap-2 hover:gap-4 transition-all whitespace-nowrap"
           >
-            See Availability <ArrowRight size={20} />
+            {t(locale, 'services', 'see-availability')} <ArrowRight size={20} />
           </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {CLINICS.map((clinic, index) => (
+          {translatedClinics.map((clinic, index) => (
             <div
               key={index}
               className="bg-slate-50 p-8 rounded-2xl hover:bg-white hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 border border-transparent hover:border-slate-100 group"

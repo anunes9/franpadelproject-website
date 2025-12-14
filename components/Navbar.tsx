@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { NAV_LINKS } from '@/lib/constants'
 import Image from 'next/image'
+import { t, getLocaleFromPathname } from '@/lib/i18n'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [locale, setLocale] = useState('pt')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,12 @@ export default function Navbar() {
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    // Detect locale from pathname
+    const pathLocale = getLocaleFromPathname(window.location.pathname)
+    setLocale(pathLocale)
   }, [])
 
   return (
@@ -34,21 +42,32 @@ export default function Navbar() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-4">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  target={link?.target ?? ''}
-                  className="p-2 text-xs font-bold text-gray-300 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-widest uppercase whitespace-nowrap"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {NAV_LINKS.map((link) => {
+                // Map link names to translation keys
+                const translationKeyMap: Record<string, string> = {
+                  Academy: 'academy',
+                  Founder: 'founder',
+                  Clinics: 'clinics',
+                  'World Wide': 'world-wide',
+                  Sponsors: 'sponsors',
+                }
+                const translationKey = translationKeyMap[link.name] || link.name.toLowerCase().replace(/\s+/g, '-')
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target={link?.target ?? ''}
+                    className="p-2 text-xs font-bold text-gray-300 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-widest uppercase whitespace-nowrap"
+                  >
+                    {t(locale, 'menu', translationKey) || link.name}
+                  </a>
+                )
+              })}
               <a
                 href="#contact"
                 className="ml-4 bg-fran-teal text-fran-navy font-black text-xs px-6 py-3 rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(104,191,163,0.4)] transition-all uppercase tracking-wider"
               >
-                Book Now
+                {t(locale, 'menu', 'book-now')}
               </a>
             </div>
 
@@ -70,22 +89,33 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col gap-8 text-center">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-3xl font-display font-black text-white hover:text-fran-teal uppercase tracking-tighter"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            // Map link names to translation keys
+            const translationKeyMap: Record<string, string> = {
+              Academy: 'academy',
+              Founder: 'founder',
+              Clinics: 'clinics',
+              'World Wide': 'world-wide',
+              Sponsors: 'sponsors',
+            }
+            const translationKey = translationKeyMap[link.name] || link.name.toLowerCase().replace(/\s+/g, '-')
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-3xl font-display font-black text-white hover:text-fran-teal uppercase tracking-tighter"
+                onClick={() => setIsOpen(false)}
+              >
+                {t(locale, 'menu', translationKey) || link.name}
+              </a>
+            )
+          })}
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
             className="mt-8 text-fran-teal underline decoration-2 underline-offset-8 uppercase font-bold tracking-widest"
           >
-            Get in Touch
+            {t(locale, 'menu', 'get-in-touch')}
           </a>
         </div>
       </div>

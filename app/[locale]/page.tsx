@@ -23,12 +23,12 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <div className="min-h-screen font-sans selection:bg-fran-teal selection:text-fran-navy overflow-x-hidden">
-      <Hero />
-      <About />
-      <Services />
-      <WorldMap />
-      <SponsorsAndPartners />
-      <Contact />
+      <Hero locale={locale} />
+      <About locale={locale} />
+      <Services locale={locale} />
+      <WorldMap locale={locale} />
+      <SponsorsAndPartners locale={locale} />
+      <Contact locale={locale} />
     </div>
   )
 }

@@ -2,8 +2,13 @@
 
 import { useState, FormEvent } from 'react'
 import { Mail, MapPin, Instagram, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react'
+import { t } from '@/lib/i18n'
 
-export default function Contact() {
+interface ContactProps {
+  locale: string
+}
+
+export default function Contact({ locale }: ContactProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -61,12 +66,10 @@ export default function Contact() {
             {/* Info */}
             <div className="text-fran-navy">
               <h2 className="font-display font-black text-4xl md:text-6xl uppercase mb-8 leading-tight">
-                Start Your <br /> <span className="text-white">Evolution</span>
+                {t(locale, 'contact', 'start-your-evolution')} <br />{' '}
+                <span className="text-white">{t(locale, 'contact', 'evolution')}</span>
               </h2>
-              <p className="text-fran-navy/80 text-lg mb-12 font-medium">
-                Ready to take your padel game to the professional level? <br /> Reach out to us for clinic availability
-                and personalized training plans.
-              </p>
+              <p className="text-fran-navy/80 text-lg mb-12 font-medium">{t(locale, 'contact', 'intro-text')}</p>
 
               <div className="space-y-6">
                 <div
@@ -77,7 +80,9 @@ export default function Contact() {
                     <Mail size={20} />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-widest opacity-60">Email</div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60">
+                      {t(locale, 'contact', 'email')}
+                    </div>
                     <div className="font-bold text-md md:text-lg group-hover:underline transition-colors">
                       fran@franpadelproject.com
                     </div>
@@ -94,7 +99,9 @@ export default function Contact() {
                     <Instagram size={20} />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-widest opacity-60">Instagram</div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60">
+                      {t(locale, 'contact', 'instagram')}
+                    </div>
                     <div className="font-bold text-md md:text-lg group-hover:underline transition-colors">
                       @franfreitas.padel
                     </div>
@@ -106,8 +113,10 @@ export default function Contact() {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <div className="text-xs font-bold uppercase tracking-widest opacity-60">Base</div>
-                    <div className="font-bold text-md md:text-lg">Lisbon, Portugal</div>
+                    <div className="text-xs font-bold uppercase tracking-widest opacity-60">
+                      {t(locale, 'contact', 'base')}
+                    </div>
+                    <div className="font-bold text-md md:text-lg">{t(locale, 'contact', 'lisbon-portugal')}</div>
                   </div>
                 </div>
               </div>
@@ -119,22 +128,20 @@ export default function Contact() {
                 {submitStatus === 'success' && (
                   <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg flex items-center gap-2">
                     <CheckCircle size={20} />
-                    <span className="text-sm font-medium">Message sent successfully! We'll get back to you soon.</span>
+                    <span className="text-sm font-medium">{t(locale, 'contact', 'success-message')}</span>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg flex items-center gap-2">
                     <AlertCircle size={20} />
-                    <span className="text-sm font-medium">
-                      {errorMessage || 'Failed to send message. Please try again.'}
-                    </span>
+                    <span className="text-sm font-medium">{errorMessage || t(locale, 'contact', 'error-message')}</span>
                   </div>
                 )}
 
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Name
+                    {t(locale, 'contact', 'name')}
                   </label>
                   <input
                     id="name"
@@ -143,13 +150,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 focus:outline-none focus:border-fran-teal transition-colors rounded-t-lg"
-                    placeholder="John Doe"
+                    placeholder={t(locale, 'contact', 'name-placeholder')}
                     disabled={isSubmitting}
                   />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="email" className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Email
+                    {t(locale, 'contact', 'email')}
                   </label>
                   <input
                     id="email"
@@ -158,14 +165,14 @@ export default function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 focus:outline-none focus:border-fran-teal transition-colors rounded-t-lg"
-                    placeholder="john@example.com"
+                    placeholder={t(locale, 'contact', 'email-placeholder')}
                     disabled={isSubmitting}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-xs font-bold text-gray-400 uppercase tracking-widest">
-                    Message
+                    {t(locale, 'contact', 'message')}
                   </label>
                   <textarea
                     id="message"
@@ -174,7 +181,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full bg-gray-50 border-b-2 border-gray-200 px-4 py-3 focus:outline-none focus:border-fran-teal transition-colors rounded-t-lg"
-                    placeholder="Tell us about your level..."
+                    placeholder={t(locale, 'contact', 'message-placeholder')}
                     disabled={isSubmitting}
                   ></textarea>
                 </div>
@@ -185,10 +192,10 @@ export default function Contact() {
                   className="w-full bg-fran-navy text-white font-black uppercase tracking-widest py-4 rounded-xl hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
-                    'Sending...'
+                    t(locale, 'contact', 'sending')
                   ) : (
                     <>
-                      Send Message <ArrowRight size={18} />
+                      {t(locale, 'contact', 'send-message')} <ArrowRight size={18} />
                     </>
                   )}
                 </button>
