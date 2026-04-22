@@ -103,7 +103,7 @@ export default function IBERecap({ locale: _locale }: IBERecapProps) {
             <div className="flex flex-wrap items-center gap-3 mb-8">
               <span className="flex items-center gap-2 text-fran-teal border border-fran-teal/30 px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-fran-teal/5">
                 <Globe className="w-3 h-3" />
-                Edition 2024
+                Edition 2025
               </span>
               <span className="flex items-center gap-2 text-white/50 border border-white/10 px-4 py-1.5 text-xs font-mono tracking-widest uppercase">
                 <MapPin className="w-3 h-3" />
@@ -111,7 +111,7 @@ export default function IBERecap({ locale: _locale }: IBERecapProps) {
               </span>
               <span className="flex items-center gap-2 text-white/50 border border-white/10 px-4 py-1.5 text-xs font-mono tracking-widest uppercase">
                 <Calendar className="w-3 h-3" />
-                March 2024
+                September 2025
               </span>
             </div>
 
@@ -195,7 +195,7 @@ export default function IBERecap({ locale: _locale }: IBERecapProps) {
                 <div className="absolute -bottom-6 -left-6 glass-panel px-6 py-5 clip-corner-tl hidden md:block">
                   <p className="text-fran-teal text-xs font-mono tracking-widest uppercase mb-1">Location</p>
                   <p className="text-white font-display font-black text-xl">Madrid, Spain</p>
-                  <p className="text-white/40 text-sm mt-0.5">March 2024</p>
+                  <p className="text-white/40 text-sm mt-0.5">September 2025</p>
                 </div>
                 <div className="absolute -top-4 -right-4 w-16 h-16 border-t-2 border-r-2 border-fran-teal/30" />
               </div>

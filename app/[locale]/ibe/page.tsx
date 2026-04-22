@@ -9,10 +9,10 @@ export async function generateMetadata({ params }: IBEPageProps): Promise<Metada
   const { locale } = await params
   const isEn = locale === 'en'
   return {
-    title: isEn ? 'IBE 2024 Recap | FRAN Padel Project' : 'IBE 2024 Recap | FRAN Padel Project',
+    title: isEn ? 'IBE 2025 Recap | FRAN Padel Project' : 'IBE 2025 Recap | FRAN Padel Project',
     description: isEn
-      ? 'Relive the Iberian Padel Experience 2024 — an intensive multi-day padel training event in Madrid, Spain by FRAN Padel Project.'
-      : 'Revive a Experiência Ibérica de Padel 2024 — um evento intensivo de treino de padel em Madrid, Espanha pelo FRAN Padel Project.',
+      ? 'Relive the Iberian Padel Experience 2025 — an intensive multi-day padel training event in Madrid, Spain by FRAN Padel Project.'
+      : 'Revive a Experiência Ibérica de Padel 2025 — um evento intensivo de treino de padel em Madrid, Espanha pelo FRAN Padel Project.',
   }
 }
 
