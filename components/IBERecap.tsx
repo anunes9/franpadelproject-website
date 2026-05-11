@@ -9,6 +9,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import IBEStats from './IBEStats'
+import Contact from './Contact'
 import { getSignedImageUrls } from '@/lib/backblaze'
 import { IBE_GALLERY_IMAGES } from '@/lib/constants'
 import { t } from '@/lib/i18n'
@@ -66,7 +67,7 @@ export default async function IBERecap({ locale }: IBERecapProps) {
         style={{ background: '#0a1e33' }}
       >
         {/* ── HERO ── */}
-        <section className='relative min-h-[100svh] flex flex-col justify-end overflow-hidden'>
+        <section className='relative flex flex-col justify-center md:justify-end overflow-hidden'>
           <div className='absolute inset-0 grid-bg opacity-60' />
           <div
             className='absolute inset-0'
@@ -99,7 +100,7 @@ export default async function IBERecap({ locale }: IBERecapProps) {
             </span>
           </div>
 
-          <div className='relative z-10 container max-w-7xl mx-auto px-6 pb-20 pt-40'>
+          <div className='relative z-10 container max-w-7xl mx-auto px-6 pb-20 pt-24 md:pt-40'>
             <div className='flex flex-wrap items-center gap-3 mb-8'>
               <span className='flex items-center gap-2 text-fran-teal border border-fran-teal/30 px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-fran-teal/5'>
                 <Globe className='w-3 h-3' />
@@ -449,6 +450,8 @@ export default async function IBERecap({ locale }: IBERecapProps) {
             </div>
           </div>
         </section>
+
+        <Contact locale={locale} />
       </div>
     </>
   )

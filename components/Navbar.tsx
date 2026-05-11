@@ -10,6 +10,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [locale, setLocale] = useState('pt')
+  const [isIbePage, setIsIbePage] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,14 +21,22 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    // Detect locale from pathname
     const pathLocale = getLocaleFromPathname(window.location.pathname)
     setLocale(pathLocale)
+    setIsIbePage(window.location.pathname.includes('/ibe'))
   }, [])
+
+  const resolveHref = (href: string) => {
+    if (!isIbePage || !href.startsWith('#')) return href
+    const base = locale === 'pt' ? '/pt' : ''
+    return `${base}/${href}`
+  }
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 w-full z-50 px-4 py-6 transition-all duration-500`}>
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 px-4 py-6 transition-all duration-500`}
+      >
         <div
           className={`mx-auto max-w-7xl transition-all duration-300 ${
             scrolled
@@ -35,13 +44,19 @@ export default function Navbar() {
               : 'bg-transparent py-2'
           }`}
         >
-          <div className="flex justify-between items-center">
-            <a href="#" className="flex items-center gap-3 group">
-              <Image src="/assets/fran-logo.png" alt="Fran" width={120} height={36} className="h-9 w-auto" />
+          <div className='flex justify-between items-center'>
+            <a href='/' className='flex items-center gap-3 group'>
+              <Image
+                src='/assets/fran-logo.png'
+                alt='Fran'
+                width={120}
+                height={36}
+                className='h-9 w-auto'
+              />
             </a>
 
             {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className='hidden md:flex items-center gap-4'>
               {NAV_LINKS.map((link) => {
                 // Map link names to translation keys
                 const translationKeyMap: Record<string, string> = {
@@ -51,21 +66,23 @@ export default function Navbar() {
                   'World Wide': 'world-wide',
                   Sponsors: 'sponsors',
                 }
-                const translationKey = translationKeyMap[link.name] || link.name.toLowerCase().replace(/\s+/g, '-')
+                const translationKey =
+                  translationKeyMap[link.name] ||
+                  link.name.toLowerCase().replace(/\s+/g, '-')
                 return (
                   <a
                     key={link.name}
-                    href={link.href}
+                    href={resolveHref(link.href)}
                     target={link?.target ?? ''}
-                    className="p-2 text-xs font-bold text-gray-300 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-widest uppercase whitespace-nowrap"
+                    className='p-2 text-xs font-bold text-gray-300 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-widest uppercase whitespace-nowrap'
                   >
                     {t(locale, 'menu', translationKey) || link.name}
                   </a>
                 )
               })}
               <a
-                href="#contact"
-                className="ml-4 bg-fran-teal text-fran-navy font-black text-xs px-6 py-3 rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(104,191,163,0.4)] transition-all uppercase tracking-wider"
+                href={resolveHref('#contact')}
+                className='ml-4 bg-fran-teal text-fran-navy font-black text-xs px-6 py-3 rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(104,191,163,0.4)] transition-all uppercase tracking-wider'
               >
                 {t(locale, 'menu', 'book-now')}
               </a>
@@ -73,7 +90,7 @@ export default function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="md:hidden text-white bg-white/10 p-2 rounded-full hover:bg-fran-teal hover:text-fran-navy transition-colors"
+              className='md:hidden text-white bg-white/10 p-2 rounded-full hover:bg-fran-teal hover:text-fran-navy transition-colors'
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -88,7 +105,7 @@ export default function Navbar() {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex flex-col gap-8 text-center">
+        <div className='flex flex-col gap-8 text-center'>
           {NAV_LINKS.map((link) => {
             // Map link names to translation keys
             const translationKeyMap: Record<string, string> = {
@@ -98,12 +115,14 @@ export default function Navbar() {
               'World Wide': 'world-wide',
               Sponsors: 'sponsors',
             }
-            const translationKey = translationKeyMap[link.name] || link.name.toLowerCase().replace(/\s+/g, '-')
+            const translationKey =
+              translationKeyMap[link.name] ||
+              link.name.toLowerCase().replace(/\s+/g, '-')
             return (
               <a
                 key={link.name}
-                href={link.href}
-                className="text-3xl font-display font-black text-white hover:text-fran-teal uppercase tracking-tighter"
+                href={resolveHref(link.href)}
+                className='text-3xl font-display font-black text-white hover:text-fran-teal uppercase tracking-tighter'
                 onClick={() => setIsOpen(false)}
               >
                 {t(locale, 'menu', translationKey) || link.name}
@@ -111,9 +130,9 @@ export default function Navbar() {
             )
           })}
           <a
-            href="#contact"
+            href={resolveHref('#contact')}
             onClick={() => setIsOpen(false)}
-            className="mt-8 text-fran-teal underline decoration-2 underline-offset-8 uppercase font-bold tracking-widest"
+            className='mt-8 text-fran-teal underline decoration-2 underline-offset-8 uppercase font-bold tracking-widest'
           >
             {t(locale, 'menu', 'get-in-touch')}
           </a>
