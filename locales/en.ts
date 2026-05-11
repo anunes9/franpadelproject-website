@@ -131,6 +131,9 @@ export const en = {
     reach: 'Reach',
     'intro-text': 'The Fran Padel Project methodology is spreading worldwide.',
   },
+  gallery: {
+    title: 'Gallery',
+  },
   footer: {
     'privacy-policy': 'Privacy Policy',
     'terms-of-service': 'Terms of Service',

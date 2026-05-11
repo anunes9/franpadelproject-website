@@ -131,6 +131,9 @@ export const pt = {
     reach: 'Global',
     'intro-text': 'A metodologia do Fran Padel Project está a espalhar-se pelo mundo.',
   },
+  gallery: {
+    title: 'Galeria',
+  },
   footer: {
     'privacy-policy': 'Política de Privacidade',
     'terms-of-service': 'Termos de Serviço',

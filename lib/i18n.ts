@@ -80,11 +80,6 @@ export const changeLocale = (newLocale: string) => {
       segments.splice(1, 1)
     }
 
-    // Add new locale
-    if (newLocale !== 'pt') {
-      segments.splice(1, 0, newLocale)
-    }
-
     const newPath = segments.join('/')
     const newUrl = `${window.location.origin}${newPath}${window.location.search}${window.location.hash}`
 
