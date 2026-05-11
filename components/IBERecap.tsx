@@ -1,7 +1,6 @@
 import {
   MapPin,
   Calendar,
-  Play,
   ChevronRight,
   Globe,
   Zap,
@@ -18,8 +17,12 @@ interface IBERecapProps {
   locale: string
 }
 
+const IBE_VIDEO = 'Teaser IBE1_Madrid.mp4'
+
 export default async function IBERecap({ locale }: IBERecapProps) {
-  const imageUrls = await getSignedImageUrls(IBE_GALLERY_IMAGES)
+  const allUrls = await getSignedImageUrls([...IBE_GALLERY_IMAGES, IBE_VIDEO])
+  const imageUrls = allUrls.slice(0, IBE_GALLERY_IMAGES.length)
+  const videoUrl = allUrls[IBE_GALLERY_IMAGES.length]
 
   const MOMENTS = [
     {
@@ -354,48 +357,15 @@ export default async function IBERecap({ locale }: IBERecapProps) {
               {t(locale, 'ibe', 'watch-the-recap')}
             </h2>
 
-            {/* pure-CSS hover via group */}
-            <div
-              className='relative overflow-hidden cursor-pointer group ibe-reveal'
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cpath d='M0 0h80v80H0z' fill='%230f2640'/%3E%3Cpath d='M20 20h40v40H20z' fill='%231a3c5e' opacity='0.5'/%3E%3C/g%3E%3C/svg%3E")`,
-                backgroundSize: '80px 80px',
-              }}
-            >
-              <div className='absolute inset-0 bg-gradient-to-br from-fran-navy via-fran-dark to-black opacity-90' />
-              <div
-                className='absolute inset-0 opacity-5'
-                style={{
-                  backgroundImage: `repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(104,191,163,0.5) 2px, rgba(104,191,163,0.5) 3px)`,
-                }}
+            <div className='ibe-reveal flex justify-center'>
+              <video
+                src={videoUrl}
+                controls
+                playsInline
+                preload='metadata'
+                className='w-full md:w-auto md:max-h-[75vh]'
+                style={{ background: '#000' }}
               />
-              <div className='relative z-10 flex flex-col items-center justify-center min-h-[320px] md:min-h-[480px] gap-6 p-12'>
-                <div className='w-20 h-20 rounded-full border-2 border-fran-teal flex items-center justify-center bg-fran-teal/10 group-hover:bg-fran-teal group-hover:scale-110 transition-all duration-300'>
-                  <Play
-                    className='w-8 h-8 ml-1 text-fran-teal group-hover:text-fran-navy transition-colors duration-300'
-                    fill='currentColor'
-                  />
-                </div>
-                <div className='text-center'>
-                  <p className='text-white font-display font-black text-2xl md:text-3xl uppercase tracking-tight mb-2'>
-                    {t(locale, 'ibe', 'event-highlights-reel')}
-                  </p>
-                  <p className='text-white/40 text-sm font-mono tracking-widest uppercase'>
-                    {t(locale, 'ibe', 'video-coming-soon')}
-                  </p>
-                </div>
-                <div className='flex gap-1 mt-2'>
-                  {[18, 10, 28, 14, 22, 8, 30, 16, 24, 12, 20, 26].map(
-                    (h, i) => (
-                      <div
-                        key={i}
-                        className='w-1 rounded-full bg-fran-teal/40'
-                        style={{ height: `${h}px` }}
-                      />
-                    ),
-                  )}
-                </div>
-              </div>
             </div>
           </div>
         </section>
