@@ -139,6 +139,21 @@ export const en = {
     'terms-of-service': 'Terms of Service',
     'all-rights-reserved': 'All rights reserved.',
   },
+  'ibe-cta': {
+    'badge-edition': 'IBE · Edition 2026',
+    'badge-date': 'April',
+    'heading-line-1': 'IBERIAN',
+    'heading-line-2': 'PADEL',
+    'heading-line-3': 'EXPERIENCE',
+    description:
+      'The first edition of the IBE brought 16 players to Madrid for 4 days of immersive training, tactical analysis, and shared competition under the FRAN methodology.',
+    'watch-recap': 'Watch the Recap',
+    'join-next': 'Join Next Edition',
+    'stat-players': 'Players',
+    'stat-days': 'Days',
+    'stat-countries': 'Countries',
+    'stat-methodology': 'Methodology',
+  },
   ibe: {
     'hero-description':
       'An intensive padel experience bringing together players, coaches, and the FRAN methodology in the heart of Madrid.',

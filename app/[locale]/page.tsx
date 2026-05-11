@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
+import IBERecapCTA from '@/components/IBERecapCTA'
 import Services from '@/components/Services'
 import WorldMap from '@/components/WorldMap'
 import SponsorsAndPartners from '@/components/SponsorsAndPartners'
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <Hero locale={locale} />
       <About locale={locale} />
       <Services locale={locale} />
+      <IBERecapCTA locale={locale} />
       <WorldMap locale={locale} />
       <SponsorsAndPartners locale={locale} />
       <Contact locale={locale} />
