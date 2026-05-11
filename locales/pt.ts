@@ -119,7 +119,8 @@ export const pt = {
     'message-placeholder': 'Conte-nos sobre o seu nível...',
     sending: 'A enviar...',
     'send-message': 'Enviar Mensagem',
-    'success-message': 'Mensagem enviada com sucesso! Entraremos em contacto em breve.',
+    'success-message':
+      'Mensagem enviada com sucesso! Entraremos em contacto em breve.',
     'error-message': 'Falha ao enviar mensagem. Por favor, tente novamente.',
   },
   sponsors: {
@@ -129,7 +130,8 @@ export const pt = {
   world: {
     'global-reach': 'Alcance',
     reach: 'Global',
-    'intro-text': 'A metodologia do Fran Padel Project está a espalhar-se pelo mundo.',
+    'intro-text':
+      'A metodologia do Fran Padel Project está a espalhar-se pelo mundo.',
   },
   gallery: {
     title: 'Galeria',
@@ -151,8 +153,8 @@ export const pt = {
       'Orientada por Francisco Freitas e pela equipa técnica FRAN, cada edição reúne grupos de 8 a 16 jogadores para uma experiência que vai além das quadras — combinando coaching técnico, análise tática, condicionamento físico e competição partilhada.',
     'join-next-edition': 'Juntar-se à Próxima Edição',
     gallery: 'Galeria',
-    'captured': 'Momentos',
-    'moments': 'Capturados',
+    captured: 'Momentos',
+    moments: 'Capturados',
     'photos-arriving-soon-1': 'Fotos',
     'photos-arriving-soon-2': 'Em Breve',
     highlights: 'Destaques',
@@ -170,8 +172,7 @@ export const pt = {
     'moment-3-desc':
       'Sessões aprofundadas de coaching com análise de vídeo de jogos reais, identificando lacunas técnicas e oportunidades táticas com aplicação imediata em quadra.',
     video: 'Vídeo',
-    'watch-the-recap-1': 'Ver o',
-    'watch-the-recap-2': 'Recap',
+    'watch-the-recap': 'Ver o Recap',
     'event-highlights-reel': 'Melhores Momentos do Evento',
     'video-coming-soon': 'Vídeo Em Breve',
     quote:

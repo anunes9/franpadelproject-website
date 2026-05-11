@@ -151,8 +151,8 @@ export const en = {
       'Guided by Francisco Freitas and the full FRAN technical team, each edition brings together groups of 8 to 16 players for an experience that goes beyond the court — combining technical coaching, tactical analysis, physical conditioning, and shared competition.',
     'join-next-edition': 'Join Next Edition',
     gallery: 'Gallery',
-    'captured': 'Captured',
-    'moments': 'Moments',
+    captured: 'Captured',
+    moments: 'Moments',
     'photos-arriving-soon-1': 'Photos',
     'photos-arriving-soon-2': 'Arriving Soon',
     highlights: 'Highlights',
@@ -170,8 +170,7 @@ export const en = {
     'moment-3-desc':
       'Deep-dive coaching sessions analyzing real match footage, uncovering technical gaps and tactical opportunities with immediate on-court application.',
     video: 'Video',
-    'watch-the-recap-1': 'Watch the',
-    'watch-the-recap-2': 'Recap',
+    'watch-the-recap': 'Watch the Recap',
     'event-highlights-reel': 'Event Highlights Reel',
     'video-coming-soon': 'Video Coming Soon',
     quote:

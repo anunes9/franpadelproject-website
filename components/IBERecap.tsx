@@ -100,15 +100,15 @@ export default async function IBERecap({ locale }: IBERecapProps) {
             <div className='flex flex-wrap items-center gap-3 mb-8'>
               <span className='flex items-center gap-2 text-fran-teal border border-fran-teal/30 px-4 py-1.5 text-xs font-mono tracking-widest uppercase bg-fran-teal/5'>
                 <Globe className='w-3 h-3' />
-                Edition 2025
+                Edition 2026
+              </span>
+              <span className='flex items-center gap-2 text-white/50 border border-white/10 px-4 py-1.5 text-xs font-mono tracking-widest uppercase'>
+                <Calendar className='w-3 h-3' />
+                April
               </span>
               <span className='flex items-center gap-2 text-white/50 border border-white/10 px-4 py-1.5 text-xs font-mono tracking-widest uppercase'>
                 <MapPin className='w-3 h-3' />
                 Madrid, Spain
-              </span>
-              <span className='flex items-center gap-2 text-white/50 border border-white/10 px-4 py-1.5 text-xs font-mono tracking-widest uppercase'>
-                <Calendar className='w-3 h-3' />
-                September 2025
               </span>
             </div>
 
@@ -116,32 +116,26 @@ export default async function IBERecap({ locale }: IBERecapProps) {
               className='font-display font-black leading-none tracking-tighter mb-4'
               style={{ fontSize: 'clamp(3rem, 10vw, 9rem)' }}
             >
-              <span className='block text-white'>IBERIAN</span>
+              <span className='block'>
+                <span className='text-white'>IBE</span>
+                <span className='text-fran-teal'>RIAN</span>
+              </span>
+              <span className='block text-fran-teal'>PADEL</span>
               <span
                 className='block'
                 style={{
-                  background:
-                    'linear-gradient(90deg, #68bfa3 0%, #a8dfd0 50%, #68bfa3 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
+                  color: 'transparent',
+                  WebkitTextStroke: '2px white',
                 }}
               >
-                PADEL
+                EXPERIENCE
               </span>
-              <span className='block text-white'>EXPERIENCE</span>
             </h1>
 
             <div className='flex flex-col sm:flex-row items-start sm:items-end gap-8 mt-8'>
-              <p className='text-white/50 text-base md:text-lg max-w-md leading-relaxed border-l-2 border-fran-teal/40 pl-6'>
+              <p className='text-white/50 text-base md:text-lg leading-relaxed border-l-2 border-fran-teal/40 pl-6'>
                 {t(locale, 'ibe', 'hero-description')}
               </p>
-              <div className='ml-auto hidden sm:block'>
-                <div className='w-px h-24 bg-gradient-to-b from-fran-teal/60 to-transparent mx-auto mb-2' />
-                <p className='text-white/20 text-xs font-mono tracking-widest uppercase rotate-90 origin-top-left translate-x-full -translate-y-2'>
-                  Scroll
-                </p>
-              </div>
             </div>
           </div>
 
@@ -172,7 +166,9 @@ export default async function IBERecap({ locale }: IBERecapProps) {
                 >
                   {t(locale, 'ibe', 'more-than-a-clinic')}
                   <br />
-                  <span className='outline-text-teal'>{t(locale, 'ibe', 'a-full-experience')}</span>
+                  <span className='outline-text-teal'>
+                    {t(locale, 'ibe', 'a-full-experience')}
+                  </span>
                 </h2>
                 <div className='space-y-4 text-white/60 leading-relaxed text-base md:text-lg'>
                   <p>{t(locale, 'ibe', 'overview-p1')}</p>
@@ -235,7 +231,9 @@ export default async function IBERecap({ locale }: IBERecapProps) {
                 <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter leading-tight'>
                   {t(locale, 'ibe', 'captured')}
                   <br />
-                  <span className='outline-text'>{t(locale, 'ibe', 'moments')}</span>
+                  <span className='outline-text'>
+                    {t(locale, 'ibe', 'moments')}
+                  </span>
                 </h2>
               </div>
               <p className='text-white/30 text-sm font-mono tracking-widest uppercase hidden md:block text-right'>
@@ -353,9 +351,7 @@ export default async function IBERecap({ locale }: IBERecapProps) {
               </span>
             </div>
             <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter leading-tight mb-10 ibe-reveal'>
-              {t(locale, 'ibe', 'watch-the-recap-1')}
-              <br />
-              {t(locale, 'ibe', 'watch-the-recap-2')}
+              {t(locale, 'ibe', 'watch-the-recap')}
             </h2>
 
             {/* pure-CSS hover via group */}
@@ -457,7 +453,9 @@ export default async function IBERecap({ locale }: IBERecapProps) {
                 <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter leading-tight mb-4'>
                   {t(locale, 'ibe', 'ready-for-your')}
                   <br />
-                  <span className='outline-text-teal'>{t(locale, 'ibe', 'ibe-experience')}</span>
+                  <span className='outline-text-teal'>
+                    {t(locale, 'ibe', 'ibe-experience')}
+                  </span>
                 </h2>
                 <p className='text-white/50 text-base md:text-lg leading-relaxed'>
                   {t(locale, 'ibe', 'cta-description')}
