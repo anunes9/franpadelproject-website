@@ -80,7 +80,10 @@ export const changeLocale = (newLocale: string) => {
       segments.splice(1, 1)
     }
 
-    const newPath = segments.join('/')
+    // Always prepend the new locale prefix
+    segments.splice(1, 0, newLocale)
+
+    const newPath = segments.join('/') || '/'
     const newUrl = `${window.location.origin}${newPath}${window.location.search}${window.location.hash}`
 
     // Navigate to new URL
@@ -102,9 +105,6 @@ export const getLocaleDisplayName = (locale: string) => {
 
 // Generate localized path
 export const getLocalizedPath = (path: string, locale: string): string => {
-  if (locale === 'pt') {
-    return path
-  }
   return `/${locale}${path}`
 }
 

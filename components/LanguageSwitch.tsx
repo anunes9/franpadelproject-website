@@ -1,6 +1,6 @@
 'use client'
 
-import { t, changeLocale, getLocaleDisplayName, getLocales } from '@/lib/i18n'
+import { t, changeLocale, getLocaleDisplayName, getLocales, getLocaleFromPathname } from '@/lib/i18n'
 import { useState, useEffect } from 'react'
 
 export default function LanguageSwitch() {
@@ -8,19 +8,7 @@ export default function LanguageSwitch() {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Get initial locale from pathname
-    const pathname = window.location.pathname
-    const segments = pathname.split('/')
-    const pathLocale = segments[1]
-
-    if (['pt', 'en'].includes(pathLocale)) {
-      setLocale(pathLocale)
-    } else {
-      // Fallback to localStorage
-      const savedLang = localStorage.getItem('lang') || 'en'
-      setLocale(savedLang)
-    }
-
+    setLocale(getLocaleFromPathname(window.location.pathname))
     setMounted(true)
   }, [])
 
