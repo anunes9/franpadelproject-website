@@ -12,34 +12,35 @@ import Image from 'next/image'
 import IBEStats from './IBEStats'
 import { getSignedImageUrls } from '@/lib/backblaze'
 import { IBE_GALLERY_IMAGES } from '@/lib/constants'
+import { t } from '@/lib/i18n'
 
 interface IBERecapProps {
   locale: string
 }
 
-const MOMENTS = [
-  {
-    icon: <Target className='w-6 h-6' />,
-    tag: 'Training',
-    title: 'FRAN Methodology in Action',
-    desc: 'Full-day training sessions led by Francisco Freitas, applying the core FRAN methodology with advanced technical and tactical drills on the courts of Madrid.',
-  },
-  {
-    icon: <Users className='w-6 h-6' />,
-    tag: 'Community',
-    title: 'International Player Mix',
-    desc: 'Players from across Portugal and Spain came together, forming lasting connections through shared passion for padel and high-performance training.',
-  },
-  {
-    icon: <Zap className='w-6 h-6' />,
-    tag: 'Analysis',
-    title: 'Video & Tactical Breakdowns',
-    desc: 'Deep-dive coaching sessions analyzing real match footage, uncovering technical gaps and tactical opportunities with immediate on-court application.',
-  },
-]
-
-export default async function IBERecap({ locale: _locale }: IBERecapProps) {
+export default async function IBERecap({ locale }: IBERecapProps) {
   const imageUrls = await getSignedImageUrls(IBE_GALLERY_IMAGES)
+
+  const MOMENTS = [
+    {
+      icon: <Target className='w-6 h-6' />,
+      tag: t(locale, 'ibe', 'moment-1-tag'),
+      title: t(locale, 'ibe', 'moment-1-title'),
+      desc: t(locale, 'ibe', 'moment-1-desc'),
+    },
+    {
+      icon: <Users className='w-6 h-6' />,
+      tag: t(locale, 'ibe', 'moment-2-tag'),
+      title: t(locale, 'ibe', 'moment-2-title'),
+      desc: t(locale, 'ibe', 'moment-2-desc'),
+    },
+    {
+      icon: <Zap className='w-6 h-6' />,
+      tag: t(locale, 'ibe', 'moment-3-tag'),
+      title: t(locale, 'ibe', 'moment-3-title'),
+      desc: t(locale, 'ibe', 'moment-3-desc'),
+    },
+  ]
 
   return (
     <>
@@ -133,8 +134,7 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
 
             <div className='flex flex-col sm:flex-row items-start sm:items-end gap-8 mt-8'>
               <p className='text-white/50 text-base md:text-lg max-w-md leading-relaxed border-l-2 border-fran-teal/40 pl-6'>
-                An intensive padel experience bringing together players,
-                coaches, and the FRAN methodology in the heart of Madrid.
+                {t(locale, 'ibe', 'hero-description')}
               </p>
               <div className='ml-auto hidden sm:block'>
                 <div className='w-px h-24 bg-gradient-to-b from-fran-teal/60 to-transparent mx-auto mb-2' />
@@ -163,38 +163,27 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
                 <div className='flex items-center gap-3 mb-6'>
                   <div className='w-8 h-px bg-fran-teal' />
                   <span className='text-fran-teal text-xs font-mono tracking-widest uppercase'>
-                    About the Event
+                    {t(locale, 'ibe', 'about-the-event')}
                   </span>
                 </div>
                 <h2
                   className='font-display font-black leading-tight tracking-tighter mb-8 text-white'
                   style={{ fontSize: 'clamp(2rem, 5vw, 4rem)' }}
                 >
-                  MORE THAN A CLINIC.
+                  {t(locale, 'ibe', 'more-than-a-clinic')}
                   <br />
-                  <span className='outline-text-teal'>A FULL EXPERIENCE.</span>
+                  <span className='outline-text-teal'>{t(locale, 'ibe', 'a-full-experience')}</span>
                 </h2>
                 <div className='space-y-4 text-white/60 leading-relaxed text-base md:text-lg'>
-                  <p>
-                    The Iberian Padel Experience is one of the most intensive
-                    padel events in the FRAN Padel Project calendar — a
-                    multi-day immersion in Madrid designed for players who want
-                    to train, think, and compete at a higher level.
-                  </p>
-                  <p>
-                    Guided by Francisco Freitas and the full FRAN technical
-                    team, each edition brings together groups of 8 to 16 players
-                    for an experience that goes beyond the court — combining
-                    technical coaching, tactical analysis, physical
-                    conditioning, and shared competition.
-                  </p>
+                  <p>{t(locale, 'ibe', 'overview-p1')}</p>
+                  <p>{t(locale, 'ibe', 'overview-p2')}</p>
                 </div>
                 <div className='mt-10'>
                   <a
                     href='#contact'
                     className='group inline-flex items-center gap-3 bg-fran-teal text-fran-navy px-7 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-white transition-colors clip-corner-br'
                   >
-                    Join Next Edition
+                    {t(locale, 'ibe', 'join-next-edition')}
                     <ChevronRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
                   </a>
                 </div>
@@ -240,19 +229,19 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
                 <div className='flex items-center gap-3 mb-4'>
                   <div className='w-8 h-px bg-fran-teal' />
                   <span className='text-fran-teal text-xs font-mono tracking-widest uppercase'>
-                    Gallery
+                    {t(locale, 'ibe', 'gallery')}
                   </span>
                 </div>
                 <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter leading-tight'>
-                  Captured
+                  {t(locale, 'ibe', 'captured')}
                   <br />
-                  <span className='outline-text'>Moments</span>
+                  <span className='outline-text'>{t(locale, 'ibe', 'moments')}</span>
                 </h2>
               </div>
               <p className='text-white/30 text-sm font-mono tracking-widest uppercase hidden md:block text-right'>
-                Photos
+                {t(locale, 'ibe', 'photos-arriving-soon-1')}
                 <br />
-                Arriving Soon
+                {t(locale, 'ibe', 'photos-arriving-soon-2')}
               </p>
             </div>
 
@@ -311,11 +300,11 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
             <div className='flex items-center gap-3 mb-4 ibe-reveal'>
               <div className='w-8 h-px bg-fran-teal' />
               <span className='text-fran-teal text-xs font-mono tracking-widest uppercase'>
-                Highlights
+                {t(locale, 'ibe', 'highlights')}
               </span>
             </div>
             <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter mb-16 ibe-reveal'>
-              Key Moments
+              {t(locale, 'ibe', 'key-moments')}
             </h2>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5'>
@@ -360,13 +349,13 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
             <div className='flex items-center gap-3 mb-4'>
               <div className='w-8 h-px bg-fran-teal' />
               <span className='text-fran-teal text-xs font-mono tracking-widest uppercase'>
-                Video
+                {t(locale, 'ibe', 'video')}
               </span>
             </div>
             <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter leading-tight mb-10 ibe-reveal'>
-              Watch the
+              {t(locale, 'ibe', 'watch-the-recap-1')}
               <br />
-              Recap
+              {t(locale, 'ibe', 'watch-the-recap-2')}
             </h2>
 
             {/* pure-CSS hover via group */}
@@ -393,10 +382,10 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
                 </div>
                 <div className='text-center'>
                   <p className='text-white font-display font-black text-2xl md:text-3xl uppercase tracking-tight mb-2'>
-                    Event Highlights Reel
+                    {t(locale, 'ibe', 'event-highlights-reel')}
                   </p>
                   <p className='text-white/40 text-sm font-mono tracking-widest uppercase'>
-                    Video Coming Soon
+                    {t(locale, 'ibe', 'video-coming-soon')}
                   </p>
                 </div>
                 <div className='flex gap-1 mt-2'>
@@ -434,8 +423,7 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
                 "
               </span>
               <blockquote className='relative font-display font-black text-2xl md:text-4xl lg:text-5xl text-white uppercase tracking-tighter leading-tight mb-10'>
-                Every player who steps onto that court in Madrid leaves a
-                different athlete.
+                {t(locale, 'ibe', 'quote')}
               </blockquote>
             </div>
             <div className='flex items-center justify-center gap-4'>
@@ -445,7 +433,7 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
                   Francisco Freitas
                 </p>
                 <p className='text-fran-teal text-xs font-mono tracking-widest uppercase mt-0.5'>
-                  Founder, FRAN Padel Project
+                  {t(locale, 'ibe', 'quote-author-title')}
                 </p>
               </div>
               <div className='w-12 h-px bg-fran-teal/40' />
@@ -464,17 +452,15 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
             <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 ibe-reveal'>
               <div className='max-w-xl'>
                 <span className='text-fran-teal text-xs font-mono tracking-widest uppercase mb-4 block'>
-                  Next Edition
+                  {t(locale, 'ibe', 'next-edition')}
                 </span>
                 <h2 className='font-display font-black text-4xl md:text-6xl text-white uppercase tracking-tighter leading-tight mb-4'>
-                  Ready for Your
+                  {t(locale, 'ibe', 'ready-for-your')}
                   <br />
-                  <span className='outline-text-teal'>IBE Experience?</span>
+                  <span className='outline-text-teal'>{t(locale, 'ibe', 'ibe-experience')}</span>
                 </h2>
                 <p className='text-white/50 text-base md:text-lg leading-relaxed'>
-                  Spots are limited to 8–16 players. Get in touch to reserve
-                  your place in the next edition of the Iberian Padel Experience
-                  in Madrid.
+                  {t(locale, 'ibe', 'cta-description')}
                 </p>
               </div>
               <div className='flex flex-col sm:flex-row gap-4'>
@@ -482,14 +468,14 @@ export default async function IBERecap({ locale: _locale }: IBERecapProps) {
                   href='#contact'
                   className='group inline-flex items-center gap-3 bg-fran-teal text-fran-navy px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-white transition-colors clip-corner-br'
                 >
-                  Get in Touch
+                  {t(locale, 'ibe', 'get-in-touch')}
                   <ChevronRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
                 </a>
                 <a
                   href='/'
                   className='inline-flex items-center gap-3 border border-white/20 text-white px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-white/5 transition-colors'
                 >
-                  Back to Home
+                  {t(locale, 'ibe', 'back-to-home')}
                 </a>
               </div>
             </div>

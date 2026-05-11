@@ -139,4 +139,50 @@ export const en = {
     'terms-of-service': 'Terms of Service',
     'all-rights-reserved': 'All rights reserved.',
   },
+  ibe: {
+    'hero-description':
+      'An intensive padel experience bringing together players, coaches, and the FRAN methodology in the heart of Madrid.',
+    'about-the-event': 'About the Event',
+    'more-than-a-clinic': 'MORE THAN A CLINIC.',
+    'a-full-experience': 'A FULL EXPERIENCE.',
+    'overview-p1':
+      'The Iberian Padel Experience is one of the most intensive padel events in the FRAN Padel Project calendar — a multi-day immersion in Madrid designed for players who want to train, think, and compete at a higher level.',
+    'overview-p2':
+      'Guided by Francisco Freitas and the full FRAN technical team, each edition brings together groups of 8 to 16 players for an experience that goes beyond the court — combining technical coaching, tactical analysis, physical conditioning, and shared competition.',
+    'join-next-edition': 'Join Next Edition',
+    gallery: 'Gallery',
+    'captured': 'Captured',
+    'moments': 'Moments',
+    'photos-arriving-soon-1': 'Photos',
+    'photos-arriving-soon-2': 'Arriving Soon',
+    highlights: 'Highlights',
+    'key-moments': 'Key Moments',
+    'moment-1-tag': 'Training',
+    'moment-1-title': 'FRAN Methodology in Action',
+    'moment-1-desc':
+      'Full-day training sessions led by Francisco Freitas, applying the core FRAN methodology with advanced technical and tactical drills on the courts of Madrid.',
+    'moment-2-tag': 'Community',
+    'moment-2-title': 'International Player Mix',
+    'moment-2-desc':
+      'Players from across Portugal and Spain came together, forming lasting connections through shared passion for padel and high-performance training.',
+    'moment-3-tag': 'Analysis',
+    'moment-3-title': 'Video & Tactical Breakdowns',
+    'moment-3-desc':
+      'Deep-dive coaching sessions analyzing real match footage, uncovering technical gaps and tactical opportunities with immediate on-court application.',
+    video: 'Video',
+    'watch-the-recap-1': 'Watch the',
+    'watch-the-recap-2': 'Recap',
+    'event-highlights-reel': 'Event Highlights Reel',
+    'video-coming-soon': 'Video Coming Soon',
+    quote:
+      'Every player who steps onto that court in Madrid leaves a different athlete.',
+    'quote-author-title': 'Founder, FRAN Padel Project',
+    'next-edition': 'Next Edition',
+    'ready-for-your': 'Ready for Your',
+    'ibe-experience': 'IBE Experience?',
+    'cta-description':
+      'Spots are limited to 8–16 players. Get in touch to reserve your place in the next edition of the Iberian Padel Experience in Madrid.',
+    'get-in-touch': 'Get in Touch',
+    'back-to-home': 'Back to Home',
+  },
 }
