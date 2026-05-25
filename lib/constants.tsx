@@ -15,10 +15,7 @@ export const NAV_LINKS = [
     href: 'https://app.franpadelproject.com/',
     target: '_blank',
   },
-  { name: 'Founder', href: '#bio' },
-  { name: 'Clinics', href: '#clinics' },
-  { name: 'World Wide', href: '#world' },
-  { name: 'Sponsors', href: '#sponsors-partners' },
+  { name: 'IBE', href: '/ibe' },
 ]
 
 export const CLINICS: ServiceItem[] = [

@@ -58,17 +58,7 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <div className='hidden md:flex items-center gap-4'>
               {NAV_LINKS.map((link) => {
-                // Map link names to translation keys
-                const translationKeyMap: Record<string, string> = {
-                  Academy: 'academy',
-                  Founder: 'founder',
-                  Clinics: 'clinics',
-                  'World Wide': 'world-wide',
-                  Sponsors: 'sponsors',
-                }
-                const translationKey =
-                  translationKeyMap[link.name] ||
-                  link.name.toLowerCase().replace(/\s+/g, '-')
+                const translationKey = link.name.toLowerCase().replace(/\s+/g, '-')
                 return (
                   <a
                     key={link.name}
@@ -107,17 +97,7 @@ export default function Navbar() {
       >
         <div className='flex flex-col gap-8 text-center'>
           {NAV_LINKS.map((link) => {
-            // Map link names to translation keys
-            const translationKeyMap: Record<string, string> = {
-              Academy: 'academy',
-              Founder: 'founder',
-              Clinics: 'clinics',
-              'World Wide': 'world-wide',
-              Sponsors: 'sponsors',
-            }
-            const translationKey =
-              translationKeyMap[link.name] ||
-              link.name.toLowerCase().replace(/\s+/g, '-')
+            const translationKey = link.name.toLowerCase().replace(/\s+/g, '-')
             return (
               <a
                 key={link.name}
