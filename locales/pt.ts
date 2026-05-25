@@ -158,14 +158,14 @@ export const pt = {
   },
   ibe: {
     'hero-description':
-      'Uma experiência intensiva de padel que reúne jogadores, treinadores e a metodologia FRAN no coração de Madrid.',
+      'Uma experiência imersiva de padel que resulta da união de metodologias de treino capazes de formar jogadores de segmento social ou profissional.',
     'about-the-event': 'Sobre o Evento',
     'more-than-a-clinic': 'MAIS DO QUE UMA CLÍNICA.',
     'a-full-experience': 'UMA EXPERIÊNCIA COMPLETA.',
     'overview-p1':
       'A Iberian Padel Experience é um dos eventos de padel mais intensivos do calendário FRAN Padel Project — uma imersão de vários dias em Madrid concebida para jogadores que querem treinar, pensar e competir a um nível mais elevado.',
     'overview-p2':
-      'Orientada por Francisco Freitas e pela equipa técnica FRAN, cada edição reúne grupos de 8 a 16 jogadores para uma experiência que vai além das quadras — combinando coaching técnico, análise tática, condicionamento físico e competição partilhada.',
+      'Estruturada e planeada pela equipa técnica FRAN em conjunto com CEPAC. Cada edição reúne grupos de 8 a 16 jogadores para uma experiência que vai além dos 10 x 20 — combina técnica, tática, tomada de decisão, estratégia e competição.',
     'join-next-edition': 'Juntar-se à Próxima Edição',
     gallery: 'Galeria',
     captured: 'Momentos',
@@ -181,17 +181,17 @@ export const pt = {
     'moment-2-tag': 'Comunidade',
     'moment-2-title': 'Mix Internacional de Jogadores',
     'moment-2-desc':
-      'Jogadores de Portugal e Espanha reuniram-se, criando ligações duradouras através da paixão partilhada pelo padel e pelo treino de alta performance.',
+      'Jogadores de todo o mundo encontram-se neste evento para aumentar o conhecimento sobre as dinâmicas de jogo, criar ligações duradouras através da paixão partilhada pelo padel e pelo treino de alta performance.',
     'moment-3-tag': 'Análise',
     'moment-3-title': 'Análise de Vídeo e Tática',
     'moment-3-desc':
-      'Sessões aprofundadas de coaching com análise de vídeo de jogos reais, identificando lacunas técnicas e oportunidades táticas com aplicação imediata em quadra.',
+      'Sessões aprofundadas de coaching, identificação de lacunas técnicas e oportunidades táticas com aplicação imediata em campo.',
     video: 'Vídeo',
     'watch-the-recap': 'Ver o Recap',
     'event-highlights-reel': 'Melhores Momentos do Evento',
     'video-coming-soon': 'Vídeo Em Breve',
     quote:
-      'Cada jogador que entra naquela quadra em Madrid sai como um atleta diferente.',
+      'Cada participante que integra esta formação imersiva vive uma experiência transformadora de aprendizagem, aprofundando o conhecimento sobre a dinâmica do jogo, desenvolvendo uma visão mais estratégica e reforçando a capacidade de análise e tomada de decisão em contexto competitivo.',
     'quote-author-title': 'Fundador, FRAN Padel Project',
     'next-edition': 'Próxima Edição',
     'ready-for-your': 'Pronto para a',

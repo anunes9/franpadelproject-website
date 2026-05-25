@@ -3,13 +3,13 @@
 import { useEffect, useRef, useState } from 'react'
 
 const STATS = [
-  { value: 3, suffix: '', label: 'Days of Training' },
-  { value: 14, suffix: '', label: 'Players' },
-  { value: 6, suffix: '+', label: 'Court Hours Daily' },
-  { value: 2, suffix: '', label: 'Countries' },
+  { value: 4, prefix: '', suffix: '', label: 'Days of Training' },
+  { value: 12, prefix: '', suffix: '', label: 'Players' },
+  { value: 3, prefix: '+', suffix: '', label: 'Court Hours Daily' },
+  { value: 2, prefix: '', suffix: '', label: 'Countries' },
 ]
 
-function Counter({ target, suffix }: { target: number; suffix: string }) {
+function Counter({ target, prefix, suffix }: { target: number; prefix: string; suffix: string }) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
 
@@ -31,7 +31,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
     return () => obs.disconnect()
   }, [target])
 
-  return <span ref={ref}>{count}{suffix}</span>
+  return <span ref={ref}>{prefix}{count}{suffix}</span>
 }
 
 export default function IBEStats() {
@@ -43,7 +43,7 @@ export default function IBEStats() {
           className={`relative px-8 py-8 border-white/5 ${i > 0 ? 'border-l' : ''}`}
         >
           <div className="font-display font-black text-5xl md:text-7xl text-fran-teal leading-none tabular-nums mb-2">
-            <Counter target={s.value} suffix={s.suffix} />
+            <Counter target={s.value} prefix={s.prefix} suffix={s.suffix} />
           </div>
           <div className="text-white/40 text-xs font-mono tracking-widest uppercase">{s.label}</div>
           <div className="absolute top-0 left-0 w-0.5 h-8 bg-fran-teal/40" />
