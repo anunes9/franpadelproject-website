@@ -10,7 +10,10 @@ interface LanguageSwitchProps {
 
 const LOCALE_COOKIE = 'NEXT_LOCALE'
 
-export default function LanguageSwitch({ locale, variant = 'dropdown' }: LanguageSwitchProps) {
+export default function LanguageSwitch({
+  locale,
+  variant = 'dropdown',
+}: LanguageSwitchProps) {
   const router = useRouter()
 
   const handleLocaleChange = (newLocale: string) => {
@@ -28,8 +31,10 @@ export default function LanguageSwitch({ locale, variant = 'dropdown' }: Languag
             type='button'
             onClick={() => handleLocaleChange(loc)}
             aria-pressed={loc === locale}
-            className={`px-2.5 py-1 rounded-full transition-colors ${
-              loc === locale ? 'bg-fran-teal text-fran-navy' : 'text-gray-300 hover:text-white'
+            className={`px-2.5 py-1 rounded-full transition-colors uppercase ${
+              loc === locale
+                ? 'bg-fran-teal text-fran-navy'
+                : 'text-gray-300 hover:text-white'
             }`}
           >
             {loc}
