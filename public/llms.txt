@@ -1,0 +1,20 @@
+# Fran Padel Project
+
+> Padel coaching and training methodology led by Francisco "Fran" Freitas, based in Lisbon, Portugal. Personalized training, clinics, and professional player development, delivered in-person across Portugal, Spain, Angola, Sweden and the Netherlands, and online via the Fran Academy.
+
+## Pages
+
+- [Home](https://franpadelproject.com/): The Fran Methodology, training clinics, global locations, sponsors and partner clubs, and contact details.
+- [Iberian Padel Experience (IBE) Recap](https://franpadelproject.com/ibe): Recap of the Iberian Padel Experience 2026, a multi-day padel training event in Madrid, Spain.
+- [Academy](https://app.franpadelproject.com/): The Fran Padel Project training academy platform.
+- [Privacy Policy](https://franpadelproject.com/privacy-policy)
+- [Terms of Service](https://franpadelproject.com/terms-of-service)
+
+## Contact
+
+- Email: fran@franpadelproject.com
+- Instagram: https://www.instagram.com/franfreitas.padel
+
+## Notes
+
+- The site is available in Portuguese (default) and English. Language is switched client-side via a toggle in the navigation or footer; there are no separate URLs per language.
