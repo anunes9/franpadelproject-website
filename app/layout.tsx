@@ -1,10 +1,19 @@
 import './globals.css'
 import { Analytics } from '@vercel/analytics/react'
-import { generateMetadata } from '@/lib/seo'
+import { generateStructuredData, SITE_URL } from '@/lib/seo'
+import { getServerLocale } from '@/lib/i18n'
+import { Metadata } from 'next'
 import { ReactNode } from 'react'
 import { Roboto, Montserrat, Archivo } from 'next/font/google'
+import Script from 'next/script'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: 'Fran Padel Project - Padel Methodology',
+  description: 'Innovative padel methodology for players of all levels, by Fran Padel Project.',
+}
 
 const RobotoFont = Roboto({
   weight: '400',
@@ -26,11 +35,12 @@ const ArchivoFont = Archivo({
   variable: '--font-archivo',
 })
 
-export const metadata = generateMetadata('pt', 'home')
+export default async function RootLayout({ children }: { children: ReactNode }) {
+  const locale = await getServerLocale()
+  const structuredData = generateStructuredData(locale, 'home')
 
-export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt" className={`${RobotoFont.className} ${MontserratFont.variable} ${ArchivoFont.variable}`}>
+    <html lang={locale} className={`${RobotoFont.className} ${MontserratFont.variable} ${ArchivoFont.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/assets/fran-logo.png" />
@@ -38,9 +48,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="text-foreground">
-        <Navbar />
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+        <Navbar locale={locale} />
         <main>{children}</main>
-        <Footer />
+        <Footer locale={locale} />
         <Analytics />
       </body>
     </html>

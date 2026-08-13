@@ -2,18 +2,14 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { t, getLocaleFromPathname } from '@/lib/i18n'
+import { t } from '@/lib/i18n'
 import LanguageSwitch from './LanguageSwitch'
 
-export default function Footer() {
-  const [locale, setLocale] = useState('pt')
+interface FooterProps {
+  locale: string
+}
 
-  useEffect(() => {
-    // Detect locale from pathname
-    const pathLocale = getLocaleFromPathname(window.location.pathname)
-    setLocale(pathLocale)
-  }, [])
+export default function Footer({ locale }: FooterProps) {
   return (
     <footer className='bg-black py-12 border-t border-gray-900'>
       <div className='container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6'>
@@ -26,7 +22,7 @@ export default function Footer() {
             className='h-12 w-auto'
           />
 
-          <a
+          {/*<a
             href='https://anunes9.github.io/me/'
             target='_blank'
             rel='noopener noreferrer'
@@ -39,11 +35,11 @@ export default function Footer() {
               height={64}
               className='h-16 w-auto'
             />
-          </a>
+          </a>*/}
         </div>
 
         <div className='flex flex-col items-center md:items-end gap-4'>
-          <LanguageSwitch />
+          <LanguageSwitch locale={locale} />
           <div className='text-gray-500 text-xs text-center md:text-right uppercase tracking-wider'>
             <p>
               &copy; {new Date().getFullYear()} Fran Padel Project.{' '}

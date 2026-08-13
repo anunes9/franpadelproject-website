@@ -73,7 +73,7 @@ export default function IBERecapCTA({ locale }: IBERecapCTAProps) {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href={`/${locale}/ibe`}
+                href="/ibe"
                 className="group inline-flex items-center gap-3 bg-fran-teal text-fran-navy px-7 py-3.5 font-bold uppercase tracking-wider text-sm hover:bg-white transition-colors clip-corner-br"
               >
                 {t(locale, 'ibe-cta', 'watch-recap')}

@@ -1,13 +1,16 @@
+import { Metadata } from 'next'
 import { Text, Title } from '@/components/Typography'
+import { SITE_URL } from '@/lib/seo'
 
-interface PrivacyPolicyPageProps {
-  params: Promise<{
-    locale: string
-  }>
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Fran Padel Project',
+  description: 'Privacy Policy for Fran Padel Project - Methodology, outlining how we collect, use and protect your information.',
+  alternates: {
+    canonical: `${SITE_URL}/privacy-policy`,
+  },
 }
 
-const Page = async ({ params }: PrivacyPolicyPageProps) => {
-  const { locale } = await params
+const Page = () => {
   return (
     <>
       <div className="px-4 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto my-8">

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const locales = ['pt', 'en']
 const defaultLocale = 'pt'
+const localeCookie = 'NEXT_LOCALE'
 
 // Get the preferred locale from request headers
 function getLocale(request: NextRequest): string {
@@ -20,29 +21,19 @@ function getLocale(request: NextRequest): string {
 }
 
 export function proxy(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
+  const response = NextResponse.next()
 
-  // Skip middleware for static assets and API routes
-  if (
-    pathname.startsWith('/_next') ||
-    pathname.startsWith('/api') ||
-    pathname.startsWith('/assets') ||
-    pathname.startsWith('/fonts') ||
-    pathname.startsWith('/favicon.ico') ||
-    pathname.includes('.')
-  ) {
-    return
+  // Once a visitor has a saved preference, leave it alone
+  if (request.cookies.has(localeCookie)) {
+    return response
   }
 
-  // Check if the pathname already has a locale
-  const pathnameHasLocale = locales.some((locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`)
+  response.cookies.set(localeCookie, getLocale(request), {
+    path: '/',
+    maxAge: 60 * 60 * 24 * 365,
+  })
 
-  if (pathnameHasLocale) return
-
-  // Redirect if there is no locale
-  const locale = getLocale(request)
-  request.nextUrl.pathname = `/${locale}${pathname}`
-  return NextResponse.redirect(request.nextUrl)
+  return response
 }
 
 export const config = {

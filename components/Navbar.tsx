@@ -4,13 +4,16 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import { NAV_LINKS } from '@/lib/constants'
 import Image from 'next/image'
-import { t, getLocaleFromPathname } from '@/lib/i18n'
+import { t } from '@/lib/i18n'
+import LanguageSwitch from './LanguageSwitch'
 
-export default function Navbar() {
+interface NavbarProps {
+  locale: string
+}
+
+export default function Navbar({ locale }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [locale, setLocale] = useState('pt')
-  const [isIbePage, setIsIbePage] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,18 +22,6 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
-
-  useEffect(() => {
-    const pathLocale = getLocaleFromPathname(window.location.pathname)
-    setLocale(pathLocale)
-    setIsIbePage(window.location.pathname.includes('/ibe'))
-  }, [])
-
-  const resolveHref = (href: string) => {
-    if (!isIbePage || !href.startsWith('#')) return href
-    const base = locale === 'pt' ? '/pt' : ''
-    return `${base}/${href}`
-  }
 
   return (
     <>
@@ -62,7 +53,7 @@ export default function Navbar() {
                 return (
                   <a
                     key={link.name}
-                    href={resolveHref(link.href)}
+                    href={link.href}
                     target={link?.target ?? ''}
                     className='p-2 text-xs font-bold text-gray-300 hover:text-white hover:bg-white/5 rounded-full transition-all tracking-widest uppercase whitespace-nowrap'
                   >
@@ -70,9 +61,10 @@ export default function Navbar() {
                   </a>
                 )
               })}
+              <LanguageSwitch locale={locale} variant='toggle' />
               <a
-                href={resolveHref('#contact')}
-                className='ml-4 bg-fran-teal text-fran-navy font-black text-xs px-6 py-3 rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(104,191,163,0.4)] transition-all uppercase tracking-wider'
+                href='#contact'
+                className='ml-2 bg-fran-teal text-fran-navy font-black text-xs px-6 py-3 rounded-full hover:bg-white hover:shadow-[0_0_20px_rgba(104,191,163,0.4)] transition-all uppercase tracking-wider'
               >
                 {t(locale, 'menu', 'book-now')}
               </a>
@@ -101,7 +93,7 @@ export default function Navbar() {
             return (
               <a
                 key={link.name}
-                href={resolveHref(link.href)}
+                href={link.href}
                 className='text-3xl font-display font-black text-white hover:text-fran-teal uppercase tracking-tighter'
                 onClick={() => setIsOpen(false)}
               >
@@ -110,12 +102,13 @@ export default function Navbar() {
             )
           })}
           <a
-            href={resolveHref('#contact')}
+            href='#contact'
             onClick={() => setIsOpen(false)}
             className='mt-8 text-fran-teal underline decoration-2 underline-offset-8 uppercase font-bold tracking-widest'
           >
             {t(locale, 'menu', 'get-in-touch')}
           </a>
+          <LanguageSwitch locale={locale} variant='toggle' />
         </div>
       </div>
     </>

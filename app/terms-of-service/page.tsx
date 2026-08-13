@@ -1,13 +1,16 @@
+import { Metadata } from 'next'
 import { Text, Title } from '@/components/Typography'
+import { SITE_URL } from '@/lib/seo'
 
-interface TermsOfServicePageProps {
-  params: Promise<{
-    locale: string
-  }>
+export const metadata: Metadata = {
+  title: 'Terms of Service | Fran Padel Project',
+  description: 'Terms of Service governing your use of the Fran Padel Project - Methodology website and services.',
+  alternates: {
+    canonical: `${SITE_URL}/terms-of-service`,
+  },
 }
 
-const Page = async ({ params }: TermsOfServicePageProps) => {
-  const { locale } = await params
+const Page = () => {
   return (
     <>
       <div className="px-4 max-w-screen-sm lg:max-w-screen-md xl:max-w-screen-lg mx-auto my-8">
